@@ -1,0 +1,137 @@
+\documentclass[prd,showkeys,preprintnumbers,floatfix,superscriptaddress, nofootinbib]{revtex4}
+\usepackage{float}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{mathtools,slashed}
+\usepackage{bm}
+\usepackage{comment}
+\usepackage{color}
+\usepackage{subfigure}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{color}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{graphicx}
+\usepackage{esint}
+\usepackage{hyperref}
+\usepackage{atbegshi}
+\usepackage{lipsum}
+\newcommand{\nn}[0]{\nonumber} 
+ \newcommand{\raul}[0]{ \color{blue} }
+ \newcommand{\red}[0]{ \color{red} }
+\newcommand{\W}[0]{{\mathcal{W}}}
+\newcommand{\Wtildf}[0]{{\mathcal{W}}_{L,{\rm df}}}
+\newcommand{\Wdf}[0]{{\mathcal{W}}_{\rm df}}
+\newcommand{\RLL}[0]{\mathcal{R}}
+\newcommand{\w}[0]{w}
+\newcommand{\mh}[0]{\color{red} \bf }
+\newcommand{\Epipi}{E_{\pi\pi}}
+
+
+
+
+\begin{document}
+ \preprint{\vbox{\hbox{JLAB-THY-??-???} }}
+\title{Obtaining form factors of resonances and bound states from lattice QCD}
+
+%%%%%%%%%%
+\author{Alessandro Baroni}
+%
+\email[e-mail: ]{abaro008@odu.edu}
+%
+\affiliation{
+Department of Physics and Astronomy University of South Carolina, \\ 
+712 Main Street, Columbia, SC 29208, USA
+}
+%%%%%%%%%%
+
+%%%%%%%%%%
+\author{Ra\'ul A.~Brice\~no}
+%
+\email[e-mail: ]{rbriceno@jlab.org}
+%
+\affiliation{Thomas Jefferson National Accelerator Facility, 12000 Jefferson Avenue, Newport News, VA 23606, USA}
+\affiliation{ Department of Physics, Old Dominion University, Norfolk, VA 23529, USA}
+%%%%%%%%%%
+
+%%%%%%%%%%
+\author{Bipasha Chakraborty}
+%
+\email[e-mail: ]{bipasha@jlab.org}
+%
+\affiliation{
+Thomas Jefferson National Accelerator Facility, 12000 Jefferson Avenue, Newport News, VA 23606, USA\\
+}
+%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%
+
+\author{Maxwell T.~Hansen}
+%
+\email[e-mail: ]{hansen@kph.uni-mainz.de}
+%
+\affiliation{
+Institut f\"ur Kernphysik and Helmholtz Institute Mainz, Johannes Gutenberg-Universit\"at Mainz,
+55099 Mainz, Germany\\
+}
+%%%%%%%%%%
+%%%%%%%%%%
+\author{Felipe Ortega}
+%
+\email[e-mail: ]{felipeortegagama@gmail.com}
+%
+\affiliation{
+?????//
+}
+%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{David~J.~Wilson}
+\email[]{djwilson@maths.tcd.ie}
+\affiliation{School of Mathematics, Trinity College, Dublin~2, Ireland}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\date{\today}
+
+\begin{abstract}
+This {\em master document} details all steps in the HadSpec numerical lattice QCD calculation of the $\rho$ form factor. The novel aspect of this calculation is that the resonance nature of the $\rho$ is rigorously accomodated. This is achieved by first determining the infinite-volume matrix element $\langle \pi \pi, \text{out} \vert \mathcal J^\mu \vert \pi \pi, \text{in} \rangle$ and then analytically continuing both the initial and final two-pion state energies into the complex plane, to the $\rho$ pole.
+ \end{abstract}
+
+\keywords{finite volume, lattice QCD}
+
+\nopagebreak
+\maketitle
+
+\tableofcontents
+
+\clearpage
+\section{To do list}
+\input{secs/to_do_list}
+\section{Form factors, amplitudes, and Lorentz decomposition}
+\input{secs/ff_amp_lor}
+\section{Quantization Conditions}
+\input{secs/QC}
+\section{Relating the finite-volume matrixs element to $\pi\pi\gamma^\star\to\pi\pi$ amplitude}
+\input{secs/pipigs_pipi}
+\section{Numerical evaluation of the relevant geometric functions}
+\input{secs/numerical}
+
+
+%\makeatletter
+%\let\toc@pre\relax
+%\let\toc@post\relax
+%\makeatother 
+%\listoffigures
+%\listoftables
+
+\clearpage
+\bibliography{bibi}
+\end{document}

@@ -1,0 +1,783 @@
+Before diving into the details regarding one how to extract desired observables form lattice QCD, it is worth defining in details the infinite-volume quantities we will studying. Our aim is two-fold:
+	\begin{itemize}
+	\item First, we will explain how different components of the $\pi\pi\gamma^\star\to\pi\pi$ amplitude can be extracted from lattice QCD. In particular, we will focus on the components of this amplitude where both the initial and final state have been projected onto an isotriplet. 
+	\item Constraining this in an large kinematic window, we can then analytically continue onto the $\rho$ poles of the initial and final states, and obtain the three form-factors of the $\rho$. 
+	\end{itemize}
+
+	In order to take the first step, we will need the formalism introduced in Ref.~\ref{Briceno:2015tza}, which we review in detail in {\raul Secs.~{XXX}} and is sketched in Fig.~\ref{fig:flowchart}. The two key inputs, in addition to the standard matrix elements, will be the 
+	\begin{itemize}
+	\item $\pi\pi\to\pi\pi$ scattering amplitude,
+	\item and the form factors of the individual final $\pi$ states.
+	\end{itemize}
+	
+	In this section we begin by reviewing basic consequences of the symmetries of the infinite-volume states: isospin, parity, G-parity, angular momentum, and charge conservation. 
+	
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[t]
+\begin{center}
+\subfigure[]{
+\includegraphics[width=.8\textwidth]{figs/flowchart2}}
+\caption{ {\raul Need to update this to include the step towards the form factors...}}\label{fig:flowchart}
+\end{center}
+\end{figure*}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Some comments about isospin and charge}
+The aim of this project is to explain how one can obtain the form factors of resonance. In particular, we will be focusing on the electromagnetic form factors. Furthermore, we will have resonances that couple to $\pi\pi$ in mind. In this regard let us refresh our minds on the isospin states of the $\pi\pi$ system, and their resonance content. First, the isostensor, has no resonances, and their isospin states can be written in terms of the charged pion states,
+\begin{align}
+|I=2,m_I=2\rangle&=|\pi^+\pi^+\rangle,\\
+|I=2,m_I=1\rangle&=\frac{1}{\sqrt{2}}\left(|\pi^+\pi^0\rangle+|\pi^0\pi^+\rangle\right),\\
+|I=2,m_I=0\rangle&=\frac{1}{\sqrt{6}}\left(|\pi^+\pi^-\rangle+|\pi^-\pi^+\rangle+2|\pi^0\pi^0\rangle\right).\\
+\end{align}
+The isovector channel, has the $\rho=(\rho^+,\rho^0,\rho^-)$. The $\rho^0$ is neutral, as a result, we expect this to have a fairly small coupling to the electromagnetic current. Therefor, we will focus on the $\rho^+$. These couple respectively to the following $\pi\pi$ states,
+\begin{align}
+\rho^+:\hspace{.5cm}|I=1,m_I=1\rangle&=\frac{1}{\sqrt{2}}\left(|\pi^+\pi^0\rangle-|\pi^0\pi^+\rangle\right),\\
+\rho^0:\hspace{.5cm}|I=1,m_I=0\rangle&=\frac{1}{\sqrt{2}}\left(|\pi^+\pi^-\rangle-|\pi^-\pi^+\rangle\right).\\
+\end{align}
+Here we notice two things. First, if we think of the $\rho^0$ indeed as a resonance that couples to $\pi^+\pi^-$, and we proceeded to evaluate diagram by diagram the coupling of the $|\pi^+\pi^-\rangle$ state to the electromagnetic current, we will get zero, since the $\pi^+$ and $\pi^-$ are oppositely charged. Arriving at the same conclusion as above. Second, for the $|\pi^+\pi^0\rangle$ state, only the $\pi^+$ will couple to the electromagnetic current. As already alluded to before, we will need the form factors of the individual $\pi$, given that only that of the $\pi^+$ is expected to be nonzero, we will only need to calculate this one. 
+
+
+Finally, the isoscalar channel couples to the $\sigma$,
+\begin{align}
+\sigma:\hspace{.5cm}|I=0,m_I=0\rangle&=\frac{1}{\sqrt{3}}\left(|\pi^+\pi^-\rangle+|\pi^-\pi^+\rangle-|\pi^0\pi^0\rangle\right).
+\end{align}
+This, of course, is neutral, and for the same reasons given above, is expected to have a vanishing eletromagnetic form factor. 
+
+To conclude, of the $\pi\pi$ channels, the one that is most sensible to consider is the $I,m_I=(1,1)$ channel, since this is expected to have the most dominant resonance form factors. Finally, the $\rho^+$ is a vector, which implies that there will be three-independent form factors to determine, the charge, magnetic and quadrupole form factors. These are proportional to the the charge, magnetic moment, and quadrupole moment of the $\rho^+$. Furthermore, one can obtain the correspond radii of the $\rho^+$. We will discuss the matrix elements in terms of the Lorentz decomposition of these form factors in Sec.~\ref{sec:Lorentz_decomp}.
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \subsection{Allowed matrix elements}
+
+We are interested in evaluating matrix elements of the QED current
+\begin{align}
+{\mathcal{J}}^{\mu}=q_u\bar{u}\gamma^\mu u+q_d\bar{d}\gamma^\mu d=(2\bar{u}\gamma^\mu u-\bar{d}\gamma^\mu d)/3.
+\end{align} 
+It is convenient to decompose this into an isovector and isoscalar current, 
+\begin{align}
+{\mathcal{J}}^{\mu}&=\frac{ \rho^{0,\mu}}{\sqrt{2}}+\frac{\omega^{\mu}}{3\sqrt{2}}
+\end{align}
+where
+\begin{align}
+\rho^{0,\mu}&=(\bar{u}\gamma^\mu u-\bar{d}\gamma^\mu d)/\sqrt{2},\\
+\omega^{\mu}&=(\bar{u}\gamma^\mu u+\bar{d}\gamma^\mu d)/\sqrt{2}.\\
+\end{align} 
+The $\rho^{0,\mu}$ component has the quantum number of the $I_z=0$ component of the $\rho$ meson, namely $I^G(J^{P})=1^{+}(1^{-})$,
+%FOOTNOTE
+\footnote{$I=$isospin, $G=$G-parity, $J$=total angular momentum, $P$=parity.}
+while the $\omega^{\mu}$ piece has the quantum numbers of the $\omega$ meson, $0^{-}(1^{-})$. Strictly speaking, these are the quantum numbers of the spatial piece of the current; the temporal components are related via Lorentz symmetry. 
+
+
+For the $\pi$ matrix elements, one can explicitly evaluate the contractions {\raul (I get that the disconnected piece of the $\rho^{0,\mu}$ current vanishes, but not for the $\omega$ piece, so not $100\%$ sure about this)}, to find that only the component of the QED current that survives the $\rho$-like piece
+\begin{align}
+\langle\pi|{\mathcal{J}}^{\mu}|\pi\rangle=
+\langle\pi|\rho^{0,\mu}|\pi\rangle/\sqrt{2}.
+\end{align}
+
+One can more generally find which components vanish, by considering the quantum numbers of the initial and final states in conjunction with those of the current. It is convenient to consider this in terms of the as a scattering process, where you have $\pi\gamma^\star\to\pi$. The advantage of doing this is that you are explicitly reminded of the additional degree of freedom associated with the the relative angular momentum ($\ell$) between the two initial states. This also introduces yet another parity to bear in mind. 
+
+
+With this, we can tabulate all possible allowed combinations quantum numbers for  $\pi\gamma^\star\to\pi$,
+\begin{center}
+ \begin{tabular}{ |c | c | c |c|c| c|} 
+\hline
+Current [$I^G(J^{P})$]
+& 
+Initial hadron
+&
+relative $\ell$
+&
+Possible final states
+& 
+Final hadron
+& 
+Overlap?
+%%%%%%%%%%%%%%%%%%%%%%%
+\\\hline
+$\rho^{0,i}[1^{+}(1^{-})]$
+&
+$\pi[1^{-}(0^{-})]$
+&
+$0$
+&
+$[1^{-}(1^{+})],\ldots$
+&
+$\pi[1^{-}(0^{-})]$
+&No, violates parity cons.
+%%%%%%%%%%%%%%%%%%%%%%%
+\\
+&
+&
+$1$
+&
+$[1^{-}(0^{-})],[1^{-}(1^{-})],\ldots$
+&
+$\pi[1^{-}(0^{-})]$
+& Yes
+%%%%%%%%%%%%%%%%%%%%%%%
+\\\hline
+$\omega^{i}[0^{-}(1^{-})]$
+&
+$\pi[1^{-}(0^{-})]$
+&
+&
+&
+$\pi[1^{-}(0^{-})]$
+&No, violates G-parity cons. 
+\vspace{.05cm}\\ \hline
+\end{tabular}
+ \end{center}
+We conclude what we found explicitly before, that only one component of the current contributes to this transition. The ``$\ldots"$ in the first two lines denote other components of isospin which do not contribute. 
+
+ 
+
+Now, we turn to the desired $\pi\pi\gamma^\star\to\pi\pi$. As we already discussed above, we will focus our attention to the scenario where the $\pi\pi$ state has been projected onto the quantum numbers of the $\rho$. Therefore, we can equally tabulate the allowed quantum numbers for $\rho\gamma^\star\to\rho$, 
+\begin{center}
+ \begin{tabular}{ |c | c | c |c|c| c|} 
+ \hline
+Current [$I^G(J^{P})$]
+& 
+Initial hadron
+&
+relative $\ell$
+&
+Possible final states
+& 
+Final hadron
+& 
+Overlap?
+%%%%%%%%%%%%%%%%%%%%%%%
+\\\hline
+$\rho^{0,i}[1^{+}(1^{-})]$
+&
+$\rho^{0,i}[1^{+}(1^{-})]$
+&
+0
+&
+$[1^{+}(1^{+})],\ldots$
+&
+$\rho^{0,i}[1^{+}(1^{-})]$
+&No, violates parity cons. 
+%%%%%%%%%%%%%%%%%%%%%%%
+\\\hline
+$\rho^{0,i}[1^{+}(1^{-})]$
+&
+$\rho^{0,i}[1^{+}(1^{-})]$
+&
+1
+&
+$[1^{+}(0^{-})],[1^{+}(1^{-})],\ldots$
+&
+$\rho^{0,i}[1^{+}(1^{-})]$
+& Yes
+%%%%%%%%%%%%%%%%%%%%%%%
+\\\hline\hline
+$\omega^{i}[0^{-}(1^{-})]$
+&
+$\rho^{0,i}[1^{+}(1^{-})]$
+&
+&
+&
+$\rho^{0,i}[1^{+}(1^{-})]$
+&No, violates G-parity cons. 
+\vspace{.05cm}\\ \hline
+\end{tabular}
+ \end{center}
+Again, we get that this transition is allowed and only the $\rho$ component of the current contributes.
+
+ \subsection{Lorentz decomposition in terms of form factors \label{sec:Lorentz_FFs}}
+When considering QCD stable states, it is naturally to write the matrix elements of the QED current in terms of form factors up to overall factors which are completely constraints from kinematics. Here, we review this for matrix elements coupling pseudoscalar and vectors states. In this study, we are primarily interested on currents coupling to the $\pi$ and $\rho$. In this section, we will ignore the fact that the $\rho$ is unstable, and we address this in Sec.~\ref{sec:Lorentz_amps}. Furthermore, for the sake of generality, when considering matrix elements coupling pseudoscalar-to-pseudoscalar states or vector-to-vector states, we will not assume that the initial and final states are degenerate. As we will see below, this is essential for later addressing the unstable nature of the $\rho$. To accommodate this added complexity, we will introduce another species of pseusocalar and vector mesons, which will refer to as $\pi'$ and $\rho'$ respectively, which will also be assumed to be stable in this section. 
+
+
+
+\subsubsection{Lorentz decomposition of $\pi\gamma^\star\to\pi'$}
+We begin with the elastic $\pi$ matrix elements, $\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi(p_i)\rangle$. This matrix element is a Lorentz vector, therefore it can only be proportional to linear combinations of the two vectors in the problem ($p_i^\mu, p_f^\mu$),
+\begin{align}
+\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi(p_i)\rangle=F_\pi(Q^2)\,(p_i+p_f)^\mu+F_{\pi,-}(Q^2)\,(p_i-p_f)^\mu,
+\end{align}
+where $F_\pi(Q^2)$ and $F_{\pi,-}(Q^2)$ are unknown form factors, which in general depend on any Lorentz scalar in the problem, $Q^2=(p_i-p_f)^2, p_i^2=m_\pi^2,$ and $p_f^2=m_\pi^2$. Here, we leave the dependence on the $\pi$ mass implicit. 
+
+The current ${\mathcal{J}}^{\mu}$ is conserved, $\partial_\mu {\mathcal{J}}^{\mu}=0$, which in momentum space tells us that 
+\begin{align}
+(p_i-p_f)_\mu\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi(p_i)\rangle&=F_\pi(Q^2)\, (p_i-p_f)_\mu(p_i+p_f)^\mu+F_{\pi,-}(Q^2)\,(p_i-p_f)^2
+\nn\\
+&=
+F_\pi(Q^2)\, (m_\pi^2-m_\pi^2)
++
+F_{\pi,-}(Q^2)\,(p_i-p_f)^2
+=0,
+\end{align}
+we conclude that $F_{\pi,-}(Q^2)$ must be zero for all virtualities. This is why for the $\pi$ we only need to determine a single form factor. 
+
+Note, in the last line above, the first term vanished because the initial and final states have the same mass. If we consider two pseudoscalars with different masses, the $\pi$ and $\pi'$, then charge conservation would lead to
+\begin{align}
+(p_i-p_f)_\mu\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi'(p_i)\rangle&=
+F_{\pi\pi'}(Q^2)\, (m_{\pi'}^2-m_\pi^2)
++
+F_{\pi\pi',-}(Q^2)\,(p_i-p_f)^2
+=0,
+\\
+\Rightarrow
+F_{\pi\pi',-}(Q^2)
+&=-
+F_{\pi\pi}(Q^2)\, \frac{(m_{\pi'}^2-m_\pi^2)}{(p_i-p_f)^2}
+= 
+F_{\pi\pi}(Q^2)\, \frac{(m_{\pi'}^2-m_\pi^2)}{Q^2}.
+\end{align} 
+So, we would conclude that still one can describe this matrix element using is a single form factor
+\begin{align}
+\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi'(p_i)\rangle=
+\left( (p_i+p_f)^\mu \, +(p_i-p_f)^\mu\frac{(m_{\pi'}^2-m_\pi^2)}{Q^2}\right)F_{\pi\pi}(Q^2).
+\label{eq:pi_to_pi_FF}
+\end{align}
+Again, the $F_{\pi\pi}(Q^2)$ depends on the masses of the two states, but Hermiticity ensures that it must be symmetric on the interchange of these two. Below we will consider examples when this dependence is slightly less trivial.  
+
+\subsubsection{Lorentz decomposition of $\rho\gamma^\star\to\pi$}
+
+Now, we turn to a slightly more complicated case, where a stable vector meson couples to a pseudoscalar.  In this case, the matrix element must be Lorentz vector. This is a bit difficult to see, since states in flight are not eigenstates of parity. This further complicated by the fact that the ``$\rho$" has nonzero spin~\cite{Thomas:2011rh}. Nevertheless, we can derive the form of the Lorentz decomposition of the matrix element in a relatively straightforward manner.
+
+First, the $\rho$ state is now defined by its momentum and helicity, $\lambda$. In the limit that the momentum is taken to be zero, we choose to quantize the spin along the $z$ axis.  Next, we note that the matrix element we are after, must be proportional to the polarization of the polarization vector of the $\rho$,
+\begin{align}
+\langle \pi(p_f)|\mathcal{J}^\mu|\rho(\lambda; p_i)\rangle\propto \epsilon^\nu(\lambda; p_i),
+\end{align}
+note the Lorentz index of $\epsilon^\nu$ need not coincide with that of the current. 
+
+There are only three linearly independent components of a spin-1 vector meson. This is manifested by the fact that $\epsilon_{\mu}(\lambda;p)p^{\mu}=0$. A standard choice for the polarization vectors that is normalized to $-1$ and satisfies this criterion is
+\begin{align}
+\epsilon^{\mu}(p,\lambda)=
+\left(\frac{\vec{p}\cdot\hat{e}_\lambda}{\sqrt{p^2}},\hat{e}_\lambda+\frac{\vec{p}\cdot\hat{e}_\lambda}{\sqrt{p^2}\left(\sqrt{p^2}+p^0\right)}\vec{p}\right)
+\end{align}
+where we use the four-dimensional units vectors
+\begin{align}
+\hat{e}_\pm&=\mp\frac{1}{\sqrt{2}}(0,1,\pm i,0),
+\\
+\hat{e}_0&=(0,0,0,1).
+\end{align}
+It is important to note that this is a pseudovector. 
+
+Under parity trasformations, $\hat{P}$, the $\rho$ state would transform as
+\begin{align}
+\hat{P}|\rho(\lambda; p_i)\rangle
+=-|\rho(-\lambda; (p_{i,0},-\vec{p}_i)\rangle,
+\end{align}
+where the helicity has changed sign, since the momentum has changed directions. The overall phase is due to the $\rho$ intrinsic negative parity. If instead, the $\rho$ is at rest, defined by $p_i=(m_\rho,\vec{0})$, then spin would not change signs
+\begin{align}
+\hat{P}|\rho(\lambda; (m_\rho,\vec{0}))\rangle
+=-|\rho(\lambda; (m_\rho,\vec{0})\rangle,
+\end{align}
+and the $\rho$ would indeed be an eigenstate of parity. 
+
+With this in mind, let us consider the matrix element in the frame where the $\rho$ is at rest. Under parity, this would transform as
+\begin{align}
+\langle \pi(p_f)|\mathcal{J}^\mu|\rho(\lambda; p_i)\rangle
+\to
+(-1)^2\langle \pi(p_f^0,-\vec{p}_f)|\mathcal{J}_\mu|\rho(\lambda; p_i)\rangle
+=\langle \pi(p_f^0,-\vec{p}_f)|\mathcal{J}_\mu|\rho(\lambda; p_i)\rangle.
+\end{align}
+Immediately, we see that the Lorentz structure of the matrix does not coincide with that of the polarization vector. The only other two vector we have at our disposal are $p_i$ and $p_f$. Requiring the matrix element to be proportional to the polarization vector, we find that the only allowed Lorentz structure is the following
+\begin{align}
+\langle \pi(p_f)|\mathcal{J}^\mu|\rho(\lambda; p_i)\rangle
+=
+\epsilon^{\mu\alpha\beta\gamma}p_{f,\alpha}p_{i,\beta}\epsilon_\gamma F_1(Q^2,p_i^2,p_f^2)
+\label{eq:pi_to_rho_FF}
+\end{align}
+note, a term of the form $p^\mu_{f}\,(p_{i}\cdot\epsilon)$ is exactly equal to zero. We also can rule out a term of the form $p^\mu_{i}\,(p_{f}\cdot\epsilon)$ because in the rest frame of the $\rho$, under parity this would trasnform as 
+\begin{align}
+p^\mu_{i}\,(p_{f}\cdot\epsilon) 
+=(-m_\rho \,\vec{p}_{f}\cdot\vec{\epsilon},\vec{0})
+\to (m_\rho \,\vec{p}_{f}\cdot\vec{\epsilon},\vec{0}).
+\end{align}
+Similarly, we can rule out a term of the form $p^\mu_{i}\,(p_{i}\cdot\epsilon)$. Note, Hemiticity also rules out terms proportional to $p^\mu_{i}\,(p_{f}\cdot\epsilon)$ or $p^\mu_{i}\,(p_{i}\cdot\epsilon)$.
+
+\subsubsection{Lorentz decomposition of $\rho\gamma^\star\to\rho'$}
+
+Now, we turn to the case where we have a stable spin-1 particle in the initial and final state. Once gain, the matrix element must be proportional to the polarization vector of the initial state, $\epsilon^{\mu}(p_i,\lambda_i)$, and complex conjugate of the final state, $\epsilon^{\mu}(\lambda_f;p_f)$. 
+
+
+Let us list the possible vector structures allowed:
+\begin{align}
+\langle\rho'(\lambda_f,p_f)|{\mathcal{J}}^{\mu}|\rho(\lambda_i,p_i)\rangle
+&=
+(p_f+p)^\mu \,\epsilon_f^*\cdot \epsilon_i\, \widetilde{G}_1(Q^2,p_i^2,p_f^2)
+\nn\\&
++(p_i-p_f)^\mu \,\epsilon_f^*\cdot \epsilon_i\,\widetilde{G}_2(Q^2,p_i^2,p_f^2)
+\nn\\&
++\epsilon_i^\mu\, p_f\cdot \epsilon_f^*\,\widetilde{G}_3(Q^2,p_i^2,p_f^2)
+\nn\\&
++\epsilon_f^{*\mu}\, p_f\cdot \epsilon_i\,\widetilde{G}_4(Q^2,p_i^2,p_f^2)
+\nn\\&
++(p_f+p)^\mu \,(\epsilon_f^*\cdot p_i)\,(\epsilon_i\cdot p_f)\,\widetilde{G}_5(Q^2,p_i^2,p_f^2)
+\nn\\&
++(p_i-p_f)^\mu \,(\epsilon_f^*\cdot p_i)\,(\epsilon_i\cdot p_f)\,\widetilde{G}_6(Q^2,p_i^2,p_f^2).
+\end{align}
+ In total we find six possible structures, where we excluded terms of the form $p\cdot \epsilon_i=p_f\cdot \epsilon_f^*=0$.
+
+It is worth remarking about the presence of the terms of the form $\epsilon_f^{*\mu}\, p_f\cdot \epsilon_i$. Naively, one might guess that these transform as pseudovectors, but if we pick the rest frame of the initial state, we find that under parity this transforms as 
+\begin{align}
+\epsilon_f^{*\mu}\, p_f\cdot \vec{\epsilon}_i
+&=
+-\epsilon_f^{*\mu}\, \vec{p}_f \cdot\vec{\epsilon}_i\nn\\
+&=
+\left(\frac{\vec{p}_f\cdot\hat{e}_{\lambda_f}}{\sqrt{p^2_f}},\hat{e}_{\lambda_f}+\frac{\vec{p}_f\cdot\hat{e}_{\lambda_f}}{\sqrt{p^2_f}\left(\sqrt{p^2_f}+p^0_f\right)}\vec{p}_f\right)
+\vec{p}_f \cdot\vec{\epsilon}_i
+\nn\\
+&\to
+-
+\left(-\frac{\vec{p}_f\cdot\hat{e}_{-\lambda_f}}{\sqrt{p^2_f}},\hat{e}_{-\lambda_f}+\frac{\vec{p}_f\cdot\hat{e}_{-\lambda_f}}{\sqrt{p^2_f}\left(\sqrt{p^2_f}+p^0_f\right)}\vec{p}_f\right)
+\vec{p}_f \cdot \vec{\epsilon}_i.
+\end{align}
+The zero helicity component satisfies $\hat{e}_{-\lambda_f}=\hat{e}_{\lambda_f}$, while the other components satisfy $\hat{e}_{-\lambda_f}=-\hat{e}_{\lambda_f}$. So, we find that the $\lambda_f=\pm 1$ pieces transform like a vector under parity. 
+
+Finally, we make use of Hermiticity, i.e. ${\mathcal{J}}_{\mu}={\mathcal{J}}^\dag_{\mu}$, to find
+\begin{align}
+\langle\rho'(\lambda_f,p_f)|{\mathcal{J}}^{\mu}|\rho(\lambda_i,p_i)\rangle
+=
+\langle\rho(\lambda_i,p_i)|{\mathcal{J}}^{\mu\dag}|\rho'(\lambda_f,p_f)\rangle^*
+=
+\langle\rho(\lambda_i,p_i)|{\mathcal{J}}^{\mu}|\rho'(\lambda_f,p_f)\rangle^*.
+\end{align}
+Note, all kinematic terms in front $\widetilde{G}_1,\widetilde{G}_5$ and $\widetilde{G}_2,\widetilde{G}_6$ are respectively explicitly symmetric and antisymmetric in terms of the interchange of coordinate. This implies that $\widetilde{G}_1,\widetilde{G}_5$ and $\widetilde{G}_2,\widetilde{G}_6$ are respectively symmetric and antisymmetric. While the terms proportional to $\widetilde{G}_3$ and $\widetilde{G}_4$ are neither symmetric nor antisymmetric. Imposing the condition above, we find
+\begin{align}
+\epsilon_i^\mu\, p_f\cdot \epsilon_f^*\,\widetilde{G}_3(Q^2,p_i^2,p_f^2)
++\epsilon_f^{*\mu}\, p_f\cdot \epsilon_i\,\widetilde{G}_4(Q^2,p_i^2,p_f^2)
+&=
+\epsilon_f^{*\mu}\, p_f\cdot \epsilon_i\,\widetilde{G}_3(Q^2,p_f^2,p_i^2)
++\epsilon_i^{\mu}\, p\cdot \epsilon_f^*\,\widetilde{G}_4(Q^2,p_f^2,p_i^2)
+\end{align}
+Since $\epsilon_f^\mu$ and $\epsilon_i^\mu$ are independent of each other, we get
+\begin{align}
+\widetilde{G}_3(Q^2,p_i^2,p_f^2)=\widetilde{G}_4(Q^2,p_f^2,p_i^2).
+\end{align}
+
+
+Next, we impose charge conservation
+\begin{align}
+(p_i-p_f)_\mu\langle\rho(\lambda_i,p_i)|{\mathcal{J}}^{\mu}|\rho'(\lambda_f,p_f)\rangle
+&=
+(p_f^2-p_i^2) \,\epsilon_f^*\cdot \epsilon_i\, \widetilde{G}_1(Q^2,p_i^2,p_f^2)
+-Q^2 \,\epsilon_f^*\cdot \epsilon_i\,\widetilde{G}_2(Q^2,p_i^2,p_f^2)
+\nn\\&
++\left[-(p_f\cdot\epsilon_i)\, p\cdot \epsilon_f^*\,
++(p_i\cdot\epsilon_f^{*})\, p_f\cdot \epsilon_i\,\right]\widetilde{G}_3(Q^2,p_i^2,p_f^2)
+\nn\\&
++(p_f^2-p_i^2) \,(\epsilon_f^*\cdot p_i)\,(\epsilon_i\cdot p_f)\,\widetilde{G}_5(Q^2,p_i^2,p_f^2)
+-Q^2 \,(\epsilon_f^*\cdot p_i)\,(\epsilon_i\cdot p_f)\,\widetilde{G}_6(Q^2,p_i^2,p_f^2)
+\nn\\
+&=
+(p_f^2-p_i^2) \,\epsilon_f^*\cdot \epsilon_i\, \widetilde{G}_1(Q^2,p_i^2,p_f^2)
+-Q^2 \,\epsilon_f^*\cdot \epsilon_i\,\widetilde{G}_2(Q^2,p_i^2,p_f^2)
+\nn\\&
++(p_f^2-p_i^2) \,(\epsilon_f^*\cdot p_i)\,(\epsilon_i\cdot p_f)\,\widetilde{G}_5(Q^2,p_i^2,p_f^2)
+-Q^2 \,(\epsilon_f^*\cdot p_i)\,(\epsilon_i\cdot p_f)\,\widetilde{G}_6(Q^2,p_i^2,p_f^2)
+\nn\\
+&=0.
+\label{eq:charge_cons_rho}
+\end{align}
+This must vanish for all values of $p,p_f,\lambda,$ and $\lambda'$. If we pick the helicities, such that $\epsilon_f^*\cdot \epsilon_i=0$, we get 
+\begin{align}
+{(p_f^2-p_i^2)}\,\widetilde{G}_5(Q^2,p_i^2,p_f^2)
+-Q^2 \,\widetilde{G}_6(Q^2,p_i^2,p_f^2)&=0\\
+\Rightarrow 
+\widetilde{G}_6(Q^2,p_i^2,p_f^2)&=\frac{(p_f^2-p_i^2)}{Q^2} \,\widetilde{G}_5(Q^2,p_i^2,p_f^2).
+\end{align}
+Using this constraint in Eq.~\ref{eq:charge_cons_rho}, we are then left with 
+\begin{align}
+(p_f^2-p_i^2) \,\, \widetilde{G}_1(Q^2,p_i^2,p_f^2)
+-Q^2 \,\,\widetilde{G}_2(Q^2,p_i^2,p_f^2)&=0
+\\
+\Rightarrow
+\widetilde{G}_2(Q^2,p_i^2,p_f^2)&=
+\frac{(p_f^2-p_i^2)}{Q^2} \,\, \widetilde{G}_1(Q^2,p_i^2,p_f^2).
+\end{align}
+Note, this is consistent with the observation made above that $\widetilde{G}_1,\widetilde{G}_5$ and $\widetilde{G}_2,\widetilde{G}_6$ are symmetric and antisymmetric.
+
+Putting all of the constraints in place, we find that the matrix element can be described in terms of just three form factors
+\begin{align}
+\langle\rho'(\lambda_f,p_f)|{\mathcal{J}}^{\mu}|\rho(\lambda_i,p_i)\rangle
+&=
+\left((p_f+p)^\mu \,+(p_i-p_f)^\mu\frac{(p_f^2-p_i^2)}{Q^2} \right)\,\left(\epsilon_f^*\cdot \epsilon_i\right)\, \widetilde{G}_1(Q^2,p_i^2,p_f^2)\,
+\nn\\&
++\left(\epsilon_i^\mu\, p_f\cdot \epsilon_f^*\,
++\epsilon_f^{*\mu}\, p_f\cdot \epsilon_i\right)\,\widetilde{G}_3(Q^2,p_i^2,p_f^2)\,
+\nn\\&
++\left((p_f+p_i)^\mu \,+(p_i-p_f)^\mu\frac{(p_f^2-p_i^2)}{Q^2} \right)(\epsilon_f^*\cdot p_i)\,(\epsilon_i\cdot p_f)\,\widetilde{G}_5(Q^2,p_i^2,p_f^2).
+\label{eq:rho_to_rho_FF}
+\end{align}
+{\raul For the case where $p_f^2=p_i^2$ this is consistent with the standard Lorentz decomposition of the matrix elements of a stable spin-1 particle, e.g., Eq.~(5) in Ref.~\cite{Shultz:2015pfa}. Also, Ref.~\cite{Jaus:2002sv} gives an expression, Eq. (2.1), which claims to be the most general form for a electroweak transition matrix element between two spin-1 particles with arbitrary masses. When the current is just the electromagnetic current, it states that only three form factors survive. This is reassuring but the relationship between their expression and this one is not immediately obvious. }
+
+
+ \subsection{Lorentz decomposition in terms of amplitudes \label{sec:Lorentz_amps}}
+In the previous section we reviewed the Lorentz decomposition of the matrix elements of the QED current involving stable states. We are ultimately interested in the matrix elements both the initial and final states are unstable under the strong interactions. In particular, we will consider two scenarios: $\pi\gamma^\star\to\pi\pi$ and $\pi\pi\gamma\to\pi\pi$. The aim is to show that by first writing the Lorentz decomposition of the amplitudes, proceeded by the partial wave projection, one finds the same Lorentz structure as was founding the previous section. 
+
+In this section we first write the general Lorentz decomposition of these amplitudes. While in the following section we confirm the equivalence of these with the matrix elements decomposition of the previous section. 
+
+\subsubsection{Lorentz decomposition of $\pi\gamma^\star\to\pi\pi$}
+{\raul [A good reference on this is 1210.6793v2]} 
+
+
+First, let us decompose 
+\begin{align}
+\gamma^\star(q)\pi^+(p_1)\to\pi^+(p_2)\pi^0(p_3),
+\end{align}
+in terms of the Mandelstam variables $s=(q+p_1)^2$, $t=(p_1-p_2)^2$, $u=(p_1-p_3)^2$. The amplitude, or the matrix element, must be a pseudo-vector. To see this, consider the matrix element
+\begin{align}
+\langle \pi^+(p_2)\pi^0(p_3)|\mathcal{J}^\mu|\pi^+(p_1)\rangle.
+\end{align}
+Under parity, this would transform to 
+\begin{align}
+(-1)^3\langle \pi^+(p_2^0,-\vec{p}_2)\pi^0(p_3^0,-\vec{p}_3)|\mathcal{J}_\mu|\pi^+(p_1^0,-\vec{p}_1)\rangle
+=
+-\langle \pi^+(p_2^0,-\vec{p}_2)\pi^0(p_3^0,-\vec{p}_3)|\mathcal{J}_\mu|\pi^+(p_1^0,-\vec{p}_1)\rangle.
+\end{align} 
+
+Here, we have only four vector to consider, namely the four momenta. Only three of these are linearly independent of each other. Furthermore, a dot product between any two of momenta can be written in terms of the Mandelstam variables. The only pseudovector we can construct in terms of these is 
+\begin{align}
+V^\mu=\epsilon^{\mu\nu\alpha\beta}p_{1,\nu}p_{2,\alpha}p_{3,\beta}.
+\end{align}
+Under parity
+\begin{align}
+V^0&=\epsilon^{0ijk}p_{1,i}p_{2,j}p_{3,j}\to
+(-1)^3\epsilon^{0ijk}p_{1,i}p_{2,j}p_{3,j}=-V_0\\
+V^i&=\epsilon^{i0jk}p_{1,0}p_{2,j}p_{3,j}+\cdots\to
+(-1)^2\epsilon^{i0jk}p_{1,0}p_{2,j}p_{3,j}+\cdots=V^i=-V_i.
+\end{align}
+where the ``$\cdots$'' denote the other components of the tensor which transform the same way. 
+
+Note, any other term can be rewritten in the same form above, e.g.,
+\begin{align}
+\epsilon^{\mu\nu\alpha\beta}q_{\nu}p_{2,\alpha}p_{3,\beta}
+=\epsilon^{\mu\nu\alpha\beta}(p_{2}+p_{3}-p_{1})_{\nu}p_{2,\alpha}p_{3,\beta}
+=-\epsilon^{\mu\nu\alpha\beta}p_{1,\nu}p_{2,\alpha}p_{3,\beta}.
+\end{align}
+
+We conclude that the amplitude can only have the following form
+\begin{align}
+\mathcal{A}^{\mu}_{\pi\gamma^\star,\pi\pi}(s,t,u)&=
+\epsilon^{\mu\nu\alpha\beta}p_{1,\nu}p_{2,\alpha}p_{3,\beta}\mathcal{F}_{1}(s,t,u).
+\label{eq:pi_to_pipi}
+\end{align}
+
+
+
+Charge conservation implies
+\begin{align}
+q_\mu\mathcal{A}^{\mu}_{\pi\gamma^\star,\pi\pi}(s,t,u)&=0,
+\end{align}
+which is clearly satisfied since $q=p_{2}+p_{3}-p_{1}$. 
+
+At this stage, we have found qualitative agreement with the expression for the $\rho\gamma^\star\to\pi$ matrix element, Eq.~\ref{eq:pi_to_rho_FF}. Namely, we find that these two can be written in terms of a single scalar function. Equation~\ref{eq:pi_to_pipi} encodes more physics, since the final $\pi\pi$ need not have just the quantum numbers of the $\rho$. 
+
+\subsubsection{Lorentz decomposition of $\pi\pi\gamma^\star\to\pi\pi$}
+{\raul see https://arxiv.org/pdf/hep-ph/0203075.pdf\\
+https://arxiv.org/pdf/hep-ph/0209056.pdf}
+
+If instead, we consider the $\pi\pi\gamma\to\pi\pi$ matrix element, now we have have four linearly independent vectors, the four momenta of the system $p^{\mu}_{1},p^{\mu'}_{2},p^{\nu}_{3},p^{\nu'}_{4}$. The matrix element is now a Lorentz vector,
+\begin{align}
+\langle\pi^+(p_3);\pi^0(p_4)|{\mathcal{J}}^{\mu}|\pi^+(p_1)\pi^0(p_2)\rangle,
+\end{align}
+so we can, in principle, write the Lorentz decomposition in terms of these four vectors. Instead of doing this, let me first observe that this has more degrees of freedom that the previously example. With the ultimately goal of matching to the formalism presented in Ref.~\cite{Briceno:2015tza}, we will use the following set of variables to described the on-shell scalar amplitudes,
+\begin{align}
+Q^2=-(P_i-P_f)^2,E_i^*,\hat{k}_i,E_f^*,\hat{k}_f,
+\end{align} 
+and use the total and relative initial/final momenta ($P_i,P_f,k_i,k_f$) to describe the vector dependence in the moving frame, defined as
+\begin{align}
+p_1&=P_i-k_i,\\
+p_2&=k_i,\\
+p_3&=P_f-k_f,\\
+p_4&=k_f.
+\end{align}
+With this, we have
+\begin{align}
+\W^{\mu}_{\pi\pi\gamma^\star,\pi\pi}(p_1,p_2;p_3,p_4)&=
+P^{+\mu}\mathcal{F}_{1}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f)
++
+P^{-\mu}\mathcal{F}_{2}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f)
+\nn\\
+&+
+k^{+\mu}\mathcal{F}_{3}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f)
++
+k^{-\mu}\mathcal{F}_{4}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f).
+\end{align}
+\begin{align}
+P^+&=P_i+P_f\\
+P^-&=P_i-P_f\\
+k^+&=k_i+k_f\\
+k^-&=k_i-k_f.
+\end{align}
+
+
+Hermiticity tells us that 
+\begin{align}
+\mathcal{F}_{j}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f)
+=(-1)^{j+1}\mathcal{F}_{j}(Q^2;E_f^*,\hat{k}_f;E_i^*,\hat{k}_i).
+\end{align}
+
+Charge conservation implies that one of these amplitudes is not linearly independent
+\begin{align}
+P^-_\mu\W^{\mu}_{\pi\pi\gamma^\star,\pi\pi}(p_1,p_2;p_3,p_4)
+&=
+(E_i^{*2}-E_f^{*2})\mathcal{F}_{1}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f)
+-Q^2 \mathcal{F}_{2}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f)
+\nn\\
+&+
+P^-_\mu k^{+\mu}\mathcal{F}_{3}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f)
++
+P^-_\mu k^{-\mu}\mathcal{F}_{4}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f)
+\\
+&=0
+\\
+\Rightarrow
+\mathcal{F}_{2}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f)
+&=\frac{1}{Q^2}
+\left[
+(E_i^{*2}-E_f^{*2})\mathcal{F}_{1}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f)
+\right.
+\nn\\
+&+
+\left.
+(P^-\cdot k^{+})\mathcal{F}_{3}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f)
++
+(P^-\cdot k^{-})\mathcal{F}_{4}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f)
+\right].
+\end{align}
+
+Putting all of the pieces together, we get
+\begin{align}
+\W^{\mu}_{\pi\pi\gamma^\star,\pi\pi}(p_1,p_2;p_3,p_4)&=
+\left(P^{+\mu}+\frac{(E_i^{*2}-E_f^{*2})}{Q^2} P^{-\mu}\right)\mathcal{F}_{1}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f)
+\nn\\
+&+
+\left(k^{+\mu}+\frac{(P^-\cdot k^{+})}{Q^2} P^{-\mu}\right)
+\mathcal{F}_{3}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f)
++
+\left(k^{-\mu}+\frac{(P^-\cdot k^{-})}{Q^2} P^{-\mu}\right)
+\mathcal{F}_{4}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f).
+\label{eq:pipi_to_pipi}
+\end{align}
+Because $\mathcal{F}_{4}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f)$ is antisymmetric with respect to the interchange of initial and final states, we might want to make this explicit by redefining it in terms of 
+\begin{align}
+\mathcal{F}_{4}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f)
+\equiv 
+\frac{(E_i^{*2}-E_f^{*2})}{(E_i^{*2}+E_f^{*2})}
+\widetilde{\mathcal{F}}_{4}(Q^2;E_i^*,\hat{k}_i;E_f^*,\hat{k}_f)
+\end{align}
+
+{\red Now I'm really concerned that this term should vanish if we set the initial and final state to be the same. This is very strange, cause otherwise it seems to contribute. Perhaps this will fine and what appears }
+
+Again we find qualitative agreement between Eq.~\ref{eq:pipi_to_pipi} and that for the matrix elements of the $\rho\to\rho'$, Eq.~\ref{eq:rho_to_rho_FF}. Not only do we see that the two depend on just three Lorentz scalars, but also we find the first term to have the same exact kinematic dependence. This is quite nice and it partly explains why we had to consider two nondegenerate $\rho$ states. 
+
+Once again, this amplitude is far more general than that of the $\rho\to\rho'$ process, since this describes any allowed process where the initial and final states are projected to any partial wave, not just $\ell=1$. In fact, one should be able to find that when the initial and final states are projected onto an S-wave, only one Lorentz scalar amplitude survives, leading to a similar expression as in Eq.~\ref{eq:pi_to_pi_FF}.  This already tells us that likely that in this limit, the terms proportional to $\mathcal{F}_{3}$ and $\mathcal{F}_{4}$ must vanish.
+
+
+
+
+{\raul 
+Questions that I do not yet have an answer to:
+
+	1) If we project the initial and final states onto S-wave, should only one of these survive? I think the answer is yes and it's probably just $\mathcal{F}_1$, since the others depend linearly on $k^+$ or $k^-$. but how do I show this? I would have assumed this expression holds for any partial wave, and then you 
+	
+	2) Do have the arguments of the $\mathcal{F}$'s right? I think so...but getting a bit confused. 
+	
+	3) how do I do the partial wave projection of this thing? 
+}
+
+{\raul A reference that might be useful in all of this discussion is Ref.~\cite{Krutov:2004vc}, although I am still deciphering it.}
+
+{\raul Relativistic quark model calculation of the $\rho$ form factors ~\cite{Krutov:2004qx}}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \subsection{Equivalence between Lorentz decompositions \label{sec:equivalence}}
+\subsubsection{Checking equivalence between $\gamma^\star\pi\to\rho$ and $\gamma^\star\pi\to(\pi\pi)_{\ell=1}$}
+Here we verify the equivalence between Eq.~\ref{eq:pi_to_rho_FF} and Eq.~\ref{eq:pi_to_pipi} in the case where the final $\pi\pi$ is projected onto a $P$-wave. To do this, we follow steps presented in {\raul Ref..}
+
+{\raul [this is a text dump from the $\pi\gamma\to\pi\pi$ paper appendix]
+
+In this appendix we show that the decomposition of the $P$-wave matrix element in Eq.~\ref{eq:decomp} is equivalent to another common decomposition. The Lorentz invariant transition amplitude may be obtained by contracting the matrix element of the electromagnetic current with the polarization vector of the photon, $\epsilon^\mu(q,\lambda_\gamma)$, where $\lambda_\gamma$ is the helicity of the photon,
+\begin{align}
+{\langle \pi\pi|{\mathcal{J}}^{\mu}(0)| \pi\rangle}\epsilon_\mu(q,\lambda_\gamma)=
+\mathcal{M}_{\lambda_\gamma}.
+\end{align}
+
+
+A common decomposition for the  ${\gamma^\star(q, \lambda_\gamma)\, \pi(p_1) \to \pi(p_2)\, \pi(p_3)}$ amplitude, not projected into any particular partial wave, is
+\begin{equation}
+\mathcal{M}_{\lambda_\gamma} = \epsilon_{\mu \nu \rho \sigma}\,  \epsilon^\mu(q,\lambda_\gamma) p_1^\nu \, p_2^\rho \, p_3^\sigma \; T(s,t,Q^2) \label{pipi_invar}
+\end{equation}
+where the invariant amplitude, $T(s,t,Q^2)$, is a function of $s = (q+p_1)^2$, $t = (p_1 - p_2)^2 $, and the virtuality of the photon, $Q^2$.
+
+In our case we are interested in the amplitude for the $P$-wave, which can be obtained in the standard way~\cite{Jacob:1959at, Danilkin:2014cra} by partial-wave expanding $\mathcal{M}_{\lambda_\gamma}$,
+\begin{equation}
+\mathcal{M}_{\lambda_\gamma}=\sum_{J=1,3,\ldots} (2J+1) \, d^{(J)}_{\lambda_\gamma, 0}(\theta) \, A_{J; \lambda_\gamma}(s,Q^2),
+\end{equation}
+where we have chosen the scattering plane to have $\phi=0$, and where $d^{(J)}_{\lambda_\gamma, 0}(\theta)$ are the reduced Wigner $d$-functions. Enforcing parity conservation ensures that $A_{J; 0}(s,Q^2)=0$ and $A_{J; -1}(s,Q^2)=-A_{J; 1}(s,Q^2)$. The contribution of the $P$-wave can be isolated,
+\begin{equation}
+\mathcal{M}_{\lambda_\gamma}=-\frac{3}{\sqrt{2}} \lambda_\gamma \, \sin \theta \; A_{1; \lambda_\gamma}(s,Q^2) +\cdots,
+\label{eq:MatPwave}
+\end{equation}
+with the ellipses denoting the higher partial-wave contributions. 
+
+The decomposition in Eq.~(\ref{pipi_invar}) is most easily investigated in the cm-frame. If we let the incoming states have momenta lying along the $\hat{z}$-axis and the outgoing momenta in the $\hat{x}\hat{z}$-plane,
+\begin{align*}
+q^\mu = \big( E_\gamma, 0, 0, q \big) 	\quad& p_2^\mu = \big( E', k\sin \theta , 0, k \cos \theta \big) \\
+p_1^\mu = \big( E_1, 0, 0, -q \big) 	\quad& p_3^\mu = \big( E', -k\sin \theta , 0, -k \cos \theta \big), 
+\end{align*}
+with the photon polarization vector being ${\epsilon^\mu(q, \lambda_\gamma = \pm 1) = \mp \tfrac{1}{\sqrt{2}} \big( 0, 1, \pm i , 0 \big)}$. It follows that $\mathcal{M}_{\lambda_\gamma} =	-\sqrt{2} i \,  T(s,t,Q^2)\, k q E' \sin \theta $, and the presence of a single factor of $\sin \theta$, as is the case for the $P$-wave in Eq.~(\ref{eq:MatPwave}), indicates that the $P$-wave part of the amplitude must lack any further $t$-dependence in $T(s,t,Q^2)$. We also note that $\mathcal{M}_{\lambda_\gamma}$ contains explicitly the factors $q$ and $k$ which describe the $P$-wave threshold behavior in the initial and final states. In light of this we can write an invariant decomposition capable of describing the $P$-wave as
+%
+\begin{equation}
+\mathcal{M}_{\lambda_\gamma}^{\mathrm{[1]}} = \epsilon_{\mu \nu \rho \sigma}\,  \epsilon^\mu(q,\lambda_\gamma) p_1^\nu \, p_2^\rho \, p_3^\sigma \; T_1(s,Q^2) \label{pipi_P_invar},
+\end{equation}
+where $T_1(s,Q^2)$ should not have the $\propto k$, $\propto q$ threshold behavior and where the superscript ${\rm ``[1]"}$ denotes this is the first of two decompositions we are relating. 
+
+
+
+We are now in a place to reconcile this decomposition with the one used through this work, Eq.~\ref{eq:decomp}, which we rewrite here using the variables defined in this appendix,
+\begin{equation}
+\mathcal{M}_{\lambda_\gamma}^{[2]} =\epsilon_{\mu \nu \rho \sigma} \epsilon^\mu(q,\lambda_\gamma)\,  p_1^\nu\,  \epsilon^{\rho*}(P,\lambda) P^\sigma\; \mathcal A(s,Q^2) , \label{rho_pi_gamma}
+\end{equation}
+where $P^\sigma=(p_2+p_3)^\sigma$ and $\epsilon^{\rho*}(P,\lambda)$ is the polarization vector of the $\pi\pi$ system which has been projected in a \mbox{$P$-wave} with helicity $\lambda$. In this appendix we are considering the time-reversed process, $\gamma^\star \, \pi \to \pi\, \pi$ which explains the presence of the complex conjugate of the $\pi\pi$ polarization vector. 
+
+The claim is that Eq.~\ref{rho_pi_gamma} is equivalent to Eq.~\ref{pipi_P_invar}, after the $\pi\pi$ state appearing in the latter has been projected in a \mbox{$P$-wave}. To show this, we begin by constructing a $\pi\pi$ helicity state in the cm-frame,
+\begin{equation}
+\big| |\textbf{k}|; J=1, \lambda \big\rangle = \int \! d\hat{\mathbf{k}} \, \frac{Y_{1\lambda}(\hat{\mathbf{k}})}{\sqrt{4\pi}}\, \big| \pi(\textbf{k}) \pi(-\textbf{k})\big\rangle,
+\end{equation}
+which we can boost to a frame having momentum $\textbf{P}$ by first boosting the system along the $\hat{z}$-axis and then performing a rotation to the axis of the momentum
+\begin{equation}
+\big| \textbf{P}; |\textbf{k}|; J=1, \lambda \big\rangle = U[R(\hat{P})]\, U[Z_P]\,  \big| |\textbf{k}|; J=1, \lambda \big\rangle.
+\end{equation}
+
+The $\hat{z}$-axis boost acting on four-vectors can be expressed as
+\begin{equation}
+	\big[ Z_P \big]^\mu_\nu = 
+		\begin{bmatrix} 
+			\gamma & 0 & 0 & \beta \gamma \\
+			0 & 1 & 0 & 0 \\
+			0 & 0 & 1 & 0 \\
+			\beta \gamma & 0 & 0 & \gamma	
+		\end{bmatrix}
+		= \frac{1}{2 \omega_\pi}
+		\begin{bmatrix} 
+			\Epipi & 0 & 0 & |\textbf{P}|\\
+			0 & 1 & 0 & 0 \\
+			0 & 0 & 1 & 0 \\
+			|\textbf{P}| & 0 & 0 & \Epipi	
+		\end{bmatrix}
+\end{equation}
+since $\gamma = \frac{\Epipi}{2\omega_\pi}$ and $\beta \gamma = \frac{|\textbf{P}|}{2 \omega_\pi}$ where $\omega_\pi = \sqrt{m_\pi^2 + k^2}$. Then the action of the boost on $k^\mu = \big(\omega_\pi, \textbf{k}\big)$ and ${\bar{k}^\mu = \big(\omega_\pi , -\textbf{k} \big)}$ is
+\begin{align}
+k'^\mu &= \big[ Z_P \big]^\mu_\nu \, k^\nu = 
+	\begin{bmatrix} \tfrac{\Epipi}{2} + \tfrac{|\textbf{P}|}{2\omega_\pi} k_z \\ k_x \\ k_y \\ \tfrac{|\textbf{P}|}{2} + \tfrac{\Epipi}{2\omega_\pi} k_z \end{bmatrix},
+	\quad \quad\quad\nn\\
+\bar{k}'^\mu &= \big[ Z_P \big]^\mu_\nu \, \bar{k}^\nu = 
+	\begin{bmatrix} \tfrac{\Epipi}{2} - \tfrac{|\textbf{P}|}{2\omega_\pi} k_z \\ -k_x \\ -k_y \\ \tfrac{|\textbf{P}|}{2} - \tfrac{\Epipi}{2\omega_\pi} k_z \end{bmatrix},	
+\end{align}
+and as expected, $\bar{k}'^\mu = P^\mu - k'^\mu$. It follows that 
+\begin{equation}
+\big| \textbf{P}; |\textbf{k}|; J=1, \lambda \big\rangle = \int \! d\hat{\mathbf{k}} \, \frac{Y_{1\lambda}(\hat{\mathbf{k}})}{\sqrt{4\pi}}\, \big| \pi(R\textbf{k}') \pi( \textbf{P} - R\textbf{k}') \big\rangle.
+\end{equation}
+
+We can write the matrix element
+\begin{align}
+ \big\langle \textbf{P}; |\textbf{k}|; J=1, \lambda \big| {\mathcal{J}}^{\mu}(0) \big| \gamma(q, \lambda_\gamma)\, \pi(p_1) \big\rangle &=\nn\\
+ &\hspace{-5.5cm} 
+ \int \! d\hat{\mathbf{k}} \, \frac{Y_{1\lambda}^*(  \hat{\mathbf{k}})   }{\sqrt{4\pi}}\,  \big\langle \pi(R\textbf{k}') \pi( \textbf{P} - R\textbf{k}') \big| {\mathcal{J}}^{\mu}(0) \big| \gamma(q, \lambda_\gamma)\, \pi(p_1) \big\rangle,
+\end{align}
+and substituting in the decomposition in Eq.~(\ref{pipi_P_invar}) we have
+\begin{align}
+\mathcal{M}_{\lambda_\gamma}^{[1]}  
+ %&= \int \! d\Omega_k \, Y_1^{\lambda*}(\Omega_k)\, T_1(s,Q^2) \, \epsilon_{\mu\nu\rho\sigma} \, \epsilon^\mu(q,\lambda_\gamma) \, p_1^\nu \, \big(R k')^\rho\,  \big( P - Rk' \big)^\sigma \\
+ &= T_1(s,Q^2)\, \epsilon_{\mu\nu\rho\sigma} \, \epsilon^\mu(q,\lambda_\gamma) \, p_1^\nu \, P^\sigma \nn\\
+& \times\; \int \! d\hat{\mathbf{k}} \, \frac{Y_{1\lambda}^*(\hat{\mathbf{k}})}{\sqrt{4\pi}}\,\big(R k')^\rho\,
+ \end{align}
+which will be equivalent to Eq.~(\ref{rho_pi_gamma}) if $\int \! d\hat{\mathbf{k}} \, Y_{1\lambda}^*(\hat{\mathbf{k}})\,\big(R k')^\rho$ transforms in the same way as $\epsilon^{\rho*}(P, \lambda)$. Since the rotation can be factored out of the integral, and since $\epsilon^\rho(RP_z, \lambda) = \big[ R \big]^\rho_\sigma \epsilon^\sigma(P_z, \lambda)$, it follows that we just need to show that $X^\sigma(\lambda) = \int \! d\hat{\mathbf{k}} \, Y_{1\lambda}(\hat{\mathbf{k}})\, k'^\sigma$ transforms like $\epsilon^{\sigma}(P_z, \lambda)$. First we establish that $P_\mu X^\mu = 0$,
+\begin{align}
+	P_\mu X^\mu 
+ 	&= \int \! d\hat{\mathbf{k}} \, Y_{1\lambda}(\hat{\mathbf{k}})\, \left[ \frac{\Epipi^2}{2}  - \frac{P^2}{2} \right] = 0,
+\end{align}
+and then we may check that the $\lambda=\pm 1$ components are what is expected, e.g.,
+\begin{align}
+	X^\sigma(\lambda = +1) &= \int \! d\hat{\mathbf{k}} \, Y_{1,+1}(\hat{\mathbf{k}})\, k'^\sigma \nn\\
+	&= -\sqrt{\frac{4\pi}{3}} |\textbf{k}| \frac{1}{\sqrt{2}} \begin{bmatrix}
+		0 \\ 1 \\ i \\ 0
+	\end{bmatrix}\nn\\
+	&= \sqrt{\frac{4\pi}{3}} |\textbf{k}| \epsilon^\sigma(P_z,\lambda=+1),
+\end{align}
+and indeed the forms are equivalent. Note the presence of a factor of $|\textbf{k}| = k$ above, which suggests that $\mathcal A \sim k \, T_1$. Recalling that $T_1$ does not have the threshold factor for the final state $\pi \pi$, we see that in the case that the $\rho$ is unstable into $\pi \pi$, the quantity $\mathcal A$ should behave like $k$ around the $\pi \pi$ threshold. 
+
+
+}
+
+\subsubsection{Checking equivalence between $\gamma^\star\sigma\to\sigma$ and $\gamma^\star(\pi\pi)_{\ell=0}\to(\pi\pi)_{\ell=0}$}
+\subsubsection{Checking equivalence between $\gamma^\star\rho\to\rho'$ and $\gamma^\star(\pi\pi)_{\ell=1}\to(\pi\pi)_{\ell=1}$}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+  \subsection{Unitarity and Watson's theorem}
+  
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+  \subsection{Defining resonance pole}
+I believe that in order to extract the form factor of a resonance or bound state, we only need to consider $\Wdf$, not the full amplitude $\W$. To understand this, we need to remember the definition of $\W$, which is the sum over all diagrams with two-particle in the initial and final states and a single insertion of an external current. $\Wdf$ has the same definition but it exclude diagrams where the current couples to the external legs. An example of such diagrams are shown in Fig.~\ref{fig:not_in_iWdf}. 
+
+Now, the point is that the diagrams that are absent in $\Wdf$ will not give a pole in both the initial and final two-particle states. These only arise from the reescattering of two-particles states. In other words, the limit of $\W$ where both the energy of the initial and final states are taken to their corresponding resonant poles coincides with that of $\Wdf$. This limit, being depicted in Fig.~\ref{fig:IWdf_res_pole}, these amplitudes are equal to,
+\begin{align}
+\lim_{E_i^*,E_f^*\to E_R}i\W=\lim_{E_i^*,E_f^*\to E_R}i\Wdf=
+ \,{ig}\,\frac{i}{E_i^{*2}-E_R^2} i\w_R(Q^2)\frac{i}{E_f^{*2}-E_R^2}\,{ig},
+\end{align}
+where $g$ is the coupling of the resonance to the two-particle states, $\w_R(Q^2)$ is the electromagnetic matrix element of the resonance. From the Lorentz decomposition of this, we can define its form factors at $Q^2=-(P_i-P_f)^2$. 
+
+The power of this observation, is that, unlike $\W$, $\Wdf$ does not have kinematic divergences. This implies that we can do all of our analysis on a function that has no kinematic divergences to get a the form factor. 
+
+
+
+ Here my argument for why I think that in the narrow width limit, 
+\begin{align}
+ \Wtildf(P_f,P_i,L)  \equiv \Wdf(P_f,P_i)+\cdots
+\end{align}
+where ellipses denote corrections that depend on the volume but are suppressed by the width. 
+
+ \subsubsection{Narrow-width limit}
+
+In the narrow width limit and in vicinity of the resonance, 
+\begin{align}
+i\Wdf(P_f,P_i)
+&\sim
+ \,{ig}\,\frac{i}{E_i^{*2}-E_R^2} i\w_R(Q^2)\frac{i}{E_f^{*2}-E_R^2}\,{ig},\\
+ i\mathcal M(P_i) 
+&\sim
+ \,{ig}\,\frac{i}{E_i^{*2}-E_R^2} \,{ig},
+\\
+i \mathcal M(P_f) 
+&\sim
+ \,{ig}\,\frac{i}{E_f^{*2}-E_R^2}\,{ig},
+\end{align}
+
+This implies that 
+ \begin{equation}
+\label{eq:WtiltoWdf}
+ \Wtildf(P_f,P_i,L)  \sim
+  \,{ig}\,\frac{i}{E_i^{*2}-E_R^2} \left[ \w_R(Q^2)+g^2[G(L) \cdot \w](P_f,P_i)\right]\frac{i}{E_f^{*2}-E_R^2}\,{ig}.\\
+ \end{equation}
+ Since $\Gamma\sim g^2$, we see that the residue of this term is equal to $w_R(Q^2)$ up to finite-volume corrections that are suppressed by the width. Note, the resonance poles will be canceled by the $\mathcal{R}$ appearing adjacent to them.
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[t]
+\begin{center}
+\subfigure[]{
+\label{fig:not_in_iWdf}
+\includegraphics[scale=0.5]{figs/not_in_iWdf}}
+\hspace{.5cm}
+\subfigure[]{
+\label{fig:IWdf_res_pole}
+\includegraphics[scale=0.5]{figs/IWdf_res_pole}}
+\caption{(a) Shown is an example of diagrams absent in $\Wdf$. (b) Shown is the postulate behavior of the $\Wdf$ near the resonance pole. }\label{fig:Wdf_pole}
+\end{center}
+\end{figure*}
+%
+
+
+
+
+\clearpage
+
