@@ -1,0 +1,127 @@
+
+	\noindent
+	We describe here how to derive a form of the generalized $Z^{\bf\Delta}_{alm}[s,x^2]$ in particular how to obtain Eq.~(\ref{eq:main_Z_acc}) from Eq.~(\ref{eq:clm}).\\
+	We will follow Ref.~\cite{Leskovec:2012gb}.
+	The generalized Zeta function is defined as
+	\begin{eqnarray}
+	Z^{\bf\Delta}_{lm}[s,x^2]&=&\sum_{{\bf r}\in P_{\bf \Delta}}\frac{r^l\,Y_{lm}(\hat {\bf r})}{(r^2-x^2)^s}\, ,\label{eq:Zdelta}
+	\end{eqnarray}
+	where the domain $P_{\bf \Delta}$ is given by
+	\begin{eqnarray}
+	P_{\Delta}= \left\{{\bf r}|{\bf r}={\bm \gamma}^{-1}({\bf n}-\frac{1}{2}{\bf \Delta}),{\bf n}\in Z^{3}\right\}\, \label{eq:Pd},
+	\end{eqnarray}
+	with
+	\begin{eqnarray}
+	{\bf \Delta}&=&\frac{{\bf P}L}{2\pi}\left(1+\frac{m_{a1}^1-m_{a2}^2}{E^{*2}}\right)\, .
+	\end{eqnarray}
+	Using the following integral definition of the Gamma function (valid only if $Re(s)>0$)
+	\begin{eqnarray}
+	\Gamma(s)&=&a^s\int_0^\infty dt t^{s-1}e^{-ta}\, ,
+	\end{eqnarray}
+	for $a=r^2-x^2$ we can rewrite Eq.~(\ref{eq:Zdelta}) as
+	\begin{eqnarray}
+	Z_{lm}^{\bf \Delta}[s,x^2]&=&\frac{1}{\Gamma(s)}\sum_{{\bf r}\in P_{\bf \Delta}}r^lY_{lm}(\hat{{\bf r}})\int_0^\infty dt t^{s-1}e^{-t(r^2-x^2)}\\
+	&=&\frac{1}{\Gamma(s)}\sum_{{\bf r}\in P_{\bf \Delta}}r^lY_{lm}(\hat{{\bf r}})
+	\left[\int_0^1 dt t^{s-1}e^{-t(r^2-x^2)}+\int_1^\infty dt t^{s-1}e^{-t(r^2-x^2)}\right]\label{eq:Zexp}.\nonumber\\
+	&=&I^{\bf\Delta}_{lm}[s,x^2]+J^{\bf\Delta}_{lm}[s;x^2]\, ,
+	\end{eqnarray}
+	with
+	\begin{eqnarray}
+	J^{\bf \Delta}_{lm}[s;x^2]&=&\frac{1}{\Gamma(s)}\sum_{{\bf r}\in P_{\bf \Delta}}r^lY_{lm}(\hat{{\bf r}})\int_1^\infty dt t^{s-1}e^{-t(r^2-x^2)}\, ,
+	\end{eqnarray}
+	and similarly for $I^{\bf\Delta}_{lm}[s;x^2]$.
+	For $s=1$ the function $J^{\bm\Delta}_{lm}[s;x^2]$ is easily evaluated
+	\begin{eqnarray}
+	J^{\bm\Delta}_{lm}[s;x^2]&=&\sum_{{\bf r}\in P_{\bf \Delta}}r^lY_{lm}(\hat{{\bf r}})\frac{e^{-(r^2-x^2)}}{r^2-x^2}\, .
+	\end{eqnarray}
+	For reasons that will be clear later it is convenient to retain the general $s$ dependence in $I^{\bf\Delta}_{lm}[s,x^2]$.
+	We also define, for convenience, the following function 
+	\begin{eqnarray}
+	F({\bf r})&=&r^lY_{lm}(\hat{{\bf r}})\, e^{-tr^2}\, ,\label{eq:bigF}
+	\end{eqnarray}
+	and therefore we can write 
+	\begin{eqnarray}
+	I^{\bf\Delta}_{lm}[s,x^2]&=& \frac{1}{\Gamma(s)}\int_0^1dt\,t^{s-1}e^{tx^2}\sum_{{\bf r}\in P_\Delta }F({\bf r})\, .
+	\end{eqnarray}
+	We recall that ${\bf r}\in P_\Delta$ is a function of ${\bf n}\in\mathbb{Z}^3$ (as it can be seen from Eq.~(\ref{eq:Pd}))
+	 equivalent to $\sum_{\bf n\in \mathbb{Z}^3}F({\bf r}({\bf n}))$ and therefore
+	 \begin{eqnarray}
+	 \sum_{{\bf r}\in P_\Delta }F({\bf r})&=&\sum_{\bf n\in \mathbb{Z}^3}F({\bf r}({\bf n}))=\sum_{\bf n\in \mathbb{Z}^3}f({\bf n})\, ,\label{eq:sums}
+	 \end{eqnarray}
+	 where we have defined the function $f({\bf n})$. 
+	 Using Poisson summation formula we can rewrite the sum of Eq.~(\ref{eq:sums}) as
+	\begin{eqnarray}
+	\sum_{\bf n\in \mathbb{Z}^3}F({\bf r}({\bf n}))=\sum_{\bf n\in \mathbb{Z}^3}f({\bf n})&=&\sum_{\bf n\in \mathbb{Z}^3}\int d{\bf y}f({\bf y})e^{i2\pi{\bf n}\cdot{\bf y}}=\sum_{\bf n\in \mathbb{Z}^3}\int d{\bf y}F({\bf r}({\bf y}))e^{i2\pi{\bf n}\cdot{\bf y}}\, .
+	\end{eqnarray}
+	where in the last passage is ${\bf r}={\bm \gamma}^{-1}({\bf y}-\frac{1}{2}{\bf \Delta})$.
+	Remembering Eq.~(\ref{eq:bigF}) we can rewrite the previous expression as
+	\begin{eqnarray}
+	\sum_{\bf n\in \mathbb{Z}^3}f({\bf n})&=&\sum_{\bf n\in \mathbb{Z}^3}\int d{\bf y}|{\bf r}({\bf y})|^lY_{lm}(\hat{{\bf r}}({\bf y}))\, e^{-t|{\bf r}({\bf y})|^2+i2\pi{\bf n}\cdot{\bf y}}\, .
+	\end{eqnarray}
+	It is convenient to 
+	perform the change of variables
+	\begin{eqnarray}
+	{\bf y}&=&{\bm \gamma}{\bf r}+\frac{1}{2}{\bf \Delta}\, ,
+	\end{eqnarray}
+	that leads to the following change in the integration measure $d{\bf y}=\gamma d{\bf r}$.  Therefore we have
+	\begin{eqnarray}
+	f({\bf n})&=& e^{i\pi{\bf n}\cdot{\bf\Delta}}\gamma \int d{\bf r}r^lY_{lm}(\hat{\bf r})e^{-tr^2+i2\,\pi{\bf n}\cdot({\bm \gamma}{\bf r})}\nonumber\\
+	&=& e^{i\pi{\bf n}\cdot{\bf\Delta}}\gamma \int_0^\infty dr r^{2+l} e^{-tr^2}\int d\hat{\bf r}Y_{lm}(\hat{\bf r})e^{-i{\bf k}\cdot{\bf r}}\, ,
+	\end{eqnarray}
+	where in the last passage we have defined, for convenience, ${\bf k}=-2\pi{\bm \gamma}^T{\bf n}$. Using the well known relation for $e^{-i{\bf k}\cdot{\bf r}}$
+	\begin{eqnarray}
+	e^{-i{\bf k}\cdot{\bf r}}&=&4\pi\sum_{l^\prime=0}^{\infty}\sum_{m^\prime=-l^\prime}^{l^\prime}(-i)^{l^\prime}Y_{l^\prime m^\prime}({\hat {\bf k}})Y_{l^\prime m^\prime}(\hat{{\bf r}})^*j_{l^\prime}(kr)\, ,
+	\end{eqnarray}
+	we obtain
+	\begin{eqnarray}
+	f({\bf n})&=&4\pi (-i)^le^{i\pi{\bf n}\cdot{\bf\Delta}}\gamma\, Y_{lm}(\hat{{\bf k}})\underbrace{\int_0^\infty dr r^{2+l} e^{-tr^2}j_l(kr)}_{f_l(t)}\, .\label{eq:fn_final}
+	\end{eqnarray}
+	{\color{red}
+	The Hankel transform can be evaluated using MATHEMATICA (as Felipe did) or SYMPY (as I did) is
+	\begin{eqnarray}
+	f_l(t)=\frac{k^l}{2^{l+1}t^{l+3/2}}\Gamma(l+3/2)\frac{_1F_1(l+3/2,l+1,-k^2/(4t))}{\Gamma(l+1)}\, ,
+	\end{eqnarray}
+	where $_1F_!(a,b,c)$ is the hypergeometric function of the first kind.}
+	In Ref.~\cite{Leskovec:2012gb} the Hankel transform $f_l(t)$ is stated to be
+	\begin{eqnarray}
+	f_l(t)&=&\frac{e^{-k^2/(4\,t)}}{4\,\pi}\left(\frac{k}{2t}\right)^l\left(\frac{\pi}{t}\right)^{3/2}\, .\label{eq:fl_lesko}
+	\end{eqnarray}
+	{\color{red}I couldn't reconcile the two expressions}. So assuming the correctness of Eq.~(\ref{eq:fl_lesko}) we finally obtain
+	\begin{eqnarray}
+	f({\bf n})&=&(-i)^le^{i\pi{\bf n}\cdot{\bf\Delta}}\gamma\, Y_{lm}(\hat{{\bf k}})e^{-k^2/(4\,t)}\left(\frac{k}{2t}\right)^l\left(\frac{\pi}{t}\right)^{3/2}\, .
+	\end{eqnarray}
+	Therefore $I^{\bf\Delta}_{lm}[s,x^2]$ can now be written as
+	\begin{eqnarray}
+		I^{\bf\Delta}_{lm}[s,x^2]&=&\frac{(-i)^l\pi^{3/2}\gamma}{\Gamma(s)}\int_0^1dt\,t^{s-5/2}e^{tx^2}\sum_{{\bf n}\in\mathbb{Z}^3}e^{i\pi{\bf n}\cdot{\bf \Delta}}Y_{lm}(\hat{\bf k})e^{-k^2/(4\,t)}\left(\frac{k}{2t}\right)^l\, .
+		%&=&\frac{(-i)^l\pi^{3/2}\gamma}{\Gamma(s)}\int_0^1dt\,t^{s-5/2}e^{tq^2}\nonumber\\
+		%&+&\frac{(-i)^l\pi^{3/2}\gamma}{\Gamma(s)}\int_0^1dt\,t^{s-5/2}e^{tq^2}\sum_{{\bf n}\in\mathbb{Z}^3/\{0\}}e^{i\pi{\bf n}\cdot{\bf \Delta}}Y_{lm}(\hat{\bf k})e^{-k^2/t}\left(\frac{k}{2t}\right)^l
+	\end{eqnarray}
+	We note that the term ${\bf n}={\bf 0}$ in the above sum is different from zero only for $l=m=0$.
+	It is important to note now that for the case of interest here ($s=1$) there is a diverrgence for ${\bf n}=0$ and $l=m=0$.
+	Indeed we have
+	\begin{eqnarray}
+	({\mbox term\,\, in\,\,}I^{\bf\Delta}_{00}[s,x^2] {\mbox \,\,with\,\,n=0 })&=&\frac{\pi\gamma}{2\Gamma(s)}\int_0^1dt t^{s-5/2}e^{tq^2}\nonumber\\
+	&=&\frac{\pi\gamma}{2\Gamma(s)}\int_0^1dt\left[t^{s-5/2}(e^{tq^2}-1)+t^{s-5/2}\right]\, ,\label{eq:term_div}
+	\end{eqnarray} 
+	The first integral for $s=1$ becomes
+	\begin{eqnarray}
+	\int_0^1dt\frac{e^{tq^2}-1}{t^{3/2}}\, ,
+	\end{eqnarray}
+	which is finite. The second integral in Eq.~\ref{eq:term_div} is divergent for $s=1$ (trivially 
+	$\int_0^1dt/t^{3/2}=\infty$). Following Ref.~\cite{Leskovec:2012gb} we consider the function
+	\begin{eqnarray}
+	g(s)&=&\int_0^1dtt^{s-5/2}=\frac{1}{s-3/2}\, ,\label{eq:g_s}
+	\end{eqnarray}
+	for $s>3/2$.which is finite. We can have a finite value of $g(s)$ for $s=1$ if we analitically continue  Eq.~(\ref{eq:g_s}) to $s=1$. Using this procedure (and evaluating the r.h.s. of Eq.~(\ref{eq:g_s})) we have $g(s=1)=-2$.\\
+	Finally collecting everything we have
+	\begin{eqnarray}
+	Z^{\bf\Delta}_{lm}(s=1,x^2)&=&\sum_{{\bf r}\in P_\Delta}\frac{e^{-(r^2-x^2)}}{r^2-x^2}r^lY_{lm}(\hat{{\bf r}})+\gamma(-i)^l\pi^{3/2}\int_0^1dt\,\frac{e^{tx^2}}{t^{3/2}}\sum_{{\bf n}\in\mathbb{Z}^3/\{0\}}e^{i\pi{\bf n}\cdot{\bf \Delta}}Y_{lm}(\hat{\bf k})e^{-k^2/(4t)}\left(\frac{k}{2t}\right)^l\nonumber\\
+	&+&\frac{\pi\gamma}{2}\delta_{l,0}\delta_{m,0}\left[\int_0^1 dt\,\frac{(e^{tx^2}-1)}{t^{3/2}}-2\right]\, ,
+	\end{eqnarray}
+	which agrees with Eq.~(\ref{eq:main_Z_acc}) {\color{red}except for the sign in the exponent 
+	$e^{i\pi{\bf n}\cdot{\bf \Delta}} $}.
+	 
+
+	%\begin{eqnarray}
+	
+	%\end{eqnarray}
