@@ -1,109 +1,128 @@
-Before diving into details regarding how the desired observables can be extracted using lattice QCD, it is worth defining in detail the infinite-volume quantities we will studying. Our aim is two-fold:
-	\begin{itemize}
-	\item First, we will explain how different components of the $\pi\pi\gamma^\star\to\pi\pi$ amplitude can be extracted from lattice QCD. In particular, we will focus on the components of this amplitude where both the initial and final state have been projected onto an isotriplet. 
-	\item Constraining this in a large kinematic window, we can then analytically continue onto the $\rho$ poles of the initial and final states, and obtain the three form-factors of the $\rho$. 
-	\end{itemize}
+Before describing how the desired observables can be extracted using lattice QCD, it is instructive to discuss the infinite-volume quantities that we aim to calculate. Our aim is two-fold:
+	\begin{enumerate}
+	\item Explain how different components of the $\pi\pi\gamma^\star\to\pi\pi$ amplitude can be extracted from lattice QCD. We will focus on the components where both the initial and final state have been projected onto an isotriplet. 
+	\item Constrain the amplitude as much as possible, in the largest possible kinematic window. We can then analytically continue initial and final states to the $\rho$ pole to obtain the four form factors of the $\rho$. 
+	\end{enumerate}
 
-	In order to take the first step, we will need the formalism introduced in Ref.~\ref{Briceno:2015tza}, which we review in detail in {\raul Secs.~{XXX}} and is sketched in Fig.~\ref{fig:flowchart}. The two key inputs, in addition to the standard matrix elements, will be the 
+	In order to take the first step, we will need the formalism introduced in Ref.~\cite{Briceno:2015tza}. The approach is sketched in Fig.~\ref{fig:flowchart} and is reviewed in detail in Sec.~\ref{sec:pipigs_pipi}. The two key inputs, in addition to the standard matrix elements, are 
 	\begin{itemize}
-	\item $\pi\pi\to\pi\pi$ scattering amplitude,
-	\item and the form factors of the individual final $\pi$ states.
+	\item the $\pi\pi\to\pi\pi$ scattering amplitude,
+	\item the single pion form factor, $\langle \pi \vert \mathcal J^\mu \vert \pi \rangle$.
 	\end{itemize}
 	
-	In this section we begin by reviewing basic consequences of the symmetries of the infinite-volume states: isospin, parity, G-parity, angular momentum, and charge conservation. 
+	In this section we begin by reviewing basic consequences of the symmetries of the infinite-volume system: isospin, parity, G-parity, angular momentum, and charge conservation. 
 	
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[t]
 \begin{center}
 \subfigure[]{
 \includegraphics[width=.8\textwidth]{figs/flowchart2}}
-\caption{ {\raul Need to update this to include the step towards the form factors...}}\label{fig:flowchart}
+\caption{Flowchart summarizing the process for extracting resonance form factors using the formalsim of Ref.~\cite{Briceno:2015tza}. {\mh [check update]}}\label{fig:flowchart}
 \end{center}
 \end{figure*}
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Some comments about isospin and charge}
-The aim of this project is to explain how one can obtain the form factors of resonance. In particular, we will be focusing on the electromagnetic form factors. Furthermore, we will have resonances that couple to $\pi\pi$ in mind. In this regard let us refresh our minds on the isospin states of the $\pi\pi$ system, and their resonance content. First, the isostensor, has no resonances, and their isospin states can be written in terms of the charged pion states,
+\subsection{Isospin and charge}
+
+The aim of this project is to explain how one can obtain the form factors of a resonance. In particular, we will be focusing on electromagnetic form factors and to resonances that couple to $\pi\pi$ states. With this in mind, it is useful to review the isospin projections of the $\pi\pi$ system, and the resonance content of each channel, beginning with the isostensor. This channel has no resonances; the individual states are given by
 \begin{align}
-|I=2,m_I=2\rangle&=|\pi^+\pi^+\rangle,\\
-|I=2,m_I=1\rangle&=\frac{1}{\sqrt{2}}\left(|\pi^+\pi^0\rangle+|\pi^0\pi^+\rangle\right),\\
-|I=2,m_I=0\rangle&=\frac{1}{\sqrt{6}}\left(|\pi^+\pi^-\rangle+|\pi^-\pi^+\rangle+2|\pi^0\pi^0\rangle\right).\\
+|I=2,m_I=2\rangle&=|\pi^+\pi^+\rangle \,,\\
+|I=2,m_I=1\rangle&=\frac{1}{\sqrt{2}}\left(|\pi^+\pi^0\rangle+|\pi^0\pi^+\rangle\right) \,,\\
+|I=2,m_I=0\rangle&=\frac{1}{\sqrt{6}}\left(|\pi^+\pi^-\rangle+|\pi^-\pi^+\rangle+2|\pi^0\pi^0\rangle\right) \,.
 \end{align}
-The isovector channel, has the $\rho=(\rho^+,\rho^0,\rho^-)$. The $\rho^0$ is neutral, as a result, we expect this to have a fairly small coupling to the electromagnetic current. Therefor, we will focus on the $\rho^+$. These couple respectively to the following $\pi\pi$ states,
+
+By contrast, the isovector channel contains the rho resonance, $\rho=(\rho^+,\rho^0,\rho^-)$. {\mh The $\rho^0$ is neutral meaning that the form factor must vanish at zero momentum transfer. As a result, we expect this to have a suppressed coupling to the electromagnetic current, also away from the zero-momentum-transfer point.} Therefore, we will focus on the $\rho^+$. The definition of $I=1$ $\pi\pi$ states and the association to the $\rho$ states is as follows:
 \begin{align}
 \rho^+:\hspace{.5cm}|I=1,m_I=1\rangle&=\frac{1}{\sqrt{2}}\left(|\pi^+\pi^0\rangle-|\pi^0\pi^+\rangle\right),\\
-\rho^0:\hspace{.5cm}|I=1,m_I=0\rangle&=\frac{1}{\sqrt{2}}\left(|\pi^+\pi^-\rangle-|\pi^-\pi^+\rangle\right).\\
+\rho^0:\hspace{.5cm}|I=1,m_I=0\rangle&=\frac{1}{\sqrt{2}}\left(|\pi^+\pi^-\rangle-|\pi^-\pi^+\rangle\right) \,.
 \end{align}
-Here we notice two things. First, if we think of the $\rho^0$ indeed as a resonance that couples to $\pi^+\pi^-$, and we proceeded to evaluate diagram by diagram the coupling of the $|\pi^+\pi^-\rangle$ state to the electromagnetic current, we will get zero, since the $\pi^+$ and $\pi^-$ are oppositely charged. Arriving at the same conclusion as above. Second, for the $|\pi^+\pi^0\rangle$ state, only the $\pi^+$ will couple to the electromagnetic current. As already alluded to before, we will need the form factors of the individual $\pi$, given that only that of the $\pi^+$ is expected to be nonzero, we will only need to calculate this one. 
+Here we notice two things. First, if we think of the $\rho^0$ indeed as a resonance that couples to $\pi^+\pi^-$, and we proceeded to evaluate diagram by diagram the coupling of the $|\pi^+\pi^-\rangle$ state to the electromagnetic current, we will get zero, since the $\pi^+$ and $\pi^-$ are oppositely charged. Arriving at the same conclusion as above. Second, for the $|\pi^+\pi^0\rangle$ state, only the $\pi^+$ will couple to the electromagnetic current. As already stated above, we will need the form factors of the individual pions to calculate the rho form factor. Given that only that of the $\pi^+$ is expected to be nonzero, we will only need to calculate this one. 
+{\mh [I don't think I'm happy with these comments. First I'm not sure one can diagramatically separate the coupling to $\pi^+$ and $\pi^-$ and make them cancel. Second, both in the context of the $\rho^0$ and the $\pi^0$, the vanishing only holds at $Q^2=0$. Thus for nonzero $Q^2$ the $\rho^0$ should give a nonzero result, so that the individual pions had better not cancel. Similarly I think we will have to calculate the $\pi^0$ form factor to get the full result... or just argue that neglecting it is a numerically good approximation.]}
 
 
 Finally, the isoscalar channel couples to the $\sigma$,
 \begin{align}
 \sigma:\hspace{.5cm}|I=0,m_I=0\rangle&=\frac{1}{\sqrt{3}}\left(|\pi^+\pi^-\rangle+|\pi^-\pi^+\rangle-|\pi^0\pi^0\rangle\right).
 \end{align}
-This, of course, is neutral, and for the same reasons given above, is expected to have a vanishing eletromagnetic form factor. 
+This, of course, is neutral, and for the same reasons given above, is expected to have a suppressed eletromagnetic form factor, vanishing at zero momentum transfer.
 
-To conclude, of the $\pi\pi$ channels, the one that is most sensible to consider is the $I,m_I=(1,1)$ channel, since this is expected to have the most dominant resonance form factors. Finally, the $\rho^+$ is a vector, which implies that there will be three-independent form factors to determine, the charge, magnetic and quadrupole form factors. These are proportional to the the charge, magnetic moment, and quadrupole moment of the $\rho^+$. Furthermore, one can obtain the correspond radii of the $\rho^+$. We will discuss the matrix elements in terms of the Lorentz decomposition of these form factors in Sec.~\ref{sec:Lorentz_decomp}.
+In conclusion, of the $\pi\pi$ channels, the one that is most sensible to consider here is $(I,m_I)=(1,1)$, since this is expected to have the largest resonance form factors. The $\rho^+$ is a vector, implying that there will be four independent form factors to determine, as we argue below.
+%
+{\mh [Can we still use the following text?: three-independent form factors to determine, the charge, magnetic and quadrupole form factors. These are proportional to the the charge, magnetic moment, and quadrupole moment of the $\rho^+$. Furthermore, one can obtain the correspond radii of the $\rho^+$.]} 
+%
+After examining which matrix elements are allowed in the following subsection, we discuss the Lorentz decomposition of the matrix elements in terms of form factors in Sec.~\ref{sec:Lorentz_FFs}.
 
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \subsection{Allowed matrix elements}
 
 We are interested in evaluating matrix elements of the QED current
 \begin{align}
-{\mathcal{J}}^{\mu}=q_u\bar{u}\gamma^\mu u+q_d\bar{d}\gamma^\mu d=(2\bar{u}\gamma^\mu u-\bar{d}\gamma^\mu d)/3.
+{\mathcal{J}}^{\mu}=q_u\bar{u}\gamma^\mu u+q_d\bar{d}\gamma^\mu d= \big (2\bar{u}\gamma^\mu u-\bar{d}\gamma^\mu d \big )/3 \,.
 \end{align} 
 It is convenient to decompose this into an isovector and isoscalar current, 
 \begin{align}
-{\mathcal{J}}^{\mu}&=\frac{ \rho^{0,\mu}}{\sqrt{2}}+\frac{\omega^{\mu}}{3\sqrt{2}}
+{\mathcal{J}}^{\mu}&=\frac{ \rho^{0,\mu}}{\sqrt{2}}+\frac{\omega^{\mu}}{3\sqrt{2}} \,,
 \end{align}
 where
 \begin{align}
-\rho^{0,\mu}&=(\bar{u}\gamma^\mu u-\bar{d}\gamma^\mu d)/\sqrt{2},\\
-\omega^{\mu}&=(\bar{u}\gamma^\mu u+\bar{d}\gamma^\mu d)/\sqrt{2}.\\
+\rho^{0,\mu}&= \big ( \bar{u}\gamma^\mu u-\bar{d}\gamma^\mu d \big )/\sqrt{2} \,,\\
+\omega^{\mu}&= \big (\bar{u}\gamma^\mu u+\bar{d}\gamma^\mu d \big )/\sqrt{2} \,.
 \end{align} 
-The $\rho^{0,\mu}$ component has the quantum number of the $I_z=0$ component of the $\rho$ meson, namely $I^G(J^{P})=1^{+}(1^{-})$,
+The $\rho^{0,\mu}$ component has the quantum number of the $I_z=0$ component of the $\rho$ meson, namely $I^G(J^{P})=1^{+}(1^{-})$,%
 %FOOTNOTE
 \footnote{$I=$isospin, $G=$G-parity, $J$=total angular momentum, $P$=parity.}
 while the $\omega^{\mu}$ piece has the quantum numbers of the $\omega$ meson, $0^{-}(1^{-})$. Strictly speaking, these are the quantum numbers of the spatial piece of the current; the temporal components are related via Lorentz symmetry. 
 
 
-For the $\pi$ matrix elements, one can explicitly evaluate the contractions {\raul (I get that the disconnected piece of the $\rho^{0,\mu}$ current vanishes, but not for the $\omega$ piece, so not $100\%$ sure about this)}, to find that only the component of the QED current that survives the $\rho$-like piece
+For the single-pion matrix elements, one can explicitly evaluate the contractions {\raul (I get that the disconnected piece of the $\rho^{0,\mu}$ current vanishes, but not for the $\omega$ piece, so not $100\%$ sure about this)}, to find that only the component of the QED current that survives the $\rho$\,-like piece. {\mh [I am not so sure if it is true that we can see the vanishing by evaluating contractions. Consider in particular
+\begin{align}
+\langle \pi  \vert \omega^\mu \vert \pi \rangle & \propto \langle 0 \vert ( \bar q \tau^a \gamma_5 q )   (\bar{q} \mathbb I \gamma^\mu  q)  ( \overline q \tau^a \gamma_5 q  )\vert 0 \rangle \,, \\
+& = - \text{Tr} \big [ S(i, f)  \tau^a \gamma_5  S(f,c) \mathbb I \gamma^\mu S(c,i) \tau^a \gamma_5 \big ] + \text{Tr} \big [ S(i, f)  \tau^a \gamma_5  S(f,i) \tau^a \gamma_5 \big ]  \text{Tr} \big [ S(c,c) \mathbb I \gamma^\mu  \big ] \,.
+\end{align}
+I don't there is an easy way to see that this is zero. One approach to argue that it vanishes is to note that a field configuration and its G-parity conjugate must have the same weight in the path integral. So one can consider the sum of these terms with their G-parity conjugates. I would suspect these should cancel to zero. But in the end this is the same as just studying the effect of G-parity on the matrix element and I think the latter is more elegant. So, if this is true, I would vote to drop discussion about contractions here. Of course it is still important to state that the disconnected part of the $\rho^{0,\mu}$ matrix element vanishes.]
+
+}
+
+
 \begin{align}
 \langle\pi|{\mathcal{J}}^{\mu}|\pi\rangle=
 \langle\pi|\rho^{0,\mu}|\pi\rangle/\sqrt{2}.
 \end{align}
 
-One can more generally find which components vanish, by considering the quantum numbers of the initial and final states in conjunction with those of the current. It is convenient to consider this in terms of the as a scattering process, where you have $\pi\gamma^\star\to\pi$. The advantage of doing this is that you are explicitly reminded of the additional degree of freedom associated with the the relative angular momentum ($\ell$) between the two initial states. This also introduces yet another parity to bear in mind. 
+\bigskip
+
+One can more generally find which components vanish, by considering the quantum numbers of the initial and final states in conjunction with those of the current. It is convenient to consider this in terms of a scattering process, $\pi\gamma^\star\to\pi$. The advantage of doing this is that one is explicitly reminded of the additional degrees of freedom associated with the the relative angular momentum ($\ell$) between the two initial particles. We also stress that this affects the total parity of the incoming state.
 
 
-With this, we can tabulate all possible allowed combinations quantum numbers for  $\pi\gamma^\star\to\pi$,
+With this in mind, we tabulate all possible combinations of quantum numbers for $\pi\gamma^\star$ and check which configurations can overlap the final $\pi$
 \begin{center}
+\renewcommand{\arraystretch}{1.2}
  \begin{tabular}{ |c | c | c |c|c| c|} 
-\hline
-Current [$I^G(J^{P})$]
+\hline 
+\ \ current [$I^G(J^{P})$] \ \ 
 & 
-Initial hadron
+\ \ initial hadron \ \ 
 &
-relative $\ell$
+\ \ relative $\ell$ \ \ 
 &
-Possible final states
+\ \ possible final states \ \ 
 & 
-Final hadron
+\ \ final hadron \ \ 
 & 
-Overlap?
+\ \ overlap? \ \ 
 %%%%%%%%%%%%%%%%%%%%%%%
-\\\hline
-$\rho^{0,i}[1^{+}(1^{-})]$
+\\ \hline \hline
+\multirow{3}{*}{$\rho^{0,i}[1^{+}(1^{-})]$}
 &
-$\pi[1^{-}(0^{-})]$
+\multirow{3}{*}{$\pi[1^{-}(0^{-})]$}
 &
 $0$
 &
 $[1^{-}(1^{+})],\ldots$
 &
-$\pi[1^{-}(0^{-})]$
-&No, violates parity cons.
+\multirow{3}{*}{$\pi[1^{-}(0^{-})]$}
+&No (violates $P$)
 %%%%%%%%%%%%%%%%%%%%%%%
 \\
 &
@@ -112,78 +131,151 @@ $1$
 &
 $[1^{-}(0^{-})],[1^{-}(1^{-})],\ldots$
 &
-$\pi[1^{-}(0^{-})]$
-& Yes
+& Yes 
 %%%%%%%%%%%%%%%%%%%%%%%
-\\\hline
+\\
+&
+&
+$\geq 2$
+&
+$ [1^- (J \geq 1)], \dots $
+&
+& No (violates $J$) 
+%%%%%%%%%%%%%%%%%%%%%%%
+\\\hline \hline
 $\omega^{i}[0^{-}(1^{-})]$
 &
 $\pi[1^{-}(0^{-})]$
-&
-&
+& $\geq 0$
+& $[1^+ (J \geq 0)]$
 &
 $\pi[1^{-}(0^{-})]$
-&No, violates G-parity cons. 
-\vspace{.05cm}\\ \hline
+& No (violates $G$)
+%%%%%%%%%%%%%%%%%%%%%%%
+\\ \hline
 \end{tabular}
  \end{center}
-We conclude what we found explicitly before, that only one component of the current contributes to this transition. The ``$\ldots"$ in the first two lines denote other components of isospin which do not contribute. 
+{\mh (We conclude the same result found by studying contractions above, that only one component of the current contributes to this transition.)} The ellipsis in the first two lines denotes other components of isospin that do not contribute. 
 
- 
+ \bigskip
 
-Now, we turn to the desired $\pi\pi\gamma^\star\to\pi\pi$. As we already discussed above, we will focus our attention to the scenario where the $\pi\pi$ state has been projected onto the quantum numbers of the $\rho$. Therefore, we can equally tabulate the allowed quantum numbers for $\rho\gamma^\star\to\rho$, 
+Now, we turn to the target $\pi\pi\gamma^\star\to\pi\pi$ transitions. As already discussed above, we focus attention on the scenario where the $\pi\pi$ state has been projected onto the quantum numbers of the $\rho$. Therefore, we can equally well tabulate the allowed quantum numbers for $\rho\gamma^\star\to\rho$, 
 \begin{center}
+\renewcommand{\arraystretch}{1.2}
  \begin{tabular}{ |c | c | c |c|c| c|} 
- \hline
-Current [$I^G(J^{P})$]
+\hline 
+\ \ current [$I^G(J^{P})$] \ \ 
 & 
-Initial hadron
+\ \ initial hadron \ \ 
 &
-relative $\ell$
+\ \ relative $\ell$ \ \ 
 &
-Possible final states
+\ \ possible final states \ \ 
 & 
-Final hadron
+\ \ final hadron \ \ 
 & 
-Overlap?
+\ \ overlap? \ \ 
 %%%%%%%%%%%%%%%%%%%%%%%
-\\\hline
-$\rho^{0,i}[1^{+}(1^{-})]$
+\\\hline \hline
+\multirow{5}{*}{$\rho^{0,i}[1^{+}(1^{-})]$}
 &
-$\rho^{0,i}[1^{+}(1^{-})]$
+\multirow{5}{*}{$\rho^{0,i}[1^{+}(1^{-})]$}
 &
 0
 &
 $[1^{+}(1^{+})],\ldots$
 &
-$\rho^{0,i}[1^{+}(1^{-})]$
-&No, violates parity cons. 
+\multirow{5}{*}{$\rho^{0,i}[1^{+}(1^{-})]$}
+&No (violates $P$)
 %%%%%%%%%%%%%%%%%%%%%%%
-\\\hline
-$\rho^{0,i}[1^{+}(1^{-})]$
+\\
 &
-$\rho^{0,i}[1^{+}(1^{-})]$
 &
 1
 &
 $[1^{+}(0^{-})],[1^{+}(1^{-})],\ldots$
 &
-$\rho^{0,i}[1^{+}(1^{-})]$
 & Yes
 %%%%%%%%%%%%%%%%%%%%%%%
-\\\hline\hline
+\\
+&
+&
+2
+&
+$[1^{+}(0^{+})],[1^{+}(1^{+})],\ldots$
+&
+& No (violates $P$)
+%%%%%%%%%%%%%%%%%%%%%%%
+\\
+&
+&
+3
+&
+$[1^{+}(1^{-})],\ldots$
+&
+& Yes
+%%%%%%%%%%%%%%%%%%%%%%%
+\\
+&
+&
+$\geq 4$
+&
+$[1^{+}(J \geq 2)], \ldots$
+&
+& No (violates $J$)
+%%%%%%%%%%%%%%%%%%%%%%%
+\\\hline \hline
 $\omega^{i}[0^{-}(1^{-})]$
 &
 $\rho^{0,i}[1^{+}(1^{-})]$
-&
-&
+& $ \geq 0$
+& $[1^- (J \geq 0)]$
 &
 $\rho^{0,i}[1^{+}(1^{-})]$
-&No, violates G-parity cons. 
-\vspace{.05cm}\\ \hline
+&No (violates $G$) 
+  \\ \hline
 \end{tabular}
  \end{center}
-Again, we get that this transition is allowed and only the $\rho$ component of the current contributes.
+Again, we get that this transition is allowed and only the $\rho$ component of the current contributes. {\mh In a nut shell, because $\omega$ flips $G$-parity it can only mediate transitions where the initial- and final-state G-parity differ.}
+
+{\mh [Please check changes to both tables]}
+
+{\mh [Question: We know with parity that, in addition to the intrinsic part, we must keep track of the parity induced by the $\ell$ value. Are we sure that nothing like this happens with $G$? For example it could be that the total $G$ parity is not just the product of intrinsic parities but also some contribution that depends on the total isospin of the final state. Just wanna be sure we are not missing something...]}
+
+\bigskip
+
+{\mh In summary, the following matrix elements are allowed
+\begin{gather}
+\overline F_{J=0}(p_f, p_i) \equiv \big  \langle \pi [1^- (0^-)] \big \vert \Big [ \rho^{0,\mu}  \big \vert \pi [1^- (0^-)] \big \rangle \Big ]_{[\ell=1,\ 1^- (0^-)]}   \,, \\
+  \big  \langle \rho^{0,i} [1^+ (1^-)] \big \vert \Big [ \rho^{0,\mu}  \big\vert \rho^{0,i} [1^+ (1^-)]  \big\rangle \Big ]_{[\ell=1,\ 1^+ (1^-)]}   \,, \\
+  \big  \langle \rho^{0,i} [1^+ (1^-)] \big \vert \Big [ \rho^{0,\mu} \big \vert \rho^{0,i} [1^+ (1^-)] \big \rangle \Big ]_{[\ell=3,\ 1^+ (1^-)]}   \,.
+\end{gather}
+
+The meaning of these is relatively obscure, consider for example $\overline F_{J=0}(p_f, p_i)$. To define this we first introduce
+\begin{equation}
+F^\mu(p_f, p_i)  \equiv \langle \pi(p_f) \vert \rho^{0, \mu}(0) \vert \pi (p_i) \rangle \,.
+\end{equation}
+Then, introducing ${\Lambda^\mu}_\nu$ as the boost to the $\textbf p_f=0$ frame we define
+\begin{equation}
+\overline F^\mu(\bar p_f^0, \bar p_i^0, \bar {\textbf p}_i)  \equiv {\Lambda^\mu}_\nu  F^\nu(p_f, p_i)  \,,
+\end{equation}
+where $\bar p^\mu \equiv {\Lambda^\mu}_\nu p^\nu$. Note that in defining $\overline F$ we have done two things (1) boosted the original $F^\mu$ to the $\textbf p_f=0$ frame and (2) rexpressed the quantity as a function of momenta defined in that frame.
+
+We are now in position to define the projection to definite $\lambda$ and to definite $m$ with $\ell=1$
+\begin{equation}
+\overline F_{m; \lambda}(\bar p_f^0, \bar p_i^0, \vert \bar {\textbf p}_i\vert) \equiv A \, \epsilon_\mu(\bar p_f - \bar p_i, \lambda) \int d \Omega_{\hat {\textbf p}_i} Y_{1 m}(\hat {\textbf p}_i) \overline F^\mu(\bar p_f^0, \bar p_i^0, \bar {\textbf p}_i)  \,,
+\end{equation}
+and to combine to $J=0$
+\begin{equation}
+\overline F_{J=0}(\bar p_f^0, \bar p_i^0, \vert \bar {\textbf p}_i\vert)  = \sum_{m,\lambda} C^{J=0,m_J=0}_{1 m; 1 \lambda} \overline F_{m; \lambda}(\bar p_f^0, \bar p_i^0, \vert \bar {\textbf p}_i\vert)  \,.
+\end{equation}
+Here $A$ is a numerical prefactor to be chosen for convenience.
+
+[At this point it is not clear whether it is really necessary to perform these projections. Perhaps thinking of the $\pi \gamma^*$ state is just a useful trick for deciding which matrix elements are allowed. Once we know these there is no need to project to them explicitly.]
+
+
+}
+
 
  \subsection{Lorentz decomposition in terms of form factors \label{sec:Lorentz_FFs}}
 When considering QCD stable states, it is naturally to write the matrix elements of the QED current in terms of form factors up to overall factors which are completely constraints from kinematics. Here, we review this for matrix elements coupling pseudoscalar and vectors states. In this study, we are primarily interested on currents coupling to the $\pi$ and $\rho$. In this section, we will ignore the fact that the $\rho$ is unstable, and we address this in Sec.~\ref{sec:Lorentz_amps}. Furthermore, for the sake of generality, when considering matrix elements coupling pseudoscalar-to-pseudoscalar states or vector-to-vector states, we will not assume that the initial and final states are degenerate. As we will see below, this is essential for later addressing the unstable nature of the $\rho$. To accommodate this added complexity, we will introduce another species of pseusocalar and vector mesons, which will refer to as $\pi'$ and $\rho'$ respectively, which will also be assumed to be stable in this section. 
@@ -191,11 +283,11 @@ When considering QCD stable states, it is naturally to write the matrix elements
 
 
 \subsubsection{Lorentz decomposition of $\pi\gamma^\star\to\pi'$}
-We begin with the elastic $\pi$ matrix elements, $\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi(p_i)\rangle$. This matrix element is a Lorentz vector, therefore it can only be proportional to linear combinations of the two vectors in the problem ($p_i^\mu, p_f^\mu$),
+We begin with the elastic pion matrix elements, $\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi(p_i)\rangle$. This matrix element is a Lorentz vector, therefore it can only be proportional to linear combinations of the two vectors in the problem ($p_i^\mu, p_f^\mu$),
 \begin{align}
 \langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi(p_i)\rangle=F_\pi(Q^2)\,(p_i+p_f)^\mu+F_{\pi,-}(Q^2)\,(p_i-p_f)^\mu,
 \end{align}
-where $F_\pi(Q^2)$ and $F_{\pi,-}(Q^2)$ are unknown form factors, which in general depend on any Lorentz scalar in the problem, $Q^2=(p_i-p_f)^2, p_i^2=m_\pi^2,$ and $p_f^2=m_\pi^2$. Here, we leave the dependence on the $\pi$ mass implicit. 
+where $F_\pi(Q^2)$ and $F_{\pi,-}(Q^2)$ are unknown form factors that in general depend on any Lorentz scalar in the system: $Q^2=(p_i-p_f)^2, p_i^2=m_\pi^2,$ and $p_f^2=m_\pi^2$. Here, we leave the dependence on the pion mass implicit. 
 
 The current ${\mathcal{J}}^{\mu}$ is conserved, $\partial_\mu {\mathcal{J}}^{\mu}=0$, which in momentum space tells us that 
 \begin{align}
@@ -207,7 +299,7 @@ F_\pi(Q^2)\, (m_\pi^2-m_\pi^2)
 F_{\pi,-}(Q^2)\,(p_i-p_f)^2
 =0,
 \end{align}
-we conclude that $F_{\pi,-}(Q^2)$ must be zero for all virtualities. This is why for the $\pi$ we only need to determine a single form factor. 
+we conclude that $F_{\pi,-}(Q^2)$ must be zero for all virtualities. This is why for the pion we only need to determine a single form factor. 
 
 Note, in the last line above, the first term vanished because the initial and final states have the same mass. If we consider two pseudoscalars with different masses, the $\pi$ and $\pi'$, then charge conservation would lead to
 \begin{align}
@@ -224,13 +316,19 @@ F_{\pi\pi}(Q^2)\, \frac{(m_{\pi'}^2-m_\pi^2)}{(p_i-p_f)^2}
 = 
 F_{\pi\pi}(Q^2)\, \frac{(m_{\pi'}^2-m_\pi^2)}{Q^2}.
 \end{align} 
-So, we would conclude that still one can describe this matrix element using is a single form factor
+In this case we conclude that one can still describe this matrix element using is a single form factor
 \begin{align}
 \langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi'(p_i)\rangle=
 \left( (p_i+p_f)^\mu \, +(p_i-p_f)^\mu\frac{(m_{\pi'}^2-m_\pi^2)}{Q^2}\right)F_{\pi\pi}(Q^2).
 \label{eq:pi_to_pi_FF}
 \end{align}
-Again, the $F_{\pi\pi}(Q^2)$ depends on the masses of the two states, but Hermiticity ensures that it must be symmetric on the interchange of these two. Below we will consider examples when this dependence is slightly less trivial.  
+Again, $F_{\pi\pi}(Q^2)$ depends on the masses of the two states. {\mh  Hermiticity, together with time-reversal invariance, ensures that it must be symmetric on the interchange of these two
+\begin{equation}
+F_{\pi\pi}(m^2_\pi, m'^2 _\pi,Q^2) = F_{\pi\pi}(m'^2_\pi, m^2 _\pi,Q^2) \,.
+\end{equation}}
+Below we consider examples when the decomposition is less trivial.  
+
+
 
 \subsubsection{Lorentz decomposition of $\rho\gamma^\star\to\pi$}
 
@@ -306,11 +404,11 @@ Similarly, we can rule out a term of the form $p^\mu_{i}\,(p_{i}\cdot\epsilon)$.
 
 \subsubsection{Lorentz decomposition of $\rho\gamma^\star\to\rho'$}
 
-Now, we turn to the case where we have a stable spin-1 particle in the initial and final state. Once again, the matrix element must be proportional to the polarization vector of the initial state, $\epsilon^{\mu}(p_i,\lambda_i)$, and complex conjugate of the final state, $\epsilon^{* \mu}(\lambda_f,p_f)$. {\mh To systematically ensure that all possible structures are included, we first list all possible building blocks that carry a Lorentz index:
+Now, we turn to the case where we have a stable spin-1 particle in the initial and final state. Once again, the matrix element must be proportional to the polarization vector of the initial state, $\epsilon^{\mu}(\lambda_i, p_i)$, and conjugate polarization vector of the final state, $\epsilon^{* \mu}(\lambda_f,p_f)$. {\mh To systematically ensure that all possible structures are included, we first list all possible building blocks that carry a Lorentz index:
 \begin{gather}
 p_f^\mu,\ p_i^\mu,\ \epsilon^{*\mu}_f,\ \epsilon_i^{\mu} \,.
 \end{gather}
-We next note that, since the matrix element must be proportional to both polarization vectors, the following decomposition must hold:
+Since the matrix element must be proportional to both polarization vectors, the following decomposition must hold:
 \begin{multline}
 \langle\rho'(\lambda_f,p_f)|{\mathcal{J}}^{\mu}|\rho(\lambda_i,p_i)\rangle
 =
@@ -319,6 +417,7 @@ We next note that, since the matrix element must be proportional to both polariz
 + \epsilon_f^{*\mu}  \Big (  \epsilon_i \cdot {Y_i}  \big (p_i^\alpha,p_f^\beta \big)  \Big ) \\ 
 +  \epsilon_f^{*\nu}   \epsilon_i^\sigma {Z^{\mu}}_{\nu \sigma}  \big (p_i^\alpha,p_f^\beta \big) \,.
 \end{multline}
+ 
  Here we have separated out all ways in which the indices on the polarization vectors can enter the vector matrix element. The key point is that $X$, $Y_i$, $Y_f$ and $Z$ are tensors, transforming as indicated by the the index structure, that do not depend on the polarization. In particular, the decomposition of $X^\mu$, $Y_i^\mu$, $Y_f^\mu$, must be identical to that of the pion vector matrix element, i.e.
 \begin{equation}
 {X}^\mu \big (p_i^\alpha,p_f^\beta \big) = (p_i + p_f)^\mu X_+ \big (Q^2, p_i^2,p_f^2 \big) + (p_i - p_f)^\mu {X_-} \big (Q^2, p_i^2,p_f^2 \big) \,.
@@ -328,6 +427,7 @@ By contrast, the three-index quantity $Z^{\mu \nu \sigma}$ leads to a new decomp
 Z^{\mu \nu \sigma} \big (p_i^\alpha,p_f^\beta \big) = \sum_{a,b,c=i,f} p_a^\mu p_b^\nu p_c^\sigma Z_{abc} \big (Q^2, p_i^2,p_f^2 \big) \\ 
 + g^{\mu \nu}  Z^\sigma_i \big (Q^2, p_i^2,p_f^2 \big) + g^{\mu \sigma}  Z^\nu_f \big (Q^2, p_i^2,p_f^2 \big) + g^{\nu \sigma}  Z^\mu \big (Q^2, p_i^2,p_f^2 \big) \,.
 \end{multline}
+
 Further decomposing the one-index $Z$ functions on the second line leads to a total of $14$ scalar form factors for the three-index quantity. However the second line leads only to terms redundant with those from $X$, $Y_i$ and $Y_f$. Dropping these leads to $8$ remaining terms from $Z$. These are to be combined with $2$ each from $X$, $Y_i$ and $Y_f$ for a grand total of $14$. Of these $14$, $8$ are redundant due to the identity $p_i\cdot \epsilon_i=p_f\cdot \epsilon_f^*=0$. More specifically, $X$ generates 2 distinct contributions, $Y_i$ and $Y_f$ each give 1, and in the end $Z$ only generates 2 more.}
 
 
@@ -415,19 +515,11 @@ A similar argument can be used to show that all six scalar form factors satisfy 
 
 
 {\mh 
-We next turn to the parity invariance of the theory. Note that, while $\epsilon_f^{*\mu}$ is a pseudovector, the product $\epsilon_f^{*\mu}\, p_f\cdot \epsilon_i$ defines a regular (non-pseudo) vector. This is because the combination $ p_f\cdot \epsilon_i$ is a pseudoscalar. %  It is worth remarking about the presence of the terms of the form $\epsilon_f^{*\mu}\, p_f\cdot \epsilon_i$. Naively, one might guess that these transform as pseudovectors, but if we pick the rest frame of the initial state, we find that under parity this transforms as 
-To see this in detail note
- \begin{align}
-\epsilon_f^{*\mu}\, p_f\cdot \vec{\epsilon}_i & =
-\left(\frac{\vec{p}_f\cdot\hat{e}_{\lambda_f}}{\sqrt{p^2_f}},\hat{e}_{\lambda_f}+\frac{\vec{p}_f\cdot\hat{e}_{\lambda_f}}{\sqrt{p^2_f}\left(\sqrt{p^2_f}+p^0_f\right)}\vec{p}_f\right)
-\vec{p}_f \cdot\vec{\epsilon}_i
-\nn\\
-& \underset{P}{\longrightarrow}
--
-\left(-\frac{\vec{p}_f\cdot\hat{e}_{-\lambda_f}}{\sqrt{p^2_f}},\hat{e}_{-\lambda_f}+\frac{\vec{p}_f\cdot\hat{e}_{-\lambda_f}}{\sqrt{p^2_f}\left(\sqrt{p^2_f}+p^0_f\right)}\vec{p}_f\right)
-\vec{p}_f \cdot \vec{\epsilon}_i = {{\mathcal P^\mu}_\nu } \epsilon_f^{*\nu}\, \vec{p}_f \cdot\vec{\epsilon}_i \,.
-\end{align}
-}
+We next turn to the parity invariance of the theory. Note that, while $\epsilon_f^{*\mu}$ is a pseudovector, the product $\big ( p_f\cdot {\epsilon}_i \big ) \, \epsilon_f^{*\mu}$ defines a regular (non-pseudo) vector. This is because the combination $ p_f\cdot \epsilon_i$ is a pseudoscalar. %  It is worth remarking about the presence of the terms of the form $\epsilon_f^{*\mu}\, p_f\cdot \epsilon_i$. Naively, one might guess that these transform as pseudovectors, but if we pick the rest frame of the initial state, we find that under parity this transforms as 
+In particular
+\begin{equation}
+\big ( p_f\cdot {\epsilon}_i \big ) \, \epsilon_f^{*\mu} \underset{P}{\longrightarrow} \big ( \! - p_f\cdot {\epsilon}_i \big ) \, \Big [ \! - {\mathcal P^\mu}_\nu \epsilon_f^{*\nu} \Big ] = {\mathcal P^\mu}_\nu \, \big ( p_f\cdot {\epsilon}_i \big ) \, \epsilon_f^{*\nu}   \,.
+\end{equation}}
 {\raul \begin{align}
 \epsilon_f^{*\mu}\, p_f\cdot \vec{\epsilon}_i
 &=
@@ -451,7 +543,7 @@ Finally, we make use of Hermiticity, i.e. ${\mathcal{J}}_{\mu}={\mathcal{J}}^\da
 =
 \langle\rho(\lambda_i,p_i)|{\mathcal{J}}^{\mu}|\rho'(\lambda_f,p_f)\rangle^*.
 \end{align}
-Note, all kinematic terms in front $\widetilde{G}_1,\widetilde{G}_3,\widetilde{G}_5$ and $\widetilde{G}_2,\widetilde{G}_3,\widetilde{G}_6$ are respectively explicitly symmetric and antisymmetric in terms of the interchange of coordinate plus complex conjugation. This, in conjunction with the fact that the kinematic terms are independent of each other, implies that $\widetilde{G}_1,\widetilde{G}_3,\widetilde{G}_5$ and $\widetilde{G}_2,\widetilde{G}_3,\widetilde{G}_6$ are respectively symmetric and antisymmetric. 
+Note, all kinematic terms in front $\widetilde{G}_1,\widetilde{G}_3,\widetilde{G}_5$ and $\widetilde{G}_2,\widetilde{G}_3,\widetilde{G}_6$ are respectively symmetric and antisymmetric with respect to the interchange of $i$ and $f$ together with complex conjugation. This, in conjunction with the fact that the kinematic terms are independent of each other, implies that $\widetilde{G}_1,\widetilde{G}_3,\widetilde{G}_5$ and $\widetilde{G}_2,\widetilde{G}_3,\widetilde{G}_6$ are respectively symmetric and antisymmetric under $(p_i^2, p_f^2) \to (p_f^2, p_i^2) $.  {\mh [To make this more clean one should define projectors.]}
 
 To convince oneself of this, one can consider an example of this being implemented in practice. For example, let $\vec{p}_i=\vec{p}_f=0$, then all terms vanish except those appearing in the first two lines
 \begin{align}
@@ -529,7 +621,7 @@ Inserting this constraint into Eq.~\ref{eq:charge_cons_rho}, we then get
 \end{align}
 Note, this is consistent with the observation made above that $\widetilde{G}_1,\widetilde{G}_3,\widetilde{G}_5$ and $\widetilde{G}_2,\widetilde{G}_4,\widetilde{G}_6$ are symmetric and antisymmetric.
 
-Putting all of the constraints in place, we find that the matrix element can be described in terms of just three form factors
+Putting all of the constraints in place, we find that the matrix element can be described in terms of four form factors
 \begin{align}
 \langle\rho'(\lambda_f,p_f)|{\mathcal{J}}^{\mu}|\rho(\lambda_i,p_i)\rangle
 &=
