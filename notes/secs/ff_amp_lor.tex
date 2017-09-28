@@ -513,6 +513,28 @@ A similar argument can be used to show that all six scalar form factors satisfy 
 
 
 
+{\mh To better understand the problems we are having with $T$, we now consider the action of $P$ on the $\rho$ state
+\begin{equation}
+P \vert \rho^+( \lambda, \textbf p) \rangle =  \lim_{p^0 \to \omega_\textbf p} \epsilon_{\mu}(\lambda, p) (1/i) [- (p^0)^2 + \textbf p^2 + m^2] \int d^4 x e^{ - i p^0  x^0 + i \textbf p \cdot \textbf x} \ P \overline d(x) \gamma^\mu u(x)     P \  \vert 0 \rangle \,.
+\end{equation}
+Substituting  
+\begin{equation}
+P \overline d(x) \gamma^\mu u(x)     P =  {\mathcal P^\mu}_\nu \overline d(\mathcal P x) \gamma^\nu u(\mathcal P x)     \,,
+\end{equation}
+we reach
+\begin{align}
+P \vert \rho^+( \lambda, \textbf p) \rangle & =     \lim_{p^0 \to \omega_\textbf p}   {\mathcal P^\mu}_\nu   \epsilon_{\mu}( \lambda, p) (1/i) [- (p^0)^2 + \textbf p^2 + m^2] \int d^4 x e^{ i p_\mu {\mathcal P^\mu}_\nu  x^\nu} \   \overline d(x) \gamma^\nu u(x)      \vert 0 \rangle \,, 
+\end{align}
+Finally using $ {\mathcal P^\mu}_\nu \epsilon_{\mu}(p,  \lambda) = - \epsilon_{\nu}(p^0, - \textbf p,  \lambda)$, we conclude
+\begin{equation}
+ P \vert \rho^+(\lambda, \textbf p) \rangle = - \vert \rho^+( \lambda ,- \textbf p) \rangle \,.
+\end{equation}
+
+[So in summary both $P$ and $T$ transformations are getting the helicity backwards. Raul and I discussed this extensively and he proposed introducing $\lambda_{- \textbf p} = - \lambda_{\textbf p}$. This is like a new helicity labeling scheme that would correct the predictions. I am not completely satisfied with this because I think the $\lambda$ inside $\epsilon_\mu(\lambda,  p)$ should always be along $p$ so that if $\textbf p$ is replaced with $- \textbf p$ then $\lambda$ automatically projects along the latter direction. However this is quite subtle. For example what is the difference between $\epsilon_\mu(\lambda,  p )$ and $\epsilon_\mu(m_s,  p )$ when $\textbf p = p \textbf z$? These should project onto the same state initially and after parity $\lambda$ should flip but $m_s$ should not. How do we define four-vectors that do this automatically?]
+
+}
+
+
 
 {\mh 
 We next turn to the parity invariance of the theory. Note that, while $\epsilon_f^{*\mu}$ is a pseudovector, the product $\big ( p_f\cdot {\epsilon}_i \big ) \, \epsilon_f^{*\mu}$ defines a regular (non-pseudo) vector. This is because the combination $ p_f\cdot \epsilon_i$ is a pseudoscalar. %  It is worth remarking about the presence of the terms of the form $\epsilon_f^{*\mu}\, p_f\cdot \epsilon_i$. Naively, one might guess that these transform as pseudovectors, but if we pick the rest frame of the initial state, we find that under parity this transforms as 
