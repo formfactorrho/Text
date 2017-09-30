@@ -23,16 +23,16 @@
 	Z_{lm}^{\bf \Delta}[s,x^2]&=&\frac{1}{\Gamma(s)}\sum_{{\bf r}\in P_{\bf \Delta}}r^lY_{lm}(\hat{{\bf r}})\int_0^\infty dt t^{s-1}e^{-t(r^2-x^2)}\\
 	&=&\frac{1}{\Gamma(s)}\sum_{{\bf r}\in P_{\bf \Delta}}r^lY_{lm}(\hat{{\bf r}})
 	\left[\int_0^1 dt t^{s-1}e^{-t(r^2-x^2)}+\int_1^\infty dt t^{s-1}e^{-t(r^2-x^2)}\right]\label{eq:Zexp}.\nonumber\\
-	&=&I^{\bf\Delta}_{lm}[s,x^2]+J^{\bf\Delta}_{lm}[s;x^2]\, ,
+	&=&I^{\bf\Delta}_{lm}[s,x^2]+J^{\bf\Delta}_{lm}[s,x^2]\, ,
 	\end{eqnarray}
 	with
 	\begin{eqnarray}
-	J^{\bf \Delta}_{lm}[s;x^2]&=&\frac{1}{\Gamma(s)}\sum_{{\bf r}\in P_{\bf \Delta}}r^lY_{lm}(\hat{{\bf r}})\int_1^\infty dt t^{s-1}e^{-t(r^2-x^2)}\, ,
+	J^{\bf \Delta}_{lm}[s,x^2]&=&\frac{1}{\Gamma(s)}\sum_{{\bf r}\in P_{\bf \Delta}}r^lY_{lm}(\hat{{\bf r}})\int_1^\infty dt t^{s-1}e^{-t(r^2-x^2)}\, ,
 	\end{eqnarray}
 	and similarly for $I^{\bf\Delta}_{lm}[s;x^2]$.
 	For $s=1$ the function $J^{\bm\Delta}_{lm}[s;x^2]$ is easily evaluated
 	\begin{eqnarray}
-	J^{\bm\Delta}_{lm}[s;x^2]&=&\sum_{{\bf r}\in P_{\bf \Delta}}r^lY_{lm}(\hat{{\bf r}})\frac{e^{-(r^2-x^2)}}{r^2-x^2}\, .
+	J^{\bm\Delta}_{lm}[s,x^2]&=&\sum_{{\bf r}\in P_{\bf \Delta}}r^lY_{lm}(\hat{{\bf r}})\frac{e^{-(r^2-x^2)}}{r^2-x^2}\, .
 	\end{eqnarray}
 	For reasons that will be clear later it is convenient to retain the general $s$ dependence in $I^{\bf\Delta}_{lm}[s,x^2]$.
 	We also define, for convenience, the following function 
@@ -77,16 +77,37 @@
 	f({\bf n})&=&4\pi (-i)^le^{i\pi{\bf n}\cdot{\bf\Delta}}\gamma\, Y_{lm}(\hat{{\bf k}})\underbrace{\int_0^\infty dr r^{2+l} e^{-tr^2}j_l(kr)}_{f_l(t)}\, .\label{eq:fn_final}
 	\end{eqnarray}
 	{\color{red}
-	The Hankel transform can be evaluated using MATHEMATICA (as Felipe did) or SYMPY (as I did) is
+	The Hankel transform can be evaluated using MATHEMATICA (as Felipe did) or SYMPY (as I did)
 	\begin{eqnarray}
-	f_l(t)=\frac{k^l}{2^{l+1}t^{l+3/2}}\Gamma(l+3/2)\frac{_1F_1(l+3/2,l+1,-k^2/(4t))}{\Gamma(l+1)}\, ,
+	f_l(t)=\frac{k^l}{2^{l+1}t^{l+3/2}}\Gamma(l+3/2)\frac{_1F_1(l+3/2,l+1,-k^2/(4t))}{\Gamma(l+1)}\, ,\label{eq:us_fl}
 	\end{eqnarray}
-	where $_1F_1(a,b,c)$ is the hypergeometric function of the first kind.}
+	where $_1F_1(a,b,c)$ is the hypergeometric function of the first kind and can be written as
+	\begin{eqnarray}
+J=\Gamma(l+3/2)\frac{_1F_1(l+3/2,l+1,-k^2/(4t))}{\Gamma(l+1)}&=&\frac{\Gamma(l+3/2)}{\Gamma(l+1)}\sum_{i=0}^{\infty}\frac{(l+3/2)_i}{(l+1)_i}\frac{z^i}{i!}\nonumber\\
+&=&\sum_{i=0}^{\infty}\frac{\Gamma(l+i+3/2)}{\Gamma(l+i+1)}\frac{z^i}{i!}\, ,
+	\end{eqnarray}
+where we have defined $z=-k^2/(4t)$, and we have used the definition of the Pochhammer symbols i. e. $(l+3/2)_i=\Gamma(l+3/2+i)/\Gamma(l+3/2)$, and similar for $(l+1)_i$.}\\
 	In Ref.~\cite{Leskovec:2012gb} the Hankel transform $f_l(t)$ is stated to be
-	\begin{eqnarray}
-	f_l(t)&=&\frac{e^{-k^2/(4\,t)}}{4\,\pi}\left(\frac{k}{2t}\right)^l\left(\frac{\pi}{t}\right)^{3/2}\, .\label{eq:fl_lesko}
-	\end{eqnarray}
-	{\color{red}I couldn't reconcile the two expressions}. So assuming the correctness of Eq.~(\ref{eq:fl_lesko}) we finally obtain
+\begin{eqnarray}
+f_l(t)&=&\frac{e^{-k^2/(4\,t)}}{4\,\pi}\left(\frac{k}{2t}\right)^l\left(\frac{\pi}{t}\right)^{3/2}\, .\label{eq:fl_lesko}
+\end{eqnarray}
+{\color{red}
+The expressions in Eq.~(\ref{eq:us_fl}) and Eq.~(\ref{eq:fl_lesko}) are the same if and only if
+\begin{eqnarray}
+J&=&\frac{\sqrt{\pi}}{2}e^{-z}\, ,
+\end{eqnarray}
+and since $\Gamma(3/2)/\Gamma(1)=\sqrt{\pi}/2$ that would imply 
+\begin{eqnarray}
+\sum_{i=0}^{\infty}\frac{\Gamma(l+i+3/2)}{\Gamma(l+i+1)}\frac{z^i}{i!}&=&\Gamma(3/2)e^{-z}\, ,
+\end{eqnarray}
+and SEEMS to imply the following identity
+\begin{eqnarray}
+\frac{\Gamma(l+i+3/2)}{\Gamma(l+i+1)}=\frac{\Gamma(3/2)}{\Gamma(1)} \quad \forall l,i\in \mathbb{N}\label{eq:wrong_id}
+\end{eqnarray}
+this cannot be true. Indeed we have a counterexample if first we consider the case $l+i=0$ the l.h.s of Eq.~(\ref{eq:wrong_id}) is $\sqrt{\pi}/2$ and if then we consider the case $l+i=1$ the l.h.s of Eq~(\ref{eq:wrong_id}) is $3\sqrt{\pi}/8$.\\ Remains to see if the two expressions give significant numerical differences.
+
+}
+ So proceeding with Eq.~(\ref{eq:fl_lesko}) we finally obtain
 	\begin{eqnarray}
 	f({\bf n})&=&(-i)^le^{i\pi{\bf n}\cdot{\bf\Delta}}\gamma\, Y_{lm}(\hat{{\bf k}})e^{-k^2/(4\,t)}\left(\frac{k}{2t}\right)^l\left(\frac{\pi}{t}\right)^{3/2}\, .
 	\end{eqnarray}
@@ -121,7 +142,3 @@
 	which agrees with Eq.~(\ref{eq:main_Z_acc}) {\color{red}except for the sign in the exponent 
 	$e^{i\pi{\bf n}\cdot{\bf \Delta}} $}.
 	 
-
-	%\begin{eqnarray}
-	
-	%\end{eqnarray}
