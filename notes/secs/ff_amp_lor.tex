@@ -32,25 +32,33 @@ The aim of this project is to explain how one can obtain the form factors of a r
 |I=2,m_I=0\rangle&=\frac{1}{\sqrt{6}}\left(|\pi^+\pi^-\rangle+|\pi^-\pi^+\rangle+2|\pi^0\pi^0\rangle\right) \,.
 \end{align}
 
-By contrast, the isovector channel contains the rho resonance, $\rho=(\rho^+,\rho^0,\rho^-)$. {\mh The $\rho^0$ is neutral meaning that the form factor must vanish at zero momentum transfer. As a result, we expect this to have a suppressed coupling to the electromagnetic current, also away from the zero-momentum-transfer point.} Therefore, we will focus on the $\rho^+$. The definition of $I=1$ $\pi\pi$ states and the association to the $\rho$ states is as follows:
+By contrast, the isovector channel contains the rho resonance, $\rho=(\rho^+,\rho^0,\rho^-)$. The $\rho^0$ is neutral and an eigenstate of charge conjugation. Furthermore, the electromagnetic current is odd under charge conjugation, $C\bar{\psi}\gamma^\mu \psi C=-\bar{\psi}\gamma^\mu \psi$. This implies 
+\begin{align}
+\langle \rho^0|\bar{\psi}\gamma^\mu \psi | \rho^0\rangle
+=
+\langle \rho^0|C(C\bar{\psi}\gamma^\mu \psi C)C| \rho^0\rangle
+=
+-\langle \rho^0|\bar{\psi}\gamma^\mu \psi | \rho^0\rangle=0.
+\end{align}
+Similarly, one concludes that the electromagnetic matrix elements of the $\pi^0$ vanishes. Note, since the $\rho^0$ is negative under charge conjugation and the $\pi^0$ is even, the $\langle \rho^0|\bar{\psi}\gamma^\mu \psi | \pi^0\rangle$ matrix element need not be zero, similarly the $\pi^0\to\gamma\gamma$ is not zero.
+
+ Since the $\rho^0$ form factors are zero, we will focus on the $\rho^+$. The definition of $I=1$ $\pi\pi$ states and the association to the $\rho$ states is as follows:
 \begin{align}
 \rho^+:\hspace{.5cm}|I=1,m_I=1\rangle&=\frac{1}{\sqrt{2}}\left(|\pi^+\pi^0\rangle-|\pi^0\pi^+\rangle\right),\\
 \rho^0:\hspace{.5cm}|I=1,m_I=0\rangle&=\frac{1}{\sqrt{2}}\left(|\pi^+\pi^-\rangle-|\pi^-\pi^+\rangle\right) \,.
 \end{align}
-Here we notice two things. First, if we think of the $\rho^0$ indeed as a resonance that couples to $\pi^+\pi^-$, and we proceeded to evaluate diagram by diagram the coupling of the $|\pi^+\pi^-\rangle$ state to the electromagnetic current, we will get zero, since the $\pi^+$ and $\pi^-$ are oppositely charged. Arriving at the same conclusion as above. Second, for the $|\pi^+\pi^0\rangle$ state, only the $\pi^+$ will couple to the electromagnetic current. As already stated above, we will need the form factors of the individual pions to calculate the rho form factor. Given that only that of the $\pi^+$ is expected to be nonzero, we will only need to calculate this one. 
-{\mh [I don't think I'm happy with these comments. First I'm not sure one can diagramatically separate the coupling to $\pi^+$ and $\pi^-$ and make them cancel. Second, both in the context of the $\rho^0$ and the $\pi^0$, the vanishing only holds at $Q^2=0$. Thus for nonzero $Q^2$ the $\rho^0$ should give a nonzero result, so that the individual pions had better not cancel. Similarly I think we will have to calculate the $\pi^0$ form factor to get the full result... or just argue that neglecting it is a numerically good approximation.]}
-
+Here we notice two things. As already stated above, we will need the form factors of the individual pions to calculate the rho form factor. Given that only that of the $\pi^+$ is nonzero, we will only need to calculate this one. 
+ 
 
 Finally, the isoscalar channel couples to the $\sigma$,
 \begin{align}
 \sigma:\hspace{.5cm}|I=0,m_I=0\rangle&=\frac{1}{\sqrt{3}}\left(|\pi^+\pi^-\rangle+|\pi^-\pi^+\rangle-|\pi^0\pi^0\rangle\right).
 \end{align}
-This, of course, is neutral, and for the same reasons given above, is expected to have a suppressed eletromagnetic form factor, vanishing at zero momentum transfer.
+This, of course, is neutral and is even under charge conjugation. As a result, similarly for the $\rho^0$ and $\pi^0$ its electromagnetic form factor vanishes. 
 
-In conclusion, of the $\pi\pi$ channels, the one that is most sensible to consider here is $(I,m_I)=(1,1)$, since this is expected to have the largest resonance form factors. The $\rho^+$ is a vector, implying that there will be four independent form factors to determine, as we argue below.
-%
-{\mh [Can we still use the following text?: three-independent form factors to determine, the charge, magnetic and quadrupole form factors. These are proportional to the the charge, magnetic moment, and quadrupole moment of the $\rho^+$. Furthermore, one can obtain the correspond radii of the $\rho^+$.]} 
-%
+In conclusion, of the $\pi\pi$ channels, the one that is most sensible to consider here is $(I,m_I)=(1,1)$, since this is the only one that could have a resonance form factors. The $\rho^+$ is a vector, implying that it has three-independent form factors to determine, the charge, magnetic and quadrupole form factors. These are proportional to the the charge, magnetic moment, and quadrupole moment of the $\rho^+$. Furthermore, one can obtain the correspond radii of the $\rho^+$. As we argue below, in practice this \emph{might} require to calculate four independent amplitudes from lattice QCD calculations. As one analytically continues these onto the $\rho$ pole, one of them will vanish, resulting in three non-zero form factors. 
+
+
 After examining which matrix elements are allowed in the following subsection, we discuss the Lorentz decomposition of the matrix elements in terms of form factors in Sec.~\ref{sec:Lorentz_FFs}.
 
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -332,7 +340,7 @@ Below we consider examples when the decomposition is less trivial.
 
 \subsubsection{Lorentz decomposition of $\rho\gamma^\star\to\pi$}
 
-Now, we turn to a slightly more complicated case, where a stable vector meson couples to a pseudoscalar.  In this case, the matrix element must be Lorentz vector. This is a bit difficult to see, since states in flight are not eigenstates of parity. This further complicated by the fact that the ``$\rho$" has nonzero spin~\cite{Thomas:2011rh}. Nevertheless, we can derive the form of the Lorentz decomposition of the matrix element in a relatively straightforward manner.
+Now, we turn to a slightly more complicated case, where a stable vector meson couples to a pseudoscalar.  In this case, the matrix element must be Lorentz vector. This is a bit difficult to see, since states in flight are not eigenstates of parity. This further complicated by the fact that the $\rho$ has nonzero spin~\cite{Thomas:2011rh}. Nevertheless, we can derive the form of the Lorentz decomposition of the matrix element in a relatively straightforward manner.
 
 First, the $\rho$ state is now defined by its momentum and helicity, $\lambda$. In the limit that the momentum is taken to be zero, we choose to quantize the spin along the $z$ axis.  Next, we note that the matrix element we are after, must be proportional to the polarization of the polarization vector of the $\rho$,
 \begin{align}
@@ -340,11 +348,11 @@ First, the $\rho$ state is now defined by its momentum and helicity, $\lambda$. 
 \end{align}
 note the Lorentz index of $\epsilon^\nu$ need not coincide with that of the current. 
 
-There are only three linearly independent components of a spin-1 vector meson. This is manifested by the fact that $\epsilon_{\mu}(\lambda, p)p^{\mu}=0$. A standard choice for the polarization vectors that is normalized to $-1$ and satisfies this criterion is
-{\mh \begin{align}
+There are only three linearly independent components of a spin-1 vector meson. This is manifested by the fact that $\epsilon_{\mu}(\lambda, p)p^{\mu}=0$. A standard choice for the polarization vectors that is normalized to $-1$ and satisfies this criterion is{ \begin{align}
 \epsilon^{\mu}(\lambda, p) & =
-\left(\frac{\vec{p}\cdot\hat{e}_\lambda}{ \sqrt{p^2} }, \ \hat{e}_\lambda + \frac{1}{\vec p^{\,2}} \left( \frac{p^0}{\sqrt{p^2}} - 1  \right) {\vec{p}\cdot\hat{e}_\lambda} \ \vec{p}\right) \,, \\
-& {\raul =  \left(\frac{\vec{p}\cdot\hat{e}_\lambda}{ \sqrt{p^2} }, \ \hat{e}_\lambda +   \frac{\vec{p}\cdot\hat{e}_\lambda  }{\sqrt{p^2} \left( \sqrt{p^2} + p^0 \right) }    \vec{p}\right) }\,.
+\left(\frac{\vec{p}\cdot\hat{e}_\lambda}{ \sqrt{p^2} }, \ \hat{e}_\lambda + \frac{1}{\vec p^{\,2}} \left( \frac{p^0}{\sqrt{p^2}} - 1  \right) {\vec{p}\cdot\hat{e}_\lambda} \ \vec{p}\right) 
+.
+%  =  \left(\frac{\vec{p}\cdot\hat{e}_\lambda}{ \sqrt{p^2} }, \ \hat{e}_\lambda +   \frac{\vec{p}\cdot\hat{e}_\lambda  }{\sqrt{p^2} \left( \sqrt{p^2} + p^0 \right) }    \vec{p}\right) \,.
 \end{align}
 This satisfies the orthogonality via
  \begin{align}
@@ -357,7 +365,7 @@ and normalization via
 & = -1 + ( \hat{p}\cdot\hat{e}_\lambda)^2 \left[ \frac{\vec p^{\,2}}{p^2}  - \frac{(p^0)^2}{p^2} - 1 + 2 \frac{p^0}{\sqrt{p^2}}     - 2    \frac{p^0}{\sqrt{p^2}} + 2      \right ] \,, \\
 & = -1 \,.
 \end{align}
-}
+
 Here we use the four-dimensional units vectors
 \begin{align}
 \hat{e}_\pm&=\mp\frac{1}{\sqrt{2}}(0,1,\pm i,0),
@@ -366,15 +374,15 @@ Here we use the four-dimensional units vectors
 \end{align}
 It is important to note that $\epsilon^\mu(p,\lambda)$ is a pseudovector. 
 
-Under parity trasformations, $\hat{P}$, the $\rho$ state would transform as
+Under parity transformations, $\hat{P}$, the momentum of a state changes direction but its spin remains unchanged. Given that helicity is defined as the component of the spin along the direction of the momentum, under parity transformations the helicity changes sign. For example, the $\rho$ state would transform as
 \begin{align}
 \hat{P}|\rho(\lambda, p_i)\rangle
 =-|\rho(-\lambda, (p_{i,0},-\vec{p}_i)\rangle,
 \end{align}
-where the helicity has changed sign, since the momentum has changed directions. The overall phase is due to the $\rho$ intrinsic negative parity. If instead, the $\rho$ is at rest, defined by $p_i=(m_\rho,\vec{0})$, then spin would not change signs
+where the overall phase is due to the $\rho$ intrinsic negative parity. If instead the $\rho$ is at rest, defined by $p_i=(m_\rho,\vec{0})$, and denote the azimuthal component of its spin as $m_z$, then
 \begin{align}
-\hat{P}|\rho(\lambda, (m_\rho,\vec{0}))\rangle
-=-|\rho(\lambda, (m_\rho,\vec{0})\rangle,
+\hat{P}|\rho(m_z, (m_\rho,\vec{0}))\rangle
+=-|\rho(m_z, (m_\rho,\vec{0})\rangle,
 \end{align}
 and the $\rho$ would indeed be an eigenstate of parity. 
 
@@ -400,11 +408,11 @@ p^\mu_{i}\,(p_{f}\cdot\epsilon)
 =(-m_\rho \,\vec{p}_{f}\cdot\vec{\epsilon},\vec{0})
 \to (m_\rho \,\vec{p}_{f}\cdot\vec{\epsilon},\vec{0}).
 \end{align}
-Similarly, we can rule out a term of the form $p^\mu_{i}\,(p_{i}\cdot\epsilon)$. Note, Hemiticity also rules out terms proportional to $p^\mu_{i}\,(p_{f}\cdot\epsilon)$ or $p^\mu_{f}\,(p_{f}\cdot\epsilon)$.
+Similarly, we can rule out a term of the form $p^\mu_{i}\,(p_{i}\cdot\epsilon)$. {\raul Note, Hemiticity also rules out terms proportional to $p^\mu_{i}\,(p_{f}\cdot\epsilon)$ or $p^\mu_{f}\,(p_{f}\cdot\epsilon)$. [need to think of this more...]}
 
 \subsubsection{Lorentz decomposition of $\rho\gamma^\star\to\rho'$}
 
-Now, we turn to the case where we have a stable spin-1 particle in the initial and final state. Once again, the matrix element must be proportional to the polarization vector of the initial state, $\epsilon^{\mu}(\lambda_i, p_i)$, and conjugate polarization vector of the final state, $\epsilon^{* \mu}(\lambda_f,p_f)$. {\mh To systematically ensure that all possible structures are included, we first list all possible building blocks that carry a Lorentz index:
+Now, we turn to the case where we have a stable spin-1 particle in the initial and final state. Once again, the matrix element must be proportional to the polarization vector of the initial state, $\epsilon^{\mu}(\lambda_i, p_i)$, and conjugate polarization vector of the final state, $\epsilon^{* \mu}(\lambda_f,p_f)$.  To systematically ensure that all possible structures are included, we first list all possible building blocks that carry a Lorentz index:
 \begin{gather}
 p_f^\mu,\ p_i^\mu,\ \epsilon^{*\mu}_f,\ \epsilon_i^{\mu} \,.
 \end{gather}
@@ -427,8 +435,24 @@ By contrast, the three-index quantity $Z^{\mu \nu \sigma}$ leads to a new decomp
 Z^{\mu \nu \sigma} \big (p_i^\alpha,p_f^\beta \big) = \sum_{a,b,c=i,f} p_a^\mu p_b^\nu p_c^\sigma Z_{abc} \big (Q^2, p_i^2,p_f^2 \big) \\ 
 + g^{\mu \nu}  Z^\sigma_i \big (Q^2, p_i^2,p_f^2 \big) + g^{\mu \sigma}  Z^\nu_f \big (Q^2, p_i^2,p_f^2 \big) + g^{\nu \sigma}  Z^\mu \big (Q^2, p_i^2,p_f^2 \big) \,.
 \end{multline}
+{\raul [Since $Z^\sigma_i  $ is a vector, shouldn't it depend on the two vectors in the problem $p_i^\alpha,p_f^\beta$ instead of just the scalars? ]} 
 
-Further decomposing the one-index $Z$ functions on the second line leads to a total of $14$ scalar form factors for the three-index quantity. However the second line leads only to terms redundant with those from $X$, $Y_i$ and $Y_f$. Dropping these leads to $8$ remaining terms from $Z$. These are to be combined with $2$ each from $X$, $Y_i$ and $Y_f$ for a grand total of $14$. Of these $14$, $8$ are redundant due to the identity $p_i\cdot \epsilon_i=p_f\cdot \epsilon_f^*=0$. More specifically, $X$ generates 2 distinct contributions, $Y_i$ and $Y_f$ each give 1, and in the end $Z$ only generates 2 more.}
+{\mh
+Further decomposing the one-index $Z$ functions on the second line leads to a total of $14$ scalar form factors for the three-index quantity. However the second line leads only to terms redundant with those from $X$, $Y_i$ and $Y_f$. Dropping these leads to $8$ remaining terms from $Z$. These are to be combined with $2$ each from $X$, $Y_i$ and $Y_f$ for a grand total of $14$. Of these $14$, $8$ are redundant due to the identity $p_i\cdot \epsilon_i=p_f\cdot \epsilon_f^*=0$. More specifically, $X$ generates 2 distinct contributions, $Y_i$ and $Y_f$ each give 1, and in the end $Z$ only generates 2 more. } 
+
+{\raul [I find this discussion slightly complicated and a bit circular. In particular, the fact that we introduce new terms written in a different way but then say that they are the same as the ones we already wrote down. An alternative starting point that is slightly less redundant is 
+\begin{multline}
+\langle\rho'(\lambda_f,p_f)|{\mathcal{J}}^{\mu}|\rho(\lambda_i,p_i)\rangle
+=
+\big ( \epsilon_f^*\cdot \epsilon_i \big ) \  {X}^\mu \big (p_i^\alpha,p_f^\beta \big)
++ \epsilon_i^\mu    \Big ( \epsilon_f^* \cdot {Y_f} \big (p_i^\alpha,p_f^\beta \big) \Big ) 
++ \epsilon_f^{*\mu}  \Big (  \epsilon_i \cdot {Y_i}  \big (p_i^\alpha,p_f^\beta \big)  \Big ) \\ 
++  \epsilon_f^{*\nu}   \epsilon_i^\sigma 
+\sum_{a,b,c=i,f} p_a^\mu p_b^\nu p_c^\sigma Z_{abc} \big (Q^2, p_i^2,p_f^2 \big)
+ \,.
+\end{multline}
+This also avoids introducing $Z$ functions that are then written in terms of other $Z$ functions.
+]}
 
 
 
@@ -454,16 +478,16 @@ We deduce that Lorentz invariance alone restricts the decomposition to $6$ disti
 \end{equation}
 % In total we find six possible structures, where we excluded terms of the form $p_i\cdot \epsilon_i=p_f\cdot \epsilon_f^*=0$.
 
-{\mh Next we show that time-reversal invariance implies that all six scalar form factors are real functions of $Q^2,p_i^2,p_f^2$. We begin by
+ Next we show that time-reversal invariance implies that all six scalar form factors are real functions of $Q^2,p_i^2,p_f^2$. We begin by
 considering a specific interpolator for the rho
 \begin{equation}
-\vert \rho^+( \lambda, \textbf p ) \rangle =  \lim_{p^0 \to \omega_\textbf p}  \epsilon_{\mu}(\lambda, p)(1/i) [- (p^0)^2 + \textbf p^2 + m^2] \int d^4 x e^{- i p^0  x^0 + i \textbf p \cdot \textbf x} \ \overline d(x) \gamma^\mu u(x) \vert 0 \rangle \,.
+\vert \rho^+( \lambda_{\textbf{p}}, \textbf p ) \rangle =  \lim_{p^0 \to \omega_\textbf p}  \epsilon_{\mu}(\lambda_{\textbf{p}}, p)(1/i) [- (p^0)^2 + \textbf p^2 + m^2] \int d^4 x e^{- i p^0  x^0 + i \textbf p \cdot \textbf x} \ \overline d(x) \gamma^\mu u(x) \vert 0 \rangle \,,
 \end{equation}
-Acting with the time-reversal operator on this state gives
+where we introduced an index in the helicity to denote witch which axis it is defined. Note $\lambda_{\textbf{p}}=(-1)^{\lambda_{\textbf{p}}}\lambda_{\textbf{-p}}$. Acting with the time-reversal operator on this state gives
 \begin{equation}
-T \vert \rho^+( \lambda, \textbf p) \rangle =  \lim_{p^0 \to \omega_\textbf p} \epsilon^*_{\mu}(\lambda, p) i [- (p^0)^2 + \textbf p^2 + m^2] \int d^4 x e^{ i p^0  x^0 - i \textbf p \cdot \textbf x} \ T \overline d(x) \gamma^\mu u(x)     T^{-1} \  \vert 0 \rangle \,.
+T \vert \rho^+( \lambda_{\textbf{p}}, \textbf p) \rangle =  \lim_{p^0 \to \omega_\textbf p} \epsilon^*_{\mu}(\lambda_{\textbf{p}}, p) i [- (p^0)^2 + \textbf p^2 + m^2] \int d^4 x e^{ i p^0  x^0 - i \textbf p \cdot \textbf x} \ T \overline d(x) \gamma^\mu u(x)     T^{-1} \  \vert 0 \rangle \,.
 \end{equation}
-To simplify this we substitute $\epsilon^{\mu*}( \lambda, p) = (-1)^\lambda \epsilon^{\mu}( - \lambda , p)$ and%
+To simplify this we substitute $\epsilon^{\mu*}( \lambda_{\textbf{p}}, p) = (-1)^\lambda \epsilon^{\mu}( - \lambda_{\textbf{p}} , p)$ and%
 %
 \footnote{
 The identify for $\epsilon^{\mu*}( p, \lambda) $ follows from the definition
@@ -479,13 +503,14 @@ T \overline d(x) \gamma^\mu u(x)     T^{-1} = - {\mathcal T^\mu}_\nu \overline d
 \end{equation}
 to reach
 \begin{align}
-T \vert \rho^+( \lambda, \textbf p) \rangle & =   (- 1)^{\lambda}  \  \lim_{p^0 \to \omega_\textbf p}   {\mathcal T^\mu}_\nu   \epsilon_{\mu}(- \lambda, p) (1/i) [- (p^0)^2 + \textbf p^2 + m^2] \int d^4 x e^{ i p_\mu {\mathcal T^\mu}_\nu  x^\nu} \   \overline d(x) \gamma^\nu u(x)      \vert 0 \rangle \,, 
+T \vert \rho^+( \lambda_{\textbf{p}}, \textbf p) \rangle & =   (- 1)^{\lambda_{\textbf{p}}}  \  \lim_{p^0 \to \omega_\textbf p}   {\mathcal T^\mu}_\nu   \epsilon_{\mu}(- \lambda_{\textbf{p}}, p) (1/i) [- (p^0)^2 + \textbf p^2 + m^2] \int d^4 x e^{ i p_\mu {\mathcal T^\mu}_\nu  x^\nu} \   \overline d(x) \gamma^\nu u(x)      \vert 0 \rangle \,, 
 \end{align}
-Finally using $ {\mathcal T^\mu}_\nu \epsilon_{\mu}(p, - \lambda) = \epsilon_{\nu}(p^0, - \textbf p, - \lambda)$, we conclude
+Finally using $ {\mathcal T^\mu}_\nu \epsilon_{\mu}(p, - \lambda_{\textbf{p}}) = \epsilon_{\nu}(p^0, - \textbf p, - \lambda_{\textbf{p}})$, we conclude
 \begin{equation}
- T \vert \rho^+(\lambda, \textbf p) \rangle = (-1)^\lambda \vert \rho^+(- \lambda ,- \textbf p) \rangle \,.
+ T \vert \rho^+(\lambda_{\textbf{p}}, \textbf p) \rangle = (-1)^{\lambda_{\textbf{p}}} \vert \rho^+(- \lambda_{\textbf{p}} ,- \textbf p) \rangle
+ = (-1)^{\lambda_{\textbf{p}}} \vert \rho^+( \lambda_{-\textbf{p}} ,- \textbf p) \rangle \,.
 \end{equation}
-[There must be some problem her because this does not seem to make sense physically. Both momentum and spin should flip under time reversal, leaving helicity unchanged.]
+Note, the spin and momentum change sign, as expected, which implies that that the helicity does not flip sign. 
 
 Next we use the identity
 \begin{equation}
@@ -495,6 +520,35 @@ to write
 \begin{equation}
 \langle\rho'(\lambda_f,p_f)|{\mathcal{J}}^{\mu}|\rho(\lambda_i,p_i)\rangle =- (-1)^{\lambda_i+\lambda_f}  \mathcal {T^{\mu}}_\nu \langle\rho'(- \lambda_f, - \textbf p_f)|{\mathcal{J}}^{\nu}|\rho(- \lambda_i, - \textbf p_i)\rangle^*  \,.
 \end{equation}
+{\raul [Not sure I understand this equation. Using what we found above, we have
+\begin{align}
+ T T \vert \rho^+(\lambda_{\textbf{p}}, \textbf p) \rangle = (-1)^{\lambda_{\textbf{p}}}T \vert \rho^+(- \lambda_{\textbf{p}} ,- \textbf p) \rangle
+ =
+(-1)^{\lambda_{\textbf{p}}-\lambda_{\textbf{p}}} \vert \rho^+( \lambda_{\textbf{p}} , \textbf p) \rangle
+= 
+\vert \rho^+( \lambda_{\textbf{p}} , \textbf p) \rangle
+\end{align}
+meaning $T^2=1$ and $T=T^{-1}$. So then 
+\begin{align}
+  \langle \rho^+(\lambda_{\textbf{p}'}, \textbf p') \vert  \mathcal \mathcal{J}^{\mu} \vert \rho^+(\lambda_{\textbf{p}}, \textbf p) \rangle   
+  & = 
+  \langle \rho^+(\lambda_{\textbf{p}'}, \textbf p') \vert  T^2\mathcal \mathcal{J}^{\mu} T^2\vert \rho^+(\lambda_{\textbf{p}}, \textbf p) \rangle 
+ \nn\\&
+ =
+ (-1)^{\lambda_{\textbf{p}}+\lambda_{\textbf{p}'}}
+  \langle \rho^+(-\lambda_{\textbf{p}'}, -\textbf p') \vert  \mathcal \mathcal{J}_{\mu} \vert \rho^+(-\lambda_{\textbf{p}}, -\textbf p) \rangle 
+ \nn\\&
+ = 
+  (-1)^{\lambda_{\textbf{p}}+\lambda_{\textbf{p}'}}
+\bigg(\langle \rho^+(-\lambda_{\textbf{p}}, -\textbf p) \vert  \mathcal \mathcal{J}^*_{\mu} \vert \rho^+(-\lambda_{\textbf{p}'}, -\textbf p') \rangle \bigg)^*
+ \nn\\
+ &=
+  (-1)^{\lambda_{\textbf{p}}+\lambda_{\textbf{p}'}}
+ \bigg(\langle \rho^+(-\lambda_{\textbf{p}}, -\textbf p) \vert  \mathcal \mathcal{J}_{\mu} \vert \rho^+(-\lambda_{\textbf{p}'}, -\textbf p') \rangle \bigg)^*
+\end{align}
+where in going from the third to fourth equality I used the fact that the current is Hermitian.
+]
+}
 
 To understand the consequences of this identity, suppose that only the first form factor, $\widetilde G_1$ were nonzero. This would imply
 \begin{align}
