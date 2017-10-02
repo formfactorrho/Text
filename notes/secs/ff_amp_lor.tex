@@ -291,51 +291,111 @@ When considering QCD stable states, it is naturally to write the matrix elements
 
 
 \subsubsection{Lorentz decomposition of $\pi\gamma^\star\to\pi'$}
-We begin with the elastic pion matrix elements, $\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi(p_i)\rangle$. This matrix element is a Lorentz vector, therefore it can only be proportional to linear combinations of the two vectors in the problem ($p_i^\mu, p_f^\mu$),
-\begin{align}
-\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi(p_i)\rangle=F_\pi(Q^2)\,(p_i+p_f)^\mu+F_{\pi,-}(Q^2)\,(p_i-p_f)^\mu,
-\end{align}
-where $F_\pi(Q^2)$ and $F_{\pi,-}(Q^2)$ are unknown form factors that in general depend on any Lorentz scalar in the system: $Q^2=(p_i-p_f)^2, p_i^2=m_\pi^2,$ and $p_f^2=m_\pi^2$. Here, we leave the dependence on the pion mass implicit. 
+%We begin with the elastic pion matrix elements, $\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi(p_i)\rangle$. This matrix element is a Lorentz vector, therefore it can only be proportional to linear combinations of the two vectors in the problem ($p_i^\mu, p_f^\mu$),
+%\begin{align}
+%\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi(p_i)\rangle=F_\pi(Q^2)\,(p_i+p_f)^\mu+F_{\pi,-}(Q^2)\,(p_i-p_f)^\mu,
+%\end{align}
+%where $F_\pi(Q^2)$ and $F_{\pi,-}(Q^2)$ are unknown form factors that in general depend on any Lorentz scalar in the system: $Q^2=(p_i-p_f)^2, p_i^2=m_\pi^2,$ and $p_f^2=m_\pi^2$. Here, we leave the dependence on the pion mass implicit. 
 
-The current ${\mathcal{J}}^{\mu}$ is conserved, $\partial_\mu {\mathcal{J}}^{\mu}=0$, which in momentum space tells us that 
-\begin{align}
-(p_i-p_f)_\mu\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi(p_i)\rangle&=F_\pi(Q^2)\, (p_i-p_f)_\mu(p_i+p_f)^\mu+F_{\pi,-}(Q^2)\,(p_i-p_f)^2
-\nn\\
-&=
-F_\pi(Q^2)\, (m_\pi^2-m_\pi^2)
-+
-F_{\pi,-}(Q^2)\,(p_i-p_f)^2
-=0,
-\end{align}
-we conclude that $F_{\pi,-}(Q^2)$ must be zero for all virtualities. This is why for the pion we only need to determine a single form factor. 
+%The current ${\mathcal{J}}^{\mu}$ is conserved, $\partial_\mu {\mathcal{J}}^{\mu}=0$, which in momentum space tells us that 
+%\begin{align}
+%(p_i-p_f)_\mu\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi(p_i)\rangle&=F_\pi(Q^2)\, (p_i-p_f)_\mu(p_i+p_f)^\mu+F_{\pi,-}(Q^2)\,(p_i-p_f)^2
+%%\nn\\
+%&=
+%F_\pi(Q^2)\, (m_\pi^2-m_\pi^2)
+%+
+%F_{\pi,-}(Q^2)\,(p_i-p_f)^2
+%=0,
+%\end{align}
+%we conclude that $F_{\pi,-}(Q^2)$ must be zero for all virtualities. This is why for the pion we only need to determine a single form factor. 
 
-Note, in the last line above, the first term vanished because the initial and final states have the same mass. If we consider two pseudoscalars with different masses, the $\pi$ and $\pi'$, then charge conservation would lead to
-\begin{align}
-(p_i-p_f)_\mu\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi'(p_i)\rangle&=
-F_{\pi\pi'}(Q^2)\, (m_{\pi'}^2-m_\pi^2)
-+
-F_{\pi\pi',-}(Q^2)\,(p_i-p_f)^2
-=0,
-\\
-\Rightarrow
-F_{\pi\pi',-}(Q^2)
-&=-
-F_{\pi\pi}(Q^2)\, \frac{(m_{\pi'}^2-m_\pi^2)}{(p_i-p_f)^2}
-= 
-F_{\pi\pi}(Q^2)\, \frac{(m_{\pi'}^2-m_\pi^2)}{Q^2}.
-\end{align} 
-In this case we conclude that one can still describe this matrix element using is a single form factor
-\begin{align}
-\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi'(p_i)\rangle=
-\left( (p_i+p_f)^\mu \, +(p_i-p_f)^\mu\frac{(m_{\pi'}^2-m_\pi^2)}{Q^2}\right)F_{\pi\pi}(Q^2).
-\label{eq:pi_to_pi_FF}
-\end{align}
-Again, $F_{\pi\pi}(Q^2)$ depends on the masses of the two states. {\mh  Hermiticity, together with time-reversal invariance, ensures that it must be symmetric on the interchange of these two
-\begin{equation}
-F_{\pi\pi}(m^2_\pi, m'^2 _\pi,Q^2) = F_{\pi\pi}(m'^2_\pi, m^2 _\pi,Q^2) \,.
-\end{equation}}
+%Note, in the last line above, the first term vanished because the initial and final states have the same mass. If we consider two pseudoscalars with different masses, the $\pi$ and $\pi'$, then charge conservation would lead to
+%\begin{align}
+%(p_i-p_f)_\mu\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi'(p_i)\rangle&=
+%F_{\pi\pi'}(Q^2)\, (m_{\pi'}^2-m_\pi^2)
+%+
+%F_{\pi\pi',-}(Q^2)\,(p_i-p_f)^2
+%=0,
+%\\
+%\Rightarrow
+%F_{\pi\pi',-}(Q^2)
+%&=-
+%F_{\pi\pi}(Q^2)\, \frac{(m_{\pi'}^2-m_\pi^2)}{(p_i-p_f)^2}
+%= 
+%F_{\pi\pi}(Q^2)\, \frac{(m_{\pi'}^2-m_\pi^2)}{Q^2}.
+%\end{align} 
+%In this case we conclude that one can still describe this matrix element using is a single form factor
+%\begin{align}
+%\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi'(p_i)\rangle=
+%\left( (p_i+p_f)^\mu \, +(p_i-p_f)^\mu\frac{(m_{\pi'}^2-m_\pi^2)}{Q^2}\right)F_{\pi\pi}(Q^2).
+%\label{eq:pi_to_pi_FF}
+%\end{align}
+%Again, $F_{\pi\pi}(Q^2)$ depends on the masses of the two states. {\mh  Hermiticity, together with time-reversal invariance, ensures that it must be symmetric on the interchange of these two
+%\begin{equation}
+%F_{\pi\pi}(m^2_\pi, m'^2 _\pi,Q^2) = F_{\pi\pi}(m'^2_\pi, m^2 _\pi,Q^2) \,.
+%\end{equation}}
+ We begin with the elastic pion matrix elements, $\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi(p_i)\rangle$, for the general case where pions are not on shell. This matrix element is a Lorentz vector, therefore it can only be proportional to linear combinations of the two vectors in the problem ($p_i^\mu, p_f^\mu$),
+	\begin{align}
+	\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi(p_i)\rangle=F_\pi({\ab p_f^2,p_i^2,}Q^2)\,(p_i+p_f)^\mu+F_{\pi,-}({\ab p_f^2,p_i^2,}Q^2)\,(p_i-p_f)^\mu\, ,
+	\end{align}
+	{\ab where the functions $F_\pi$ and $F_{\pi,-}$ have in principle not vanishing imaginary parts.
+	Firt we require time reversal invariance of the matrix element
+	\begin{eqnarray}
+	\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi'(p_i)\rangle&=&{\cal T}_\nu^\mu\langle\pi(p_f^0,-\vec{p}_f)|J^\nu|\pi(p_i^0-\vec{p}_i)\rangle^*\, \\
+	&=&{\cal T}_\nu^\mu\left[F^*_\pi(p_f^2,p_i^2,Q^2)(\tilde{p}_i+\tilde{p}_f)^\nu+F^*_{\pi,-}(p_f^2,p_i^2,Q^2)\,(\tilde{p}_i-\tilde{p}_f)^\nu\right]\label{eq:t-rev-gpi}
+	\end{eqnarray}
+	where we have defined $\tilde{p}_f=(p^0_f,-\vec{p}_f)$ and similarly for $\tilde{p}_i$. Looking at $\mu =0$ in Eq.~(\ref{eq:t-rev-gpi}) we obtain the following relation
+	\begin{eqnarray}
+	F_\pi(p_f^2,p_i^2,Q^2)\,(p^0_i+p^0_f)+F_{\pi,-}(p_f^2,p_i^2,Q^2)\,(p_i^0-p_f^0)&=&
+	F^*_\pi(p_f^2,p_i^2,Q^2)\,(p^0_i+p^0_f)+F^*_{\pi,-}(p_f^2,p_i^2,Q^2)\,(p_i^0-p_f^0)
+	\end{eqnarray}
+	therefore we conclude that $F_\pi$ and $F_{\pi,-}$ have vanishing imaginary parts.
+	It is easy to see that when $\mu=i$ Eq.~(\ref{eq:t-rev-gpi}) is trivially satisfied.
+	We now require hermiticity of the matrix element
+	\begin{align}
+	\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi(p_i)\rangle=\langle\pi(p_i)|{\mathcal{J}}^{\mu}|\pi(p_f)\rangle^*\, ,
+	\end{align}
+	that gives
+	\begin{align}
+	F_\pi(p_f^2,p_i^2,Q^2)\,(p_i+p_f)^\mu+F_{\pi,-}(p_f^2,p_i^2,Q^2)\,(p_i-p_f)^\mu=
+	F^*_\pi(p_i^2,p_f^2,Q^2)\,(p_i+p_f)^\mu-F^*_{\pi,-}(p_i^2,p_f^2,Q^2)\,(p_i-p_f)^\mu\, ,
+	\end{align}
+	and since the form factors are real, we obtain the following constraints
+	\begin{eqnarray}
+	F_\pi(p_f^2,p_i^2,Q^2)&=&F_\pi(p_i^2,p_f^2,Q^2)\, \\
+	F_{\pi,-}(p_f^2,p_i^2,Q^2)&=&-F_{\pi,-}(p_i^2,p_f^2,Q^2)\, .
+	\end{eqnarray}}
+The current ${\mathcal{J}}^{\mu}$ is conserved, $\partial_\mu {\mathcal{J}}^{\mu}=0$, which in momentum space tells us that
+	\begin{align}
+	(p_i-p_f)_\mu\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi'(p_i)\rangle&=
+	F_{\pi}({\ab p_f^2,p_i^2,}Q^2)\, (p_f^2-p_i^2)
+	+
+	F_{\pi,-}({\ab p_f^2,p_i^2,}Q^2)\,(p_i-p_f)^2
+	=0,
+	\\
+	\Rightarrow
+	F_{\pi,-}({\ab p_f^2,p_i^2,}Q^2)
+	&=-
+	F_{\pi}({\ab p_f^2,p_i^2,}Q^2)\, \frac{(p_f^2-p_i^2)}{(p_i-p_f)^2}
+	= 
+	-F_{\pi}({\ab p_f^2,p_i^2,}Q^2)\, \frac{(p_f^2-p_i^2)}{Q^2}.
+	\end{align}
+We conclude that this matrix element can be described using a single form factor
+	\begin{align}
+	\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi'(p_i)\rangle=
+	\left( (p_i+p_f)^\mu \, +(p_i-p_f)^\mu\frac{{\ab(p_f^2-p_i^2)}}{Q^2}\right)F_{\pi\pi}({\ab p_f^2,p_i^2,}Q^2).
+	\label{eq:pi_to_pi_FF}
+	\end{align}
+	{\ab
+	It is straightforward to see that for pions on shell}
+	\begin{align}
+	\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi'(p_i)\rangle=
+	\left( (p_i+p_f)^\mu \, +(p_i-p_f)^\mu\frac{(m_{\pi'}^2-m_\pi^2)}{Q^2}\right)F_{\pi\pi}(Q^2).
+	\label{eq:pi_to_pi_FF}
+	\end{align}
+
+
 Below we consider examples when the decomposition is less trivial.  
-
 
 
 \subsubsection{Lorentz decomposition of $\rho\gamma^\star\to\pi$}
