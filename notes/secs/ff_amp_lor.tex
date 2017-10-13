@@ -17,7 +17,7 @@ Before describing how the desired observables can be extracted using lattice QCD
 \begin{center}
 \subfigure[]{
 \includegraphics[width=.8\textwidth]{figs/flowchart2}}
-\caption{Flowchart summarizing the process for extracting resonance form factors using the formalsim of Ref.~\cite{Briceno:2015tza}. {\mh [check update]}}\label{fig:flowchart}
+\caption{Flowchart summarizing the process for extracting resonance form factors using the formalsim of Ref.~\cite{Briceno:2015tza}. {\mh [Check second update, now two analytic continuation arrows and colors]}}\label{fig:flowchart}
 \end{center}
 \end{figure*}
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -338,20 +338,23 @@ When considering QCD stable states, it is naturally to write the matrix elements
 	\begin{align}
 	\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi(p_i)\rangle=F_\pi({\ab p_f^2,p_i^2,}Q^2)\,(p_i+p_f)^\mu+F_{\pi,-}({\ab p_f^2,p_i^2,}Q^2)\,(p_i-p_f)^\mu\, ,
 	\end{align}
-	{\ab where the functions $F_\pi$ and $F_{\pi,-}$ have in principle not vanishing imaginary parts.
-	Firt we require time reversal invariance of the matrix element
-	\begin{eqnarray}
-	\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi'(p_i)\rangle&=&-{\cal T}_\nu^\mu\langle\pi(p_f^0,-\vec{p}_f)|J^\nu|\pi(p_i^0-\vec{p}_i)\rangle^*\, \\
-	&=&-{\cal T}_\nu^\mu\left[F^*_\pi(p_f^2,p_i^2,Q^2)(\tilde{p}_i+\tilde{p}_f)^\nu+F^*_{\pi,-}(p_f^2,p_i^2,Q^2)\,(\tilde{p}_i-\tilde{p}_f)^\nu\right]\label{eq:t-rev-gpi}
-	\end{eqnarray}
-	where we have defined $\tilde{p}_f=(p^0_f,-\vec{p}_f)$ and similarly for $\tilde{p}_i$. Looking at $\mu =0$ in Eq.~(\ref{eq:t-rev-gpi}) we obtain the following relation
+	{\ab where the functions $F_\pi$ and $F_{\pi,-}$ could {\em a priori} have non-vanishing imaginary parts.
+	Time-reversal invariance implies
+	\begin{align}
+	\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi'(p_i)\rangle&= -{{\cal T}^\mu}_\nu \langle\pi(p_f^0,-\vec{p}_f)|J^\nu|\pi(p_i^0-\vec{p}_i)\rangle^*\,, \\
+	&=- {{\cal T}^\mu}_\nu \left[F^*_\pi(p_f^2,p_i^2,Q^2)(\tilde{p}_i+\tilde{p}_f)^\nu+F^*_{\pi,-}(p_f^2,p_i^2,Q^2)\,(\tilde{p}_i-\tilde{p}_f)^\nu\right] \,, \label{eq:t-rev-gpi} \\
+	&={\color{red} F^*_\pi({  p_f^2,p_i^2,}Q^2)\,(p_i+p_f)^\mu+F^*_{\pi,-}({  p_f^2,p_i^2,}Q^2)\,(p_i-p_f)^\mu } \,,
+	\end{align}
+	where in the second line we have defined $\tilde{p}_f=(p^0_f,-\vec{p}_f)$ and similarly for $\tilde{p}_i$. 
+	{\mh [I think we can drop the following...] (Looking at $\mu =0$ in Eq.~(\ref{eq:t-rev-gpi}) we obtain the following relation
 	\begin{eqnarray}
 	F_\pi(p_f^2,p_i^2,Q^2)\,(p^0_i+p^0_f)+F_{\pi,-}(p_f^2,p_i^2,Q^2)\,(p_i^0-p_f^0)&=&
 	F^*_\pi(p_f^2,p_i^2,Q^2)\,(p^0_i+p^0_f)+F^*_{\pi,-}(p_f^2,p_i^2,Q^2)\,(p_i^0-p_f^0)
-	\end{eqnarray}
-	therefore we conclude that $F_\pi$ and $F_{\pi,-}$ have vanishing imaginary parts.
-	It is easy to see that when $\mu=i$ Eq.~(\ref{eq:t-rev-gpi}) is trivially satisfied.
-	We now require hermiticity of the matrix element
+	\end{eqnarray})}
+	We conclude that $F_\pi$ and $F_{\pi,-}$ have vanishing imaginary parts for all $p_f^2,p_i^2,Q^2$.
+	{\mh (It is easy to see that when $\mu=i$ Eq.~(\ref{eq:t-rev-gpi}) is trivially satisfied.)}
+	
+	We next take advantage of the hermiticity of the current to find
 	\begin{align}
 	\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi(p_i)\rangle=\langle\pi(p_i)|{\mathcal{J}}^{\mu}|\pi(p_f)\rangle^*\, ,
 	\end{align}
@@ -396,6 +399,8 @@ We conclude that this matrix element can be described using a single form factor
 
 
 Below we consider examples when the decomposition is less trivial.  
+
+{\mh [very nice!]}
 
 
 \subsubsection{Lorentz decomposition of $\rho\gamma^\star\to\pi$}
@@ -474,36 +479,14 @@ Similarly, we can rule out a term of the form $p^\mu_{i}\,(p_{i}\cdot\epsilon)$.
 
 \subsubsection{Lorentz decomposition of $\rho\gamma^\star\to\rho'$}
 
-Now, we turn to the case where we have a stable spin-1 particle in the initial and final state. Once again, the matrix element must be proportional to the polarization vector of the initial state, $\epsilon^{\mu}(\lambda_i, p_i)$, and conjugate polarization vector of the final state, $\epsilon^{* \mu}(\lambda_f,p_f)$.  To systematically ensure that all possible structures are included, we first list all possible building blocks that carry a Lorentz index:
+{\mh [I agree with Raul's suggestion here and have already implemented it.]}
+
+Now, we turn to the case where we have a stable spin-1 particle in the initial and final state. Once again, the matrix element must be proportional to the polarization vector of the initial state, $\epsilon^{\mu}(\lambda_i, p_i)$, and conjugate polarization vector of the final state, $\epsilon^{* \mu}(\lambda_f,p_f)$.  To systematically ensure that all possible structures are included, we first list all possible building blocks that carry a Lorentz index
 \begin{gather}
 p_f^\mu,\ p_i^\mu,\ \epsilon^{*\mu}_f,\ \epsilon_i^{\mu} \,.
 \end{gather}
-Since the matrix element must be proportional to both polarization vectors, the following decomposition must hold:
-\begin{multline}
-\langle\rho'(\lambda_f,p_f)|{\mathcal{J}}^{\mu}|\rho(\lambda_i,p_i)\rangle
-=
-\big ( \epsilon_f^*\cdot \epsilon_i \big ) \  {X}^\mu \big (p_i^\alpha,p_f^\beta \big)
-+ \epsilon_i^\mu    \Big ( \epsilon_f^* \cdot {Y_f} \big (p_i^\alpha,p_f^\beta \big) \Big ) 
-+ \epsilon_f^{*\mu}  \Big (  \epsilon_i \cdot {Y_i}  \big (p_i^\alpha,p_f^\beta \big)  \Big ) \\ 
-+  \epsilon_f^{*\nu}   \epsilon_i^\sigma {Z^{\mu}}_{\nu \sigma}  \big (p_i^\alpha,p_f^\beta \big) \,.
-\end{multline}
- 
- Here we have separated out all ways in which the indices on the polarization vectors can enter the vector matrix element. The key point is that $X$, $Y_i$, $Y_f$ and $Z$ are tensors, transforming as indicated by the the index structure, that do not depend on the polarization. In particular, the decomposition of $X^\mu$, $Y_i^\mu$, $Y_f^\mu$, must be identical to that of the pion vector matrix element, i.e.
-\begin{equation}
-{X}^\mu \big (p_i^\alpha,p_f^\beta \big) = (p_i + p_f)^\mu X_+ \big (Q^2, p_i^2,p_f^2 \big) + (p_i - p_f)^\mu {X_-} \big (Q^2, p_i^2,p_f^2 \big) \,.
-\end{equation}
-By contrast, the three-index quantity $Z^{\mu \nu \sigma}$ leads to a new decomposition
-\begin{multline}
-Z^{\mu \nu \sigma} \big (p_i^\alpha,p_f^\beta \big) = \sum_{a,b,c=i,f} p_a^\mu p_b^\nu p_c^\sigma Z_{abc} \big (Q^2, p_i^2,p_f^2 \big) \\ 
-+ g^{\mu \nu}  Z^\sigma_i \big (Q^2, p_i^2,p_f^2 \big) + g^{\mu \sigma}  Z^\nu_f \big (Q^2, p_i^2,p_f^2 \big) + g^{\nu \sigma}  Z^\mu \big (Q^2, p_i^2,p_f^2 \big) \,.
-\end{multline}
-{\raul [Since $Z^\sigma_i  $ is a vector, shouldn't it depend on the two vectors in the problem $p_i^\alpha,p_f^\beta$ instead of just the scalars? ]} 
-
-{\mh
-Further decomposing the one-index $Z$ functions on the second line leads to a total of $14$ scalar form factors for the three-index quantity. However the second line leads only to terms redundant with those from $X$, $Y_i$ and $Y_f$. Dropping these leads to $8$ remaining terms from $Z$. These are to be combined with $2$ each from $X$, $Y_i$ and $Y_f$ for a grand total of $14$. Of these $14$, $8$ are redundant due to the identity $p_i\cdot \epsilon_i=p_f\cdot \epsilon_f^*=0$. More specifically, $X$ generates 2 distinct contributions, $Y_i$ and $Y_f$ each give 1, and in the end $Z$ only generates 2 more. } 
-
-{\raul [I find this discussion slightly complicated and a bit circular. In particular, the fact that we introduce new terms written in a different way but then say that they are the same as the ones we already wrote down. An alternative starting point that is slightly less redundant is 
-\begin{multline}
+We see that the following decomposition must hold:
+{\raul \begin{multline}
 \langle\rho'(\lambda_f,p_f)|{\mathcal{J}}^{\mu}|\rho(\lambda_i,p_i)\rangle
 =
 \big ( \epsilon_f^*\cdot \epsilon_i \big ) \  {X}^\mu \big (p_i^\alpha,p_f^\beta \big)
@@ -512,13 +495,46 @@ Further decomposing the one-index $Z$ functions on the second line leads to a to
 +  \epsilon_f^{*\nu}   \epsilon_i^\sigma 
 \sum_{a,b,c=i,f} p_a^\mu p_b^\nu p_c^\sigma Z_{abc} \big (Q^2, p_i^2,p_f^2 \big)
  \,.
-\end{multline}
-This also avoids introducing $Z$ functions that are then written in terms of other $Z$ functions.
-]}
+\end{multline}}
+ Here we have separated out all ways in which the indices on the polarization vectors can enter the vector matrix element. The key point is that $X^\mu$, $Y^\mu_i$, $Y^\mu_f$ are vectors, and $Z$ a scalar, that do not depend on the polarization. In particular, the decomposition of $X^\mu$, $Y_i^\mu$, $Y_f^\mu$, must be identical to that of the pion vector matrix element, i.e.
+\begin{equation}
+{X}^\mu \big (p_i^\alpha,p_f^\beta \big) = (p_i + p_f)^\mu X_+ \big (Q^2, p_i^2,p_f^2 \big) + (p_i - p_f)^\mu {X_-} \big (Q^2, p_i^2,p_f^2 \big) \,.
+\end{equation}
+%By contrast, the three-index quantity $Z^{\mu \nu \sigma}$ leads to a new decomposition
+%\begin{multline}
+%Z^{\mu \nu \sigma} \big (p_i^\alpha,p_f^\beta \big) = \sum_{a,b,c=i,f} p_a^\mu p_b^\nu p_c^\sigma Z_{abc} \big (Q^2, p_i^2,p_f^2 \big) \\ 
+%+ g^{\mu \nu}  Z^\sigma_i \big (Q^2, p_i^2,p_f^2 \big) + g^{\mu \sigma}  Z^\nu_f \big (Q^2, p_i^2,p_f^2 \big) + g^{\nu \sigma}  Z^\mu \big (Q^2, p_i^2,p_f^2 \big) \,.
+%\end{multline}
+%{\raul [Since $Z^\sigma_i  $ is a vector, shouldn't it depend on the two vectors in the problem $p_i^\alpha,p_f^\beta$ instead of just the scalars? ]} 
+%
+%
+{\mh
 
-
-
-We deduce that Lorentz invariance alone restricts the decomposition to $6$ distinct, nonzero scalar form factors. After slight rearanging these can be written
+Next implementing the identities $p_i\cdot \epsilon_i=p_f\cdot \epsilon_f^*=0$ we see that six terms survive, two from $X^\mu$ and $Z$ and one each from $Y_i^\mu$ and $Y_f^\mu$. 
+%
+%Further decomposing the one-index $Z$ functions on the second line leads to a total of $14$ scalar form factors for the three-index quantity. However the second line leads only to terms redundant with those from $X$, $Y_i$ and $Y_f$. Dropping these leads to $8$ remaining terms from $Z$. These are to be combined with $2$ each from $X$, $Y_i$ and $Y_f$ for a grand total of $14$. Of these $14$, $8$ are redundant due to the identity $p_i\cdot \epsilon_i=p_f\cdot \epsilon_f^*=0$. More specifically, $X$ generates 2 distinct contributions, $Y_i$ and $Y_f$ each give 1, and in the end $Z$ only generates 2 more. 
+} 
+%
+%
+%{\raul [I find this discussion slightly complicated and a bit circular. In particular, the fact that we introduce new terms written in a different way but then say that they are the same as the ones we already wrote down. An alternative starting point that is slightly less redundant is 
+%\begin{multline}
+%\langle\rho'(\lambda_f,p_f)|{\mathcal{J}}^{\mu}|\rho(\lambda_i,p_i)\rangle
+%=
+%\big ( \epsilon_f^*\cdot \epsilon_i \big ) \  {X}^\mu \big (p_i^\alpha,p_f^\beta \big)
+%+ \epsilon_i^\mu    \Big ( \epsilon_f^* \cdot {Y_f} \big (p_i^\alpha,p_f^\beta \big) \Big ) 
+%+ \epsilon_f^{*\mu}  \Big (  \epsilon_i \cdot {Y_i}  \big (p_i^\alpha,p_f^\beta \big)  \Big ) \\ 
+%+  \epsilon_f^{*\nu}   \epsilon_i^\sigma 
+%\sum_{a,b,c=i,f} p_a^\mu p_b^\nu p_c^\sigma Z_{abc} \big (Q^2, p_i^2,p_f^2 \big)
+% \,.
+%\end{multline}
+%This also avoids introducing $Z$ functions that are then written in terms of other $Z$ functions.
+%]}
+%
+% MH: I agree! and made the changes above
+%
+%
+%We deduce that Lorentz invariance alone restricts the decomposition to $6$ distinct, nonzero scalar form factors. 
+After slight rearanging these can be written
 \begin{equation}
 \begin{split}
 \langle\rho'(\lambda_f,p_f)|{\mathcal{J}}^{\mu}|\rho(\lambda_i,p_i)\rangle
@@ -576,13 +592,19 @@ Note, the spin and momentum change sign, as expected, which implies that that th
 
 Next we use the identity
 \begin{equation}
+\label{eq:Tident}
   \langle \alpha \vert  \mathcal O \vert \beta \rangle    =  \left [ \Big ( T \vert \alpha \rangle \Big )^\dagger   T \mathcal O T^{-1}  \Big ( T \vert \beta \rangle \Big ) \right ]^* \,,
 \end{equation}
 to write
 \begin{equation}
 \langle\rho'(\lambda_f,p_f)|{\mathcal{J}}^{\mu}|\rho(\lambda_i,p_i)\rangle =- (-1)^{\lambda_i+\lambda_f}  \mathcal {T^{\mu}}_\nu \langle\rho'(- \lambda_f, - \textbf p_f)|{\mathcal{J}}^{\nu}|\rho(- \lambda_i, - \textbf p_i)\rangle^*  \,.
 \end{equation}
-{\raul [Not sure I understand this equation. Using what we found above, we have
+{\raul [Not sure I understand this equation. {\mh So Eq.~(\ref{eq:Tident}) is indeed a bit strange but I think it is crucial to extracting the properties we want. I also think $T^2=1$ cannot be generally used because it does not hold for all states. One can also see that it leads to very weird predictions. For example suppose $T \vert \psi \rangle = \vert \psi \rangle$. Then one can argue
+\begin{equation}
+i \langle \psi \vert \psi \rangle =  \langle \psi \vert (i) \vert \psi \rangle =  \langle \psi \vert  T^2 (i) T^2 \vert \psi \rangle =  \langle \psi \vert  T (i) T \vert \psi \rangle =  \langle \psi \vert  (-i)  \vert \psi \rangle = - i  \langle \psi \vert \psi \rangle \Longrightarrow  \langle \psi \vert \psi \rangle = 0\,.
+\end{equation}
+Clearly this does not make sense and I think that inserting $T^2$ is the incorrect step.
+} Using what we found above, we have
 \begin{align}
  T T \vert \rho^+(\lambda_{\textbf{p}}, \textbf p) \rangle = (-1)^{\lambda_{\textbf{p}}}T \vert \rho^+(- \lambda_{\textbf{p}} ,- \textbf p) \rangle
  =
@@ -602,13 +624,17 @@ meaning $T^2=1$ and $T=T^{-1}$. So then
  \nn\\&
  = 
   (-1)^{\lambda_{\textbf{p}}+\lambda_{\textbf{p}'}}
-\bigg(\langle \rho^+(-\lambda_{\textbf{p}}, -\textbf p) \vert  \mathcal \mathcal{J}^*_{\mu} \vert \rho^+(-\lambda_{\textbf{p}'}, -\textbf p') \rangle \bigg)^*
+\bigg(\langle \rho^+(-\lambda_{\textbf{p}}, -\textbf p) \vert  \mathcal \mathcal{J}^\dagger_{\mu} \vert \rho^+(-\lambda_{\textbf{p}'}, -\textbf p') \rangle \bigg)^*
  \nn\\
  &=
   (-1)^{\lambda_{\textbf{p}}+\lambda_{\textbf{p}'}}
- \bigg(\langle \rho^+(-\lambda_{\textbf{p}}, -\textbf p) \vert  \mathcal \mathcal{J}_{\mu} \vert \rho^+(-\lambda_{\textbf{p}'}, -\textbf p') \rangle \bigg)^*
+ \bigg(\langle \rho^+(-\lambda_{\textbf{p}}, -\textbf p) \vert  \mathcal \mathcal{J}_{\mu} \vert \rho^+(-\lambda_{\textbf{p}'}, -\textbf p') \rangle \bigg)^* \\
+ &=  {\color{red}
+  (-1)^{\lambda_{\textbf{p}}+\lambda_{\textbf{p}'}}
+  \langle \rho^+(-\lambda_{\textbf{p}'}, -\textbf p') \vert  \mathcal \mathcal{J}_{\mu} \vert \rho^+(-\lambda_{\textbf{p}}, -\textbf p) \rangle }
 \end{align}
 where in going from the third to fourth equality I used the fact that the current is Hermitian.
+{\mh [It is important to note that our goal here is to find a relation between $\langle \alpha \vert \mathcal O \vert \beta \rangle$ and $\langle \alpha \vert \mathcal O \vert \beta \rangle^*$. If we find a relation between $\langle \alpha \vert \mathcal O \vert \beta \rangle$ and $\langle \beta \vert \mathcal O \vert \alpha \rangle^*$ then we just get a statement about operator hermiticity but not about the reality of the matrix element.]}
 ]
 }
 
@@ -622,7 +648,7 @@ where in the first line we used $\epsilon^*(- \lambda_f,  (p^0_f, - \textbf p_f)
 \begin{equation}
 \widetilde{G}_1(Q^2,p_i^2,p_f^2)  = \widetilde{G}^*_1(Q^2,p_i^2,p_f^2) \,.
 \end{equation}
-A similar argument can be used to show that all six scalar form factors satisfy this condition. [Check this!]
+A similar argument can be used to show that all six scalar form factors satisfy this condition. {\mh [Check this!]}
 
 \bigskip
 }
@@ -741,9 +767,9 @@ Putting all of the constraints in place, we find that the matrix element can be 
 \begin{align}
 \langle\rho'(\lambda_f,p_f)|{\mathcal{J}}^{\mu}|\rho(\lambda_i,p_i)\rangle
 &=
-\left((p_f+p)^\mu \,+(p_i-p_f)^\mu\frac{(p_f^2-p_i^2)}{Q^2} \right)\,\left(\epsilon_f^*\cdot \epsilon_i\right)\, \widetilde{G}_1(Q^2,p_i^2,p_f^2)\,
+\left((p_f+p_i)^\mu \,+(p_i-p_f)^\mu\frac{(p_f^2-p_i^2)}{Q^2} \right)\,\left(\epsilon_f^*\cdot \epsilon_i\right)\, \widetilde{G}_1(Q^2,p_i^2,p_f^2)\,
 \nn\\&
-+\left(\epsilon_i^\mu\, p_f\cdot \epsilon_f^*\,
++\left(\epsilon_i^\mu\, p_i \cdot \epsilon_f^*\,
 +\epsilon_f^{*\mu}\, p_f\cdot \epsilon_i\right)\,\widetilde{G}_3(Q^2,p_i^2,p_f^2)\,
 \nn\\
 &+\left(\epsilon_i^\mu\, p_i\cdot \epsilon_f^*\,-\epsilon_f^{*\mu}\, p_f\cdot \epsilon_i
@@ -755,6 +781,7 @@ Putting all of the constraints in place, we find that the matrix element can be 
 +\left((p_f+p_i)^\mu \,+(p_i-p_f)^\mu\frac{(p_f^2-p_i^2)}{Q^2} \right)(\epsilon_f^*\cdot p_i)\,(\epsilon_i\cdot p_f)\,\widetilde{G}_5(Q^2,p_i^2,p_f^2).
 \label{eq:rho_to_rho_FF}
 \end{align}
+{\mh [I fixed a minor typo here.]}
  For the case where $p_f^2=p_i^2$ this is consistent with the standard Lorentz decomposition of the matrix elements of a stable spin-1 particle, e.g., Eq.~(5) in Ref.~\cite{Shultz:2015pfa}. This is because $\lim_{p_i^2=p_f^2}\widetilde{G}_4(Q^2,p_i^2,p_f^2)=-\lim_{p_i^2=p_f^2}\widetilde{G}_4(Q^2,p_f^2,p_i^2)=0$. So one finds that indeed only three form factors are needed to describe the matrix element. 
 
 { \red [not sure about this now...Also, Ref.~\cite{Jaus:2002sv} gives an expression, Eq. (2.1), which claims to be the most general form for a electroweak transition matrix element between two spin-1 particles with arbitrary masses. When the current is just the electromagnetic current, it states that only three form factors survive. This is reassuring but the relationship between their expression and this one is not immediately obvious. ]}

@@ -181,6 +181,76 @@ Y^*_{\ell_i m_{i}}(\hat {\textbf k}^*_{i})
 \end{align}
 {\mh [Using the definitions above, Prove Eq.~(\ref{eq:Gdotw})]}
 
+{\mh 
+\subsubsection{Reducing $G$ using the decomposition of the $\rho$ form factor}
+
+In Eqs.~(\ref{eq:rho_to_rho_FF}) and () above we have shown that 
+\begin{align}
+\langle \pi \pi, P_f, \lambda_f | {\mathcal{J}}^{\mu} | \pi \pi, P_i, \lambda_i \rangle
+&=
+\left((P_f+P_i)^\mu \,+(P_i-P_f)^\mu\frac{(P_f^2-P_i^2)}{Q^2} \right)\,\left(\epsilon_f^*\cdot \epsilon_i\right)\, \mathcal{F}_1(Q^2,P_i^2,P_f^2)\,
+\nn\\&
++\left(\epsilon_i^\mu\, P_i \cdot \epsilon_f^*\,
++\epsilon_f^{*\mu}\, P_f\cdot \epsilon_i\right)\,\mathcal{F}_2(Q^2,P_i^2,P_f^2)\,
+\nn\\
+&+\left(\epsilon_i^\mu\, P_i\cdot \epsilon_f^*\,-\epsilon_f^{*\mu}\, P_f\cdot \epsilon_i
+-2
+(P_i-P_f)^\mu \,(\epsilon_f^*\cdot P_i)\,(\epsilon_i\cdot P_f)
+\right)
+\, \mathcal F_3(Q^2,P_i^2,P_f^2)
+\nn\\&
++\left((P_f+P_i)^\mu \,+(P_i-P_f)^\mu\frac{(P_f^2-P_i^2)}{Q^2} \right)(\epsilon_f^*\cdot P_i)\,(\epsilon_i\cdot P_f)\,\mathcal {F}_4(Q^2,P_i^2,P_f^2) \,,
+\end{align}
+where we have renamed $\widetilde{G}_1 \to \mathcal F_1$, $\widetilde{G}_3 \to \mathcal F_2$, $\widetilde{G}_4 \to \mathcal F_3$, $\widetilde{G}_5 \to \mathcal F_4$.
+
+In this subsection we use this decomposition to define scalar projections of $G$. The basic idea here is to start with
+\begin{equation}
+\label{eq:WtiltoWdf2}
+ \Wdf(P_f,P_i)  \equiv \Wtildf(P_f,P_i,L) -  \mathcal  M(P_f) \ [G(L) \cdot \w](P_f,P_i) \ \mathcal M(P_i)    \,,
+ \end{equation}
+ and rewrite this at the level of the scalar form factors $\mathcal F_i$. Many issues must be addressed to do this property. To name a few, we must
+ \begin{enumerate}
+\item Understand the subduction of the Lellouch-L\"uscher-like equation that is used to extract $\Wtildf(P_f,P_i,L)$ from the finite-volume matrix element.
+\item Understand how the mixing of partial waves enters the subtraction $\mathcal  M(P_f) \ [G(L) \cdot \w](P_f,P_i) \ \mathcal M(P_i)$.
+\item Understand the scalar decomposition of $ \Wdf(P_f,P_i) $ and how it is related to the decomposition of the full matrix element given above.
+\end{enumerate}
+
+To get started we circumvent these issues by assuming that the symmetry group of the infinite-volume gives a leading-order approximation and assuming that $ \Wdf(P_f,P_i) $ admits the same decomposition as the full matrix element. In equations, the latter implies
+\begin{align}
+ \mathcal W^\mu_{{\rm df},\ell'=1, m'=\lambda_f; \ell=1, m=\lambda_i}(P_f,P_i) 
+&=
+\left((P_f+P_i)^\mu \,+(P_i-P_f)^\mu\frac{(P_f^2-P_i^2)}{Q^2} \right)\,\left(\epsilon_f^*\cdot \epsilon_i\right)\, \mathcal{F}^{\rm df}_1(Q^2,P_i^2,P_f^2)\,
+\nn\\&
++\left(\epsilon_i^\mu\, P_i \cdot \epsilon_f^*\,
++\epsilon_f^{*\mu}\, P_f\cdot \epsilon_i\right)\,\mathcal{F}^{\rm df}_2(Q^2,P_i^2,P_f^2)\,
+\nn\\
+&+\left(\epsilon_i^\mu\, P_i\cdot \epsilon_f^*\,-\epsilon_f^{*\mu}\, P_f\cdot \epsilon_i
+-2
+(P_i-P_f)^\mu \,(\epsilon_f^*\cdot P_i)\,(\epsilon_i\cdot P_f)
+\right)
+\, \mathcal F^{\rm df}_3(Q^2,P_i^2,P_f^2)
+\nn\\&
++\left((P_f+P_i)^\mu \,+(P_i-P_f)^\mu\frac{(P_f^2-P_i^2)}{Q^2} \right)(\epsilon_f^*\cdot P_i)\,(\epsilon_i\cdot P_f)\,\mathcal {F}^{\rm df}_4(Q^2,P_i^2,P_f^2) \,.
+\end{align}
+
+Next suppose that we are able to identify projectors, $\mathcal P^k_{\lambda_i, \lambda_f, \mu}$ such that
+\begin{equation}
+\mathcal P^k_{\lambda_i, \lambda_f, \mu}   \mathcal W^\mu_{{\rm df},  \lambda_f, \lambda_i}(P_f,P_i) =  \mathcal{F}^{\rm df}_k(Q^2,P_i^2,P_f^2) \,.
+\end{equation}
+Then, applying these to Eq.~(\ref{eq:WtiltoWdf2}), we find
+\begin{equation}
+ \mathcal{F}^{\rm df}_k(Q^2,P_i^2,P_f^2) \equiv \mathcal P^k_{\lambda_i, \lambda_f, \mu}  \Wtildf^\mu(P_f,P_i,L) -  F_\pi[(P_f - P_i)^2] \mathcal  M_{p}(P_f)   \mathcal G^k(P_f,P_i,L)   \mathcal M_{p}(P_i)  \,,
+ \end{equation}
+ where $\mathcal M_p(P)$ is the p-wave scattering amplitude and where
+\begin{equation}
+\mathcal G^k(P_f,P_i,L)  \equiv  \mathcal P^k_{\lambda_i, \lambda_f, \mu}  \left [ (P_f + P_i)^\mu  \ G^S_{ 1 \lambda_{f}, 1 \lambda_{i}}(P_f,P_i,L)   - 2 G^{V,\mu}_{1 \lambda_{f},  1 \lambda_{i}}(P_f,P_i,L)    \right ]     \,.
+ \end{equation}
+ 
+Something like this is likely the final form of the kinematic function that we will wish to code in this project.
+
+}
+
+
 
 
 \subsubsection{Evaluating $G$ for $P_i^\mu = P_f^\mu$}
