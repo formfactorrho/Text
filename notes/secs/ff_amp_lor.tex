@@ -371,7 +371,7 @@ When considering QCD stable states, it is naturally to write the matrix elements
 The current ${\mathcal{J}}^{\mu}$ is conserved, $\partial_\mu {\mathcal{J}}^{\mu}=0$, which in momentum space tells us that
 	\begin{align}
 	(p_i-p_f)_\mu\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi'(p_i)\rangle&=
-	F_{\pi}({\ab p_f^2,p_i^2,}Q^2)\, (p_f^2-p_i^2)
+	F_{\pi}({\ab p_f^2,p_i^2,}Q^2)\, (p_i^2-p_f^2)
 	+
 	F_{\pi,-}({\ab p_f^2,p_i^2,}Q^2)\,(p_i-p_f)^2
 	=0,
@@ -379,14 +379,14 @@ The current ${\mathcal{J}}^{\mu}$ is conserved, $\partial_\mu {\mathcal{J}}^{\mu
 	\Rightarrow
 	F_{\pi,-}({\ab p_f^2,p_i^2,}Q^2)
 	&=-
-	F_{\pi}({\ab p_f^2,p_i^2,}Q^2)\, \frac{(p_f^2-p_i^2)}{(p_i-p_f)^2}
+	F_{\pi}({\ab p_f^2,p_i^2,}Q^2)\, \frac{(p_i^2-p_f^2)}{(p_i-p_f)^2}
 	= 
-	-F_{\pi}({\ab p_f^2,p_i^2,}Q^2)\, \frac{(p_f^2-p_i^2)}{Q^2}.
+	-F_{\pi}({\ab p_f^2,p_i^2,}Q^2)\, \frac{(p_i^2-p_f^2)}{Q^2}.
 	\end{align}
 We conclude that this matrix element can be described using a single form factor
 	\begin{align}
 	\langle\pi(p_f)|{\mathcal{J}}^{\mu}|\pi'(p_i)\rangle=
-	\left( (p_i+p_f)^\mu \, +(p_i-p_f)^\mu\frac{{\ab(p_f^2-p_i^2)}}{Q^2}\right)F_{\pi\pi}({\ab p_f^2,p_i^2,}Q^2).
+	\left( (p_i+p_f)^\mu \, +(p_i-p_f)^\mu\frac{{\ab(p_i^2-p_f^2)}}{Q^2}\right)F_{\pi\pi}({\ab p_f^2,p_i^2,}Q^2).
 	\label{eq:pi_to_pi_FF}
 	\end{align}
 	{\ab
@@ -711,7 +711,7 @@ and thus
 \begin{align}
 (p_i-p_f)_\mu\langle\rho(\lambda_i,p_i)|{\mathcal{J}}^{\mu}|\rho'(\lambda_f,p_f)\rangle
 &=
-(p_f^2-p_i^2) \,\epsilon_f^*\cdot \epsilon_i\, \widetilde{G}_1(Q^2,p_i^2,p_f^2)
+(p_i^2-p_f^2) \,\epsilon_f^*\cdot \epsilon_i\, \widetilde{G}_1(Q^2,p_i^2,p_f^2)
 -Q^2 \,\epsilon_f^*\cdot \epsilon_i\,\widetilde{G}_2(Q^2,p_i^2,p_f^2)
 \nn\\&
 +
@@ -721,17 +721,17 @@ and thus
 -2p_f\cdot\epsilon_i\, p_i\cdot \epsilon_f^*\,
 \,\widetilde{G}_4(Q^2,p_i^2,p_f^2)
 \nn\\
-&+(p_f^2-p_i^2) \,(\epsilon_f^*\cdot p_i)\,(\epsilon_i\cdot p_f)\,\widetilde{G}_5(Q^2,p_i^2,p_f^2)
+&+(p_i^2-p_f^2) \,(\epsilon_f^*\cdot p_i)\,(\epsilon_i\cdot p_f)\,\widetilde{G}_5(Q^2,p_i^2,p_f^2)
 -Q^2 \,(\epsilon_f^*\cdot p_i)\,(\epsilon_i\cdot p_f)\,\widetilde{G}_6(Q^2,p_i^2,p_f^2)
 \nn\\
 &=
-(p_f^2-p_i^2) \,\epsilon_f^*\cdot \epsilon_i\, \widetilde{G}_1(Q^2,p_i^2,p_f^2)
+(p_i^2-p_f^2) \,\epsilon_f^*\cdot \epsilon_i\, \widetilde{G}_1(Q^2,p_i^2,p_f^2)
 -Q^2 \,\epsilon_f^*\cdot \epsilon_i\,\widetilde{G}_2(Q^2,p_i^2,p_f^2)
 \nn\\
 &-2p_f\cdot\epsilon_i\, p_i\cdot \epsilon_f^*\,
 \,\widetilde{G}_4(Q^2,p_i^2,p_f^2)
 \nn\\&
-+(p_f^2-p_i^2) \,(\epsilon_f^*\cdot p_i)\,(\epsilon_i\cdot p_f)\,\widetilde{G}_5(Q^2,p_i^2,p_f^2)
++(p_i^2-p_f^2) \,(\epsilon_f^*\cdot p_i)\,(\epsilon_i\cdot p_f)\,\widetilde{G}_5(Q^2,p_i^2,p_f^2)
 -Q^2 \,(\epsilon_f^*\cdot p_i)\,(\epsilon_i\cdot p_f)\,\widetilde{G}_6(Q^2,p_i^2,p_f^2)
 \nn\\
 &=0.
@@ -740,24 +740,24 @@ and thus
 
 We see that we get two independent equations here. Note, this equation must be satisfied for all values of $p_i,p_f,\lambda,$ and $\lambda'$. So if let $\vec{p}_i=\vec{p}_f=0$, we get 
 \begin{align}
-(p_f^2-p_i^2) \,\, \widetilde{G}_1(Q^2,p_i^2,p_f^2)
+(p_i^2-p_f^2) \,\, \widetilde{G}_1(Q^2,p_i^2,p_f^2)
 -Q^2 \,\,\widetilde{G}_2(Q^2,p_i^2,p_f^2)&=0
 \\
 \Rightarrow
 \widetilde{G}_2(Q^2,p_i^2,p_f^2)&=
-\frac{(p_f^2-p_i^2)}{Q^2} \,\, \widetilde{G}_1(Q^2,p_i^2,p_f^2).
+\frac{(p_i^2-p_f^2)}{Q^2} \,\, \widetilde{G}_1(Q^2,p_i^2,p_f^2).
 \end{align}
 
 Inserting this constraint into Eq.~\ref{eq:charge_cons_rho}, we then get
 \begin{align}
 -2
 \,\widetilde{G}_4(Q^2,p_i^2,p_f^2)
-+(p_f^2-p_i^2) \,\,\widetilde{G}_5(Q^2,p_i^2,p_f^2)
++(p_i^2-p_f^2) \,\,\widetilde{G}_5(Q^2,p_i^2,p_f^2)
 -Q^2\widetilde{G}_6(Q^2,p_i^2,p_f^2) \,\,
 &=0,
 \nn\\
 \Rightarrow
-\widetilde{G}_6(Q^2,p_i^2,p_f^2)&=\frac{(p_f^2-p_i^2)}{Q^2} \,\widetilde{G}_5(Q^2,p_i^2,p_f^2)-
+\widetilde{G}_6(Q^2,p_i^2,p_f^2)&=\frac{(p_i^2-p_f^2)}{Q^2} \,\widetilde{G}_5(Q^2,p_i^2,p_f^2)-
 2
 \,\widetilde{G}_4(Q^2,p_i^2,p_f^2).
 \end{align}
@@ -767,7 +767,7 @@ Putting all of the constraints in place, we find that the matrix element can be 
 \begin{align}
 \langle\rho'(\lambda_f,p_f)|{\mathcal{J}}^{\mu}|\rho(\lambda_i,p_i)\rangle
 &=
-\left((p_f+p_i)^\mu \,+(p_i-p_f)^\mu\frac{(p_f^2-p_i^2)}{Q^2} \right)\,\left(\epsilon_f^*\cdot \epsilon_i\right)\, \widetilde{G}_1(Q^2,p_i^2,p_f^2)\,
+\left((p_f+p_i)^\mu \,+(p_i-p_f)^\mu\frac{(p_i^2-p_f^2)}{Q^2} \right)\,\left(\epsilon_f^*\cdot \epsilon_i\right)\, \widetilde{G}_1(Q^2,p_i^2,p_f^2)\,
 \nn\\&
 +\left(\epsilon_i^\mu\, p_i \cdot \epsilon_f^*\,
 +\epsilon_f^{*\mu}\, p_f\cdot \epsilon_i\right)\,\widetilde{G}_3(Q^2,p_i^2,p_f^2)\,
@@ -778,7 +778,7 @@ Putting all of the constraints in place, we find that the matrix element can be 
 \right)
 \,\widetilde{G}_4(Q^2,p_i^2,p_f^2)
 \nn\\&
-+\left((p_f+p_i)^\mu \,+(p_i-p_f)^\mu\frac{(p_f^2-p_i^2)}{Q^2} \right)(\epsilon_f^*\cdot p_i)\,(\epsilon_i\cdot p_f)\,\widetilde{G}_5(Q^2,p_i^2,p_f^2).
++\left((p_f+p_i)^\mu \,+(p_i-p_f)^\mu\frac{(p_i^2-p_f^2)}{Q^2} \right)(\epsilon_f^*\cdot p_i)\,(\epsilon_i\cdot p_f)\,\widetilde{G}_5(Q^2,p_i^2,p_f^2).
 \label{eq:rho_to_rho_FF}
 \end{align}
 {\mh [I fixed a minor typo here.]}
@@ -981,7 +981,8 @@ Questions that I do not yet have an answer to:
  \subsubsection{Partial-wave projected states}
 In order to match the amplitudes with the form-factor decomposition, we will need to do a partial-wave projection of the amplitude. To do this, we follow steps presented in Ref.~\cite{Briceno:2016kkp}, which requires defining the partial-wave projected $\pi\pi$ states. In the cm-frame we can define these using spherical harmonics,
 \begin{equation}
-\big| |\textbf{k}^\star|; \ell \lambda \big\rangle = \int \! d\hat{\mathbf{k}}^\star \, \,{Y_{\ell \lambda}(\hat{\mathbf{k}}^\star)}\, \big| \pi(\textbf{k}^\star) \pi(-\textbf{k}^\star)\big\rangle,
+\big| |\textbf{k}^\star|; \ell \lambda \big\rangle = \int \! d\hat{\mathbf{k}}^\star \, \,\frac{Y_{\ell \lambda}(\hat{\mathbf{k}}^\star)}{\sqrt{4\pi}}\, \big| \pi(\textbf{k}^\star) \pi(-\textbf{k}^\star)\big\rangle,
+\label{eq:PW_proj}
 \end{equation}
 
 For systems with arbitrary momentum $\textbf{P}$, we define helicity states by first boosting along the $\hat{z}$-axis followed by a rotation to the momentum axis,
@@ -1007,7 +1008,6 @@ The $\hat{z}$-axis boost acting on four-vectors can be expressed as
 			|\textbf{P}| & 0 & 0 & E_i	
 		\end{bmatrix}
 \end{equation}
-{\ab
 since $\gamma = \frac{E_i}{ E_i^\star}$ and $\beta \gamma = \frac{|\textbf{P}|}{E_i^\star}$ where $E_i^\star=2\omega_\pi = 2\,\sqrt{m_\pi^2 + k^{\star 2}}$. Then the action of the boost on $k^\mu = \big(\omega_\pi, \textbf{k}^\star\big)$ and ${\bar{k}^\mu = \big(\omega_\pi , -\textbf{k}^\star \big)}$ is
 \begin{align}
 k'^\mu &= \big[ Z_P \big]^\mu_\nu \, k^\nu = 
@@ -1025,129 +1025,604 @@ E_i\\
 |{\bf P}|\, .
 \end{bmatrix}
 \end{align}
-It follows that 
-\begin{equation}
-\big| \textbf{P}; |\textbf{k}^\star|; J=1, \lambda \big\rangle = \int \! d\hat{\mathbf{k}^\star} \, \frac{Y_{1\lambda}(\hat{\mathbf{k}^\star})}{\sqrt{4\pi}}\, \big| \pi(R\textbf{k}') \pi( \textbf{P} - R\textbf{k}') \big\rangle.
-\end{equation}
+
+We point the reader to Ref.~\cite{Briceno:2016kkp} for details for how this can then be used to find the equivalence between Eq.~\ref{eq:pi_to_rho_FF} and Eq.~\ref{eq:pi_to_pipi}.
 
 
-\begin{align}
-\langle \pi(p_f)|\mathcal{J}^\mu|\rho(\lambda; p_i)\rangle
-=
-\epsilon^{\mu\alpha\beta\gamma}p_{f,\alpha}p_{i,\beta}\epsilon_\gamma F_1(Q^2,p_i^2,p_f^2)
-\label{eq:pi_to_rho_FF}
-\end{align}
+%It follows that 
+%\begin{equation}
+%\big| \textbf{P}; |\textbf{k}^\star|; J=1, \lambda \big\rangle = \int \! d\hat{\mathbf{k}^\star} \, \frac{Y_{1\lambda}(\hat{\mathbf{k}^\star})}{\sqrt{4\pi}}\, \big| \pi(R\textbf{k}') \pi( \textbf{P} - R\textbf{k}') \big\rangle.
+%\end{equation}
 
-\begin{align}
-\mathcal{A}^{\mu}_{\pi\gamma^\star,\pi\pi}(s,t,u)&=
-\epsilon^{\mu\nu\alpha\beta}p_{1,\nu}p_{2,\alpha}p_{3,\beta}\mathcal{F}_{1}(s,t,u).
-\label{eq:pi_to_pipi}
-\end{align}
-
-}
-\subsubsection{Checking equivalence between $\gamma^\star\pi\to\rho$ and $\gamma^\star\pi\to(\pi\pi)_{\ell=1}$}
-Here we verify the equivalence between Eq.~\ref{eq:pi_to_rho_FF} and Eq.~\ref{eq:pi_to_pipi} in the case where the final $\pi\pi$ is projected onto a $P$-wave. 
-
-
-{\raul
-
-In this appendix we show that the decomposition of the $P$-wave matrix element in Eq.~\ref{eq:decomp} is equivalent to another common decomposition. The Lorentz invariant transition amplitude may be obtained by contracting the matrix element of the electromagnetic current with the polarization vector of the photon, $\epsilon^\mu(q,\lambda_\gamma)$, where $\lambda_\gamma$ is the helicity of the photon,
-\begin{align}
-{\langle \pi\pi|{\mathcal{J}}^{\mu}(0)| \pi\rangle}\epsilon_\mu(q,\lambda_\gamma)=
-\mathcal{M}_{\lambda_\gamma}.
-\end{align}
-
-
-A common decomposition for the  ${\gamma^\star(q, \lambda_\gamma)\, \pi(p_1) \to \pi(p_2)\, \pi(p_3)}$ amplitude, not projected into any particular partial wave, is
-\begin{equation}
-\mathcal{M}_{\lambda_\gamma} = \epsilon_{\mu \nu \rho \sigma}\,  \epsilon^\mu(q,\lambda_\gamma) p_1^\nu \, p_2^\rho \, p_3^\sigma \; T(s,t,Q^2) \label{pipi_invar}
-\end{equation}
-where the invariant amplitude, $T(s,t,Q^2)$, is a function of $s = (q+p_1)^2$, $t = (p_1 - p_2)^2 $, and the virtuality of the photon, $Q^2$.
-
-In our case we are interested in the amplitude for the $P$-wave, which can be obtained in the standard way~\cite{Jacob:1959at, Danilkin:2014cra} by partial-wave expanding $\mathcal{M}_{\lambda_\gamma}$,
-\begin{equation}
-\mathcal{M}_{\lambda_\gamma}=\sum_{J=1,3,\ldots} (2J+1) \, d^{(J)}_{\lambda_\gamma, 0}(\theta) \, A_{J; \lambda_\gamma}(s,Q^2),
-\end{equation}
-where we have chosen the scattering plane to have $\phi=0$, and where $d^{(J)}_{\lambda_\gamma, 0}(\theta)$ are the reduced Wigner $d$-functions. Enforcing parity conservation ensures that $A_{J; 0}(s,Q^2)=0$ and $A_{J; -1}(s,Q^2)=-A_{J; 1}(s,Q^2)$. The contribution of the $P$-wave can be isolated,
-\begin{equation}
-\mathcal{M}_{\lambda_\gamma}=-\frac{3}{\sqrt{2}} \lambda_\gamma \, \sin \theta \; A_{1; \lambda_\gamma}(s,Q^2) +\cdots,
-\label{eq:MatPwave}
-\end{equation}
-with the ellipses denoting the higher partial-wave contributions. 
-
-The decomposition in Eq.~(\ref{pipi_invar}) is most easily investigated in the cm-frame. If we let the incoming states have momenta lying along the $\hat{z}$-axis and the outgoing momenta in the $\hat{x}\hat{z}$-plane,
-\begin{align*}
-q^\mu = \big( E_\gamma, 0, 0, q \big) 	\quad& p_2^\mu = \big( E', k\sin \theta , 0, k \cos \theta \big) \\
-p_1^\mu = \big( E_1, 0, 0, -q \big) 	\quad& p_3^\mu = \big( E', -k\sin \theta , 0, -k \cos \theta \big), 
-\end{align*}
-with the photon polarization vector being ${\epsilon^\mu(q, \lambda_\gamma = \pm 1) = \mp \tfrac{1}{\sqrt{2}} \big( 0, 1, \pm i , 0 \big)}$. It follows that $\mathcal{M}_{\lambda_\gamma} =	-\sqrt{2} i \,  T(s,t,Q^2)\, k q E' \sin \theta $, and the presence of a single factor of $\sin \theta$, as is the case for the $P$-wave in Eq.~(\ref{eq:MatPwave}), indicates that the $P$-wave part of the amplitude must lack any further $t$-dependence in $T(s,t,Q^2)$. We also note that $\mathcal{M}_{\lambda_\gamma}$ contains explicitly the factors $q$ and $k$ which describe the $P$-wave threshold behavior in the initial and final states. In light of this we can write an invariant decomposition capable of describing the $P$-wave as
 %
-\begin{equation}
-\mathcal{M}_{\lambda_\gamma}^{\mathrm{[1]}} = \epsilon_{\mu \nu \rho \sigma}\,  \epsilon^\mu(q,\lambda_\gamma) p_1^\nu \, p_2^\rho \, p_3^\sigma \; T_1(s,Q^2) \label{pipi_P_invar},
-\end{equation}
-where $T_1(s,Q^2)$ should not have the $\propto k$, $\propto q$ threshold behavior and where the superscript ${\rm ``[1]"}$ denotes this is the first of two decompositions we are relating. 
+%{\raul [not sure what's the point of this]
+%\begin{align}
+%\langle \pi(p_f)|\mathcal{J}^\mu|\rho(\lambda; p_i)\rangle
+%=
+%\epsilon^{\mu\alpha\beta\gamma}p_{f,\alpha}p_{i,\beta}\epsilon_\gamma F_1(Q^2,p_i^2,p_f^2)
+%\label{eq:pi_to_rho_FF}
+%\end{align}
+%
+%\begin{align}
+%\mathcal{A}^{\mu}_{\pi\gamma^\star,\pi\pi}(s,t,u)&=
+%\epsilon^{\mu\nu\alpha\beta}p_{1,\nu}p_{2,\alpha}p_{3,\beta}\mathcal{F}_{1}(s,t,u).
+%\label{eq:pi_to_pipi}
+%\end{align}}
+%
+%
+%\subsubsection{Checking equivalence between $\gamma^\star\pi\to\rho$ and $\gamma^\star\pi\to(\pi\pi)_{\ell=1}$}
+%Here we verify the equivalence between Eq.~\ref{eq:pi_to_rho_FF} and Eq.~\ref{eq:pi_to_pipi} in the case where the final $\pi\pi$ is projected onto a $P$-wave. 
+%
+%
+%{\raul
+%
+%In this appendix we show that the decomposition of the $P$-wave matrix element in Eq.~\ref{eq:decomp} is equivalent to another common decomposition. The Lorentz invariant transition amplitude may be obtained by contracting the matrix element of the electromagnetic current with the polarization vector of the photon, $\epsilon^\mu(q,\lambda_\gamma)$, where $\lambda_\gamma$ is the helicity of the photon,
+%\begin{align}
+%{\langle \pi\pi|{\mathcal{J}}^{\mu}(0)| \pi\rangle}\epsilon_\mu(q,\lambda_\gamma)=
+%\mathcal{M}_{\lambda_\gamma}.
+%\end{align}
+%
+%
+%A common decomposition for the  ${\gamma^\star(q, \lambda_\gamma)\, \pi(p_1) \to \pi(p_2)\, \pi(p_3)}$ amplitude, not projected into any particular partial wave, is
+%\begin{equation}
+%\mathcal{M}_{\lambda_\gamma} = \epsilon_{\mu \nu \rho \sigma}\,  \epsilon^\mu(q,\lambda_\gamma) p_1^\nu \, p_2^\rho \, p_3^\sigma \; T(s,t,Q^2) \label{pipi_invar}
+%\end{equation}
+%where the invariant amplitude, $T(s,t,Q^2)$, is a function of $s = (q+p_1)^2$, $t = (p_1 - p_2)^2 $, and the virtuality of the photon, $Q^2$.
+%
+%In our case we are interested in the amplitude for the $P$-wave, which can be obtained in the standard way~\cite{Jacob:1959at, Danilkin:2014cra} by partial-wave expanding $\mathcal{M}_{\lambda_\gamma}$,
+%\begin{equation}
+%\mathcal{M}_{\lambda_\gamma}=\sum_{J=1,3,\ldots} (2J+1) \, d^{(J)}_{\lambda_\gamma, 0}(\theta) \, A_{J; \lambda_\gamma}(s,Q^2),
+%\end{equation}
+%where we have chosen the scattering plane to have $\phi=0$, and where $d^{(J)}_{\lambda_\gamma, 0}(\theta)$ are the reduced Wigner $d$-functions. Enforcing parity conservation ensures that $A_{J; 0}(s,Q^2)=0$ and $A_{J; -1}(s,Q^2)=-A_{J; 1}(s,Q^2)$. The contribution of the $P$-wave can be isolated,
+%\begin{equation}
+%\mathcal{M}_{\lambda_\gamma}=-\frac{3}{\sqrt{2}} \lambda_\gamma \, \sin \theta \; A_{1; \lambda_\gamma}(s,Q^2) +\cdots,
+%\label{eq:MatPwave}
+%\end{equation}
+%with the ellipses denoting the higher partial-wave contributions. 
+%
+%The decomposition in Eq.~(\ref{pipi_invar}) is most easily investigated in the cm-frame. If we let the incoming states have momenta lying along the $\hat{z}$-axis and the outgoing momenta in the $\hat{x}\hat{z}$-plane,
+%\begin{align*}
+%q^\mu = \big( E_\gamma, 0, 0, q \big) 	\quad& p_2^\mu = \big( E', k\sin \theta , 0, k \cos \theta \big) \\
+%p_1^\mu = \big( E_1, 0, 0, -q \big) 	\quad& p_3^\mu = \big( E', -k\sin \theta , 0, -k \cos \theta \big), 
+%\end{align*}
+%with the photon polarization vector being ${\epsilon^\mu(q, \lambda_\gamma = \pm 1) = \mp \tfrac{1}{\sqrt{2}} \big( 0, 1, \pm i , 0 \big)}$. It follows that $\mathcal{M}_{\lambda_\gamma} =	-\sqrt{2} i \,  T(s,t,Q^2)\, k q E' \sin \theta $, and the presence of a single factor of $\sin \theta$, as is the case for the $P$-wave in Eq.~(\ref{eq:MatPwave}), indicates that the $P$-wave part of the amplitude must lack any further $t$-dependence in $T(s,t,Q^2)$. We also note that $\mathcal{M}_{\lambda_\gamma}$ contains explicitly the factors $q$ and $k$ which describe the $P$-wave threshold behavior in the initial and final states. In light of this we can write an invariant decomposition capable of describing the $P$-wave as
+%%
+%\begin{equation}
+%\mathcal{M}_{\lambda_\gamma}^{\mathrm{[1]}} = \epsilon_{\mu \nu \rho \sigma}\,  \epsilon^\mu(q,\lambda_\gamma) p_1^\nu \, p_2^\rho \, p_3^\sigma \; T_1(s,Q^2) \label{pipi_P_invar},
+%\end{equation}
+%where $T_1(s,Q^2)$ should not have the $\propto k$, $\propto q$ threshold behavior and where the superscript ${\rm ``[1]"}$ denotes this is the first of two decompositions we are relating. 
+%
+%
+%
+%We are now in a place to reconcile this decomposition with the one used through this work, Eq.~\ref{eq:decomp}, which we rewrite here using the variables defined in this appendix,
+%\begin{equation}
+%\mathcal{M}_{\lambda_\gamma}^{[2]} =\epsilon_{\mu \nu \rho \sigma} \epsilon^\mu(q,\lambda_\gamma)\,  p_1^\nu\,  \epsilon^{\rho*}(P,\lambda) P^\sigma\; \mathcal A(s,Q^2) , \label{rho_pi_gamma}
+%\end{equation}
+%where $P^\sigma=(p_2+p_3)^\sigma$ and $\epsilon^{\rho*}(P,\lambda)$ is the polarization vector of the $\pi\pi$ system which has been projected in a \mbox{$P$-wave} with helicity $\lambda$. In this appendix we are considering the time-reversed process, $\gamma^\star \, \pi \to \pi\, \pi$ which explains the presence of the complex conjugate of the $\pi\pi$ polarization vector. 
+%
+%The claim is that Eq.~\ref{rho_pi_gamma} is equivalent to Eq.~\ref{pipi_P_invar}, after the $\pi\pi$ state appearing in the latter has been projected in a \mbox{$P$-wave}. To show this, we begin by constructing a $\pi\pi$ helicity state in the cm-frame,
+%\begin{equation}
+%\big| |\textbf{k}|; J=1, \lambda \big\rangle = \int \! d\hat{\mathbf{k}} \, \frac{Y_{1\lambda}(\hat{\mathbf{k}})}{\sqrt{4\pi}}\, \big| \pi(\textbf{k}) \pi(-\textbf{k})\big\rangle,
+%\end{equation}
+%which we can boost to a frame having momentum $\textbf{P}$ by first boosting the system along the $\hat{z}$-axis and then performing a rotation to the axis of the momentum
+%\begin{equation}
+%\big| \textbf{P}; |\textbf{k}|; J=1, \lambda \big\rangle = U[R(\hat{P})]\, U[Z_P]\,  \big| |\textbf{k}|; J=1, \lambda \big\rangle.
+%\end{equation}
+%
+%The $\hat{z}$-axis boost acting on four-vectors can be expressed as
+%\begin{equation}
+%	\big[ Z_P \big]^\mu_\nu = 
+%		\begin{bmatrix} 
+%			\gamma & 0 & 0 & \beta \gamma \\
+%			0 & 1 & 0 & 0 \\
+%			0 & 0 & 1 & 0 \\
+%			\beta \gamma & 0 & 0 & \gamma	
+%		\end{bmatrix}
+%		= \frac{1}{2 \omega_\pi}
+%		\begin{bmatrix} 
+%			\Epipi & 0 & 0 & |\textbf{P}|\\
+%			0 & 1 & 0 & 0 \\
+%			0 & 0 & 1 & 0 \\
+%			|\textbf{P}| & 0 & 0 & \Epipi	
+%		\end{bmatrix}
+%\end{equation}
+%since $\gamma = \frac{\Epipi}{2\omega_\pi}$ and $\beta \gamma = \frac{|\textbf{P}|}{2 \omega_\pi}$ where $\omega_\pi = \sqrt{m_\pi^2 + k^2}$. Then the action of the boost on $k^\mu = \big(\omega_\pi, \textbf{k}\big)$ and ${\bar{k}^\mu = \big(\omega_\pi , -\textbf{k} \big)}$ is
+%\begin{align}
+%k'^\mu &= \big[ Z_P \big]^\mu_\nu \, k^\nu = 
+%	\begin{bmatrix} \tfrac{\Epipi}{2} + \tfrac{|\textbf{P}|}{2\omega_\pi} k_z \\ k_x \\ k_y \\ \tfrac{|\textbf{P}|}{2} + \tfrac{\Epipi}{2\omega_\pi} k_z \end{bmatrix},
+%	\quad \quad\quad\nn\\
+%\bar{k}'^\mu &= \big[ Z_P \big]^\mu_\nu \, \bar{k}^\nu = 
+%	\begin{bmatrix} \tfrac{\Epipi}{2} - \tfrac{|\textbf{P}|}{2\omega_\pi} k_z \\ -k_x \\ -k_y \\ \tfrac{|\textbf{P}|}{2} - \tfrac{\Epipi}{2\omega_\pi} k_z \end{bmatrix},	
+%\end{align}
+%and as expected, $\bar{k}'^\mu = P^\mu - k'^\mu$. It follows that 
+%\begin{equation}
+%\big| \textbf{P}; |\textbf{k}|; J=1, \lambda \big\rangle = \int \! d\hat{\mathbf{k}} \, \frac{Y_{1\lambda}(\hat{\mathbf{k}})}{\sqrt{4\pi}}\, \big| \pi(R\textbf{k}') \pi( \textbf{P} - R\textbf{k}') \big\rangle.
+%\end{equation}
+%
+%We can write the matrix element
+%\begin{align}
+% \big\langle \textbf{P}; |\textbf{k}|; J=1, \lambda \big| {\mathcal{J}}^{\mu}(0) \big| \gamma(q, \lambda_\gamma)\, \pi(p_1) \big\rangle &=\nn\\
+% &\hspace{-5.5cm} 
+% \int \! d\hat{\mathbf{k}} \, \frac{Y_{1\lambda}^*(  \hat{\mathbf{k}})   }{\sqrt{4\pi}}\,  \big\langle \pi(R\textbf{k}') \pi( \textbf{P} - R\textbf{k}') \big| {\mathcal{J}}^{\mu}(0) \big| \gamma(q, \lambda_\gamma)\, \pi(p_1) \big\rangle,
+%\end{align}
+%and substituting in the decomposition in Eq.~(\ref{pipi_P_invar}) we have
+%\begin{align}
+%\mathcal{M}_{\lambda_\gamma}^{[1]}  
+% %&= \int \! d\Omega_k \, Y_1^{\lambda*}(\Omega_k)\, T_1(s,Q^2) \, \epsilon_{\mu\nu\rho\sigma} \, \epsilon^\mu(q,\lambda_\gamma) \, p_1^\nu \, \big(R k')^\rho\,  \big( P - Rk' \big)^\sigma \\
+% &= T_1(s,Q^2)\, \epsilon_{\mu\nu\rho\sigma} \, \epsilon^\mu(q,\lambda_\gamma) \, p_1^\nu \, P^\sigma \nn\\
+%& \times\; \int \! d\hat{\mathbf{k}} \, \frac{Y_{1\lambda}^*(\hat{\mathbf{k}})}{\sqrt{4\pi}}\,\big(R k')^\rho\,
+% \end{align}
+%which will be equivalent to Eq.~(\ref{rho_pi_gamma}) if $\int \! d\hat{\mathbf{k}} \, Y_{1\lambda}^*(\hat{\mathbf{k}})\,\big(R k')^\rho$ transforms in the same way as $\epsilon^{\rho*}(P, \lambda)$. Since the rotation can be factored out of the integral, and since $\epsilon^\rho(RP_z, \lambda) = \big[ R \big]^\rho_\sigma \epsilon^\sigma(P_z, \lambda)$, it follows that we just need to show that $X^\sigma(\lambda) = \int \! d\hat{\mathbf{k}} \, Y_{1\lambda}(\hat{\mathbf{k}})\, k'^\sigma$ transforms like $\epsilon^{\sigma}(P_z, \lambda)$. First we establish that $P_\mu X^\mu = 0$,
+%\begin{align}
+%	P_\mu X^\mu 
+% 	&= \int \! d\hat{\mathbf{k}} \, Y_{1\lambda}(\hat{\mathbf{k}})\, \left[ \frac{\Epipi^2}{2}  - \frac{P^2}{2} \right] = 0,
+%\end{align}
+%and then we may check that the $\lambda=\pm 1$ components are what is expected, e.g.,
+%\begin{align}
+%	X^\sigma(\lambda = +1) &= \int \! d\hat{\mathbf{k}} \, Y_{1,+1}(\hat{\mathbf{k}})\, k'^\sigma \nn\\
+%	&= -\sqrt{\frac{4\pi}{3}} |\textbf{k}| \frac{1}{\sqrt{2}} \begin{bmatrix}
+%		0 \\ 1 \\ i \\ 0
+%	\end{bmatrix}\nn\\
+%	&= \sqrt{\frac{4\pi}{3}} |\textbf{k}| \epsilon^\sigma(P_z,\lambda=+1),
+%\end{align}
+%and indeed the forms are equivalent. Note the presence of a factor of $|\textbf{k}| = k$ above, which suggests that $\mathcal A \sim k \, T_1$. Recalling that $T_1$ does not have the threshold factor for the final state $\pi \pi$, we see that in the case that the $\rho$ is unstable into $\pi \pi$, the quantity $\mathcal A$ should behave like $k$ around the $\pi \pi$ threshold. 
+%
+%
+%}
 
-
-
-We are now in a place to reconcile this decomposition with the one used through this work, Eq.~\ref{eq:decomp}, which we rewrite here using the variables defined in this appendix,
-\begin{equation}
-\mathcal{M}_{\lambda_\gamma}^{[2]} =\epsilon_{\mu \nu \rho \sigma} \epsilon^\mu(q,\lambda_\gamma)\,  p_1^\nu\,  \epsilon^{\rho*}(P,\lambda) P^\sigma\; \mathcal A(s,Q^2) , \label{rho_pi_gamma}
-\end{equation}
-where $P^\sigma=(p_2+p_3)^\sigma$ and $\epsilon^{\rho*}(P,\lambda)$ is the polarization vector of the $\pi\pi$ system which has been projected in a \mbox{$P$-wave} with helicity $\lambda$. In this appendix we are considering the time-reversed process, $\gamma^\star \, \pi \to \pi\, \pi$ which explains the presence of the complex conjugate of the $\pi\pi$ polarization vector. 
-
-The claim is that Eq.~\ref{rho_pi_gamma} is equivalent to Eq.~\ref{pipi_P_invar}, after the $\pi\pi$ state appearing in the latter has been projected in a \mbox{$P$-wave}. To show this, we begin by constructing a $\pi\pi$ helicity state in the cm-frame,
-\begin{equation}
-\big| |\textbf{k}|; J=1, \lambda \big\rangle = \int \! d\hat{\mathbf{k}} \, \frac{Y_{1\lambda}(\hat{\mathbf{k}})}{\sqrt{4\pi}}\, \big| \pi(\textbf{k}) \pi(-\textbf{k})\big\rangle,
-\end{equation}
-which we can boost to a frame having momentum $\textbf{P}$ by first boosting the system along the $\hat{z}$-axis and then performing a rotation to the axis of the momentum
-\begin{equation}
-\big| \textbf{P}; |\textbf{k}|; J=1, \lambda \big\rangle = U[R(\hat{P})]\, U[Z_P]\,  \big| |\textbf{k}|; J=1, \lambda \big\rangle.
-\end{equation}
-
-The $\hat{z}$-axis boost acting on four-vectors can be expressed as
-\begin{equation}
-	\big[ Z_P \big]^\mu_\nu = 
-		\begin{bmatrix} 
-			\gamma & 0 & 0 & \beta \gamma \\
-			0 & 1 & 0 & 0 \\
-			0 & 0 & 1 & 0 \\
-			\beta \gamma & 0 & 0 & \gamma	
-		\end{bmatrix}
-		= \frac{1}{2 \omega_\pi}
-		\begin{bmatrix} 
-			\Epipi & 0 & 0 & |\textbf{P}|\\
-			0 & 1 & 0 & 0 \\
-			0 & 0 & 1 & 0 \\
-			|\textbf{P}| & 0 & 0 & \Epipi	
-		\end{bmatrix}
-\end{equation}
-since $\gamma = \frac{\Epipi}{2\omega_\pi}$ and $\beta \gamma = \frac{|\textbf{P}|}{2 \omega_\pi}$ where $\omega_\pi = \sqrt{m_\pi^2 + k^2}$. Then the action of the boost on $k^\mu = \big(\omega_\pi, \textbf{k}\big)$ and ${\bar{k}^\mu = \big(\omega_\pi , -\textbf{k} \big)}$ is
+\subsubsection{Equivalence between $\gamma^\star\sigma\to\sigma$ and $\gamma^\star(\pi\pi)_{\ell=0}\to(\pi\pi)_{\ell=0}$}
+	The Lorentz decomposition of the matrix element $\gamma^\star\sigma\to\sigma$ is the same as that of $\gamma^\star\pi\to\pi$, and therefore will not be repeated here. This must also be the same as Eq.~\ref{eq:pipi_to_pipi} when the initial and final state are projected onto an $\ell=0$ partial wave,
 \begin{align}
-k'^\mu &= \big[ Z_P \big]^\mu_\nu \, k^\nu = 
-	\begin{bmatrix} \tfrac{\Epipi}{2} + \tfrac{|\textbf{P}|}{2\omega_\pi} k_z \\ k_x \\ k_y \\ \tfrac{|\textbf{P}|}{2} + \tfrac{\Epipi}{2\omega_\pi} k_z \end{bmatrix},
-	\quad \quad\quad\nn\\
-\bar{k}'^\mu &= \big[ Z_P \big]^\mu_\nu \, \bar{k}^\nu = 
-	\begin{bmatrix} \tfrac{\Epipi}{2} - \tfrac{|\textbf{P}|}{2\omega_\pi} k_z \\ -k_x \\ -k_y \\ \tfrac{|\textbf{P}|}{2} - \tfrac{\Epipi}{2\omega_\pi} k_z \end{bmatrix},	
+\langle{\bf P}_f;|{\bf k}^\star_f|;\ell=0|{\cal J}^\mu(0)|{\bf P}_i;|{\bf k}^\star_i|;\ell=0\rangle\, \nn\\
+&\hspace{-4cm}
+=
+\frac{1}{(4\pi)^2}\int d\hat{\bf k}^\star_i\int d\hat{\bf k}^\star_f
+\langle \pi(p_3)\pi(p_4)|{\cal J}^\mu(0)|\pi(p_1)\pi(p_2)\rangle,\nn\\
+&\hspace{-4cm}=
+\frac{1}{(4\pi)^2}\int d\hat{\bf k}^\star_i\int d\hat{\bf k}^\star_f\bigg[ \left(P^{+\mu}+\frac{(E_i^{\star 2}-E_f^{\star 2})}{Q^2} P^{-\mu}\right)\mathcal{F}_{1}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)
+\nn\\
+&\hspace{-4cm}
++
+\left(k^{+\mu}+\frac{(P^-\cdot k^{+})}{Q^2} P^{-\mu}\right)
+\mathcal{F}_{3}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)
++
+\left(k^{-\mu}+\frac{(P^-\cdot k^{-})}{Q^2} P^{-\mu}\right)
+\mathcal{F}_{4}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)\bigg].
+\label{eq:pipi_to_pipi_Swave}
 \end{align}
-and as expected, $\bar{k}'^\mu = P^\mu - k'^\mu$. It follows that 
-\begin{equation}
-\big| \textbf{P}; |\textbf{k}|; J=1, \lambda \big\rangle = \int \! d\hat{\mathbf{k}} \, \frac{Y_{1\lambda}(\hat{\mathbf{k}})}{\sqrt{4\pi}}\, \big| \pi(R\textbf{k}') \pi( \textbf{P} - R\textbf{k}') \big\rangle.
-\end{equation}
 
-We can write the matrix element
+%\W^{\mu}_{\pi\pi\gamma^\star,\pi\pi}(p_1,p_2;p_3,p_4)&=
+
+
+%	We consider the following matrix element 
+%\begin{eqnarray}
+%M_{\lambda_\gamma}&=&\langle \pi(p_3)\pi(p_4)|{\cal J}^\mu(0)|\pi(p_1)\pi(p_2)\rangle\epsilon_\mu(q,\lambda_\gamma)\, ,
+%\end{eqnarray}
+%and for convenience we repeat here the expression of its Lorentz decomposition
+%\begin{eqnarray}
+%&&\frac{1}{4\pi}\int d\hat{\bf k}^\star_i\int d\hat{\bf k}^\star_f\bigg[ \left(P^{+\mu}+\frac{(E_i^{\star 2}-E_f^{\star 2})}{Q^2} P^{-\mu}\right)\mathcal{F}_{1}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)
+%\nn\\
+%&&+
+%\left(k^{+\mu}+\frac{(P^-\cdot k^{+})}{Q^2} P^{-\mu}\right)
+%\mathcal{F}_{3}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)
+%+
+%\left(k^{-\mu}+\frac{(P^-\cdot k^{-})}{Q^2} P^{-\mu}\right)
+%\mathcal{F}_{4}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)\bigg].
+%\label{eq:pipi_to_pipi2}
+%\end{eqnarray}
+%We are interested in calculating the following matrix element
+%\begin{eqnarray}
+%\langle{\bf P}_f;|{\bf k}^\star_f|;J=0|{\cal J}^\mu(0)|{\bf P}_i;|{\bf k}^\star_i|;J=0\rangle\, ,
+%\end{eqnarray}
+%where $|{\bf P}_i;|{\bf k}^\star_i|;J=0\rangle $ is an initial two-nucleon state with center of mass momentum ${\bf k}^\star_i$ that has been boosted to a moving frame with momentum ${\bf P_i}$ and then performing a rotation to the axis of the momentum. Therefore using the following two relations
+%\begin{eqnarray}
+%|{\bf P}_i;|{\bf k}_i^\star|;J=0\rangle&=&\int d\hat{\bf k}^\star_i\frac{1}{\sqrt{4\pi}}|\pi(R_i{\bf k}_i^\prime)\pi({\bf P}_i-R_i{\bf k}_i^\prime)\rangle\, ,\\
+%|{\bf P}_f;|{\bf k_f}^\star|;J=0\rangle&=&\int d\hat{\bf k}^\star_f\frac{1}{\sqrt{4\pi}}|\pi(R_f{\bf k}_f^\prime)\pi({\bf P}_f-R_f{\bf k}_f^\prime)\rangle\, ,
+%\end{eqnarray}
+%where $k_i^{\prime\mu}=\left[Z_{P_i}\right]^\mu_\nu k^{\star\nu}$ and $k_f^{\prime\mu}=\left[Z_{P_f}\right]^\mu_\nu k_f^{\star\nu}$, we have now
+%\begin{eqnarray}
+%\frac{1}{4\pi}\int d\hat{\bf k}_i^\star\int d\hat{\bf k}_f^\star\langle\pi(R_f{\bf k}_f^\prime)\pi({\bf P}_f-R_f{\bf k}_f^\prime)|{\cal J}^\mu(0)|\pi(R_i{\bf k}_i^\prime)\pi({\bf P}_i-R_i{\bf k}_i^\prime)\rangle\, .
+%\end{eqnarray}
+
+We can simplify this by first writing the angular dependence of the amplitudes in terms of spherical harmonics, 
 \begin{align}
- \big\langle \textbf{P}; |\textbf{k}|; J=1, \lambda \big| {\mathcal{J}}^{\mu}(0) \big| \gamma(q, \lambda_\gamma)\, \pi(p_1) \big\rangle &=\nn\\
- &\hspace{-5.5cm} 
- \int \! d\hat{\mathbf{k}} \, \frac{Y_{1\lambda}^*(  \hat{\mathbf{k}})   }{\sqrt{4\pi}}\,  \big\langle \pi(R\textbf{k}') \pi( \textbf{P} - R\textbf{k}') \big| {\mathcal{J}}^{\mu}(0) \big| \gamma(q, \lambda_\gamma)\, \pi(p_1) \big\rangle,
+{\cal F}_j(Q^2;E_i^\star,{\hat k}_i;E_f^\star,\hat{k}_f^\star)
+=
+4\pi  Y_{l^\prime m^\prime}(\hat{k}^\star_f){\cal F}_{j;l^\prime m^\prime;lm}(Q^2;E_i^\star;E_f^\star)Y_{l m}(\hat{k}^\star_i)\, .
 \end{align}
-and substituting in the decomposition in Eq.~(\ref{pipi_P_invar}) we have
+Next, we note that these amplitudes must be invariant under parity. This tells us that 
 \begin{align}
-\mathcal{M}_{\lambda_\gamma}^{[1]}  
- %&= \int \! d\Omega_k \, Y_1^{\lambda*}(\Omega_k)\, T_1(s,Q^2) \, \epsilon_{\mu\nu\rho\sigma} \, \epsilon^\mu(q,\lambda_\gamma) \, p_1^\nu \, \big(R k')^\rho\,  \big( P - Rk' \big)^\sigma \\
- &= T_1(s,Q^2)\, \epsilon_{\mu\nu\rho\sigma} \, \epsilon^\mu(q,\lambda_\gamma) \, p_1^\nu \, P^\sigma \nn\\
-& \times\; \int \! d\hat{\mathbf{k}} \, \frac{Y_{1\lambda}^*(\hat{\mathbf{k}})}{\sqrt{4\pi}}\,\big(R k')^\rho\,
- \end{align}
-which will be equivalent to Eq.~(\ref{rho_pi_gamma}) if $\int \! d\hat{\mathbf{k}} \, Y_{1\lambda}^*(\hat{\mathbf{k}})\,\big(R k')^\rho$ transforms in the same way as $\epsilon^{\rho*}(P, \lambda)$. Since the rotation can be factored out of the integral, and since $\epsilon^\rho(RP_z, \lambda) = \big[ R \big]^\rho_\sigma \epsilon^\sigma(P_z, \lambda)$, it follows that we just need to show that $X^\sigma(\lambda) = \int \! d\hat{\mathbf{k}} \, Y_{1\lambda}(\hat{\mathbf{k}})\, k'^\sigma$ transforms like $\epsilon^{\sigma}(P_z, \lambda)$. First we establish that $P_\mu X^\mu = 0$,
+{\cal F}_{j;1 m;00}=0.
+\label{eq:parity_PW}
+\end{align}
+This is sufficient to show that 
+\begin{align}
+\langle{\bf P}_f;|{\bf k}^\star_f|;\ell=0|{\cal J}^\mu(0)|{\bf P}_i;|{\bf k}^\star_i|;\ell=0\rangle\, 
+&=
+\left(P^{+\mu}+\frac{(E_i^{\star 2}-E_f^{\star 2})}{Q^2} P^{-\mu}\right)\mathcal{F}_{s}(Q^2;E_i^\star;E_f^\star)
+\label{eq:pipi_to_pipi_swave}
+\end{align}
+where
+\begin{align}
+\mathcal{F}_{s}(Q^2;E_i^\star;E_f^\star)
+=
+\mathcal{F}_{1;00;00}(Q^2;E_i^\star;E_f^\star)
++\frac{1}{2}\mathcal{F}_{3;00;00}(Q^2;E_i^\star;E_f^\star).
+\end{align}
+
+
+Now, we proceed to derive this expression. Using the partial wave projection of $\mathcal{F}_{1}$ and noting that the kinematic term appearing in front of it in Eq.~\ref{eq:pipi_to_pipi_Swave} carries no angular dependence, it is a straightforward exercise to show that $\mathcal{F}_{s}$ should depend on $\mathcal{F}_{1}$ as shown. 
+
+To see the dependence on  $\mathcal{F}_{3}$ and  $\mathcal{F}_{4}$, we note that the angular dependence is only more complicated by the fact that the kinematic terms in front of these functions depend on $k^+$ and $k^-$. Because these depend at most on the $\ell=1$ partial waves. Thanks to this and Eq.~\ref{eq:parity_PW}, we can safely conclude that only the $\ell=\ell'=0$ components of these amplitudes contribute. This is to say that we can consider the integral over the kinematic pieces in isolation. For example, to understand the factor in front of $\mathcal{F}_{3;00;00}$ 
+\begin{align}
+\frac{1}{(4\pi)^2}\int d\hat{\bf k}^\star_i\int d\hat{\bf k}^\star_f
+\left(k^{+\mu}+\frac{(P^-\cdot k^{+})}{Q^2} P^{-\mu}\right)
+=
+\frac{1}{4\pi}\int d\hat{\bf k}^\star_i
+\left(k^{\mu}_i+\frac{(P^-\cdot k_i)}{Q^2} P^{-\mu}\right)
++
+\frac{1}{4\pi}\int d\hat{\bf k}^\star_f
+\left(k^{\mu}_f+\frac{(P^-\cdot k_f)}{Q^2} P^{-\mu}\right).
+\end{align}
+Now, let us consider the first term in the right by rewriting it in terms of the center of mass coordinates,  
+
+\begin{align}
+\frac{1}{4\pi}\int d\hat{\bf k}^\star_i
+\left(k^{\mu}_i+\frac{(P^-\cdot k_i)}{Q^2} P^{-\mu}\right)
+&
+ \nn\\
+ &\hspace{-4cm}
+ =\frac{1}{4\pi}\int d\hat{\bf k}^\star_i
+\left(
+\begin{bmatrix} 
+\gamma_i\left(\omega_{k_i}^\star+\beta_ik_{i||}^\star\right)\\
+\gamma_i\left(\beta_i\omega_{k_i}^\star+k_{i||}^\star\right)\\
+ k^\star_{i\perp}
+ \end{bmatrix}^\mu
++
+\frac{\left[P^-_0\gamma_i\left(\omega_{k_i}^\star+\beta_ik_{i||}^\star\right)-\vec{P}^-_{||}\cdot\hat{P}_i \gamma_i\left(\beta_i\omega_{k_i}^\star+k_{i||}^\star\right) - \vec{P}^-_{||}\cdot\vec{k}^\star_\perp\right]}{Q^2} P^{-\mu}\right)
+ \nn\\
+ &\hspace{-4cm}
+ =\frac{1}{4\pi}\int d\hat{\bf k}^\star_i
+\left(
+\begin{bmatrix} 
+\gamma_i\omega_{k_i}^\star\\
+\gamma_i \beta_i\omega_{k_i}^\star\\
+0
+ \end{bmatrix}^\mu
++
+\frac{\left[P^-_0\gamma_i\omega_{k_i}^\star-\vec{P}^-_{||}\cdot\hat{P}_i \gamma_i\beta_i\omega_{k_i}^\star\right]}{Q^2} P^{-\mu}\right)
+ \nn\\
+  &\hspace{-4cm}
+=
+\frac{1}{2}\left(
+P^\mu_i
++
+\frac{P^-\cdot P_i}{Q^2} P^{-\mu}\right).
+\end{align}
+The last equality follows from the fact that $\gamma_i\omega_{k_i}=\frac{1}{2}\gamma_iE^\star_i=\frac{1}{2}E_i$ and $\beta_i\gamma_i\omega_{k_i}=\frac{1}{2}\beta_iE_i=\frac{1}{2}{P}_i$. It is easy to see that a similar decomposition holds for the term proportional to $k_f$.
+
+Putting all of the pieces together we find
+\begin{align}
+&\frac{1}{(4\pi)^2}\int d\hat{\bf k}^\star_i\int d\hat{\bf k}^\star_f\bigg[
+\left(k^{+\mu}+\frac{(P^-\cdot k^{+})}{Q^2} P^{-\mu}\right)
+\mathcal{F}_{3}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)
++
+\left(k^{-\mu}+\frac{(P^-\cdot k^{-})}{Q^2} P^{-\mu}\right)
+\mathcal{F}_{4}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)\bigg]
+\nn\\
+&\hspace{2cm}=
+\left(P^{+\mu}+\frac{(P^-\cdot P^{+})}{Q^2} P^{-\mu}\right)
+\mathcal{F}_{3}(Q^2;E_i^\star;E_f^\star)
++
+\left(P^{-\mu}+\frac{(P^-\cdot P^{-})}{Q^2} P^{-\mu}\right)
+\mathcal{F}_{4}(Q^2;E_i^\star;E_f^\star)
+\nn\\
+&\hspace{2cm}=
+\left(P^{+\mu}+\frac{(P^-\cdot P^{+})}{Q^2} P^{-\mu}\right)
+\mathcal{F}_{3}(Q^2;E_i^\star;E_f^\star)
++
+\left(P^{-\mu}-\frac{Q^2}{Q^2} P^{-\mu}\right)
+\mathcal{F}_{4}(Q^2;E_i^\star;E_f^\star)
+\nn\\
+&\hspace{2cm}=
+\left(P^{+\mu}+\frac{(P^-\cdot P^{+})}{Q^2} P^{-\mu}\right)
+\mathcal{F}_{3}(Q^2;E_i^\star;E_f^\star),
+\end{align}
+confirming Eq.~\ref{eq:pipi_to_pipi_swave}. 
+
+This is a first important check on Eq.~\ref{eq:pipi_to_pipi}. Naively, one might have expected that three or more amplitudes would contributed to the S-wave $\gamma^\star(\pi\pi)_{\ell=0}\to(\pi\pi)_{\ell=0}$ amplitude. Here we see that only one linear combination contributes, as one could have argued from the fact that a scalar meson can only have one electromagnetic form factor, as shown in Eq.~\ref{eq:pi_to_pi_FF}. 
+
+ 
+%{\raul [continue here]}
+
+%the rotation matrix is independent from $k_i$ therefore we will look only at
+%\begin{eqnarray}
+%\int d\hat{{\bf k}}_id\hat{{\bf k}}_fk_i^\prime{\cal F}_3(Q^2;E_i^\star,{\hat k}_i;E_f^\star,\hat{k}_f^\star)\, ,
+%\end{eqnarray}
+%and expanding ${\cal F}_3$ in spherical harmonics, we have
+%\begin{eqnarray}
+%4\pi\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_fk_i^\prime Y_{l^\prime m^\prime}(\hat{k}^\star_f){\cal F}_{3;l^\prime m^\prime;lm}(Q^2;E_i^\star;E_f^\star)Y_{l m}(\hat{k}^\star_i)\, ,\label{eq:basic_unit}
+%\end{eqnarray}
+%
+%Since we have
+%\begin{eqnarray}
+%p^\mu_1&=&(R_ik_i^\prime)^\mu,\qquad  p^\mu_2=P^\mu_i-(R_ik^\prime_i)^\mu,\\
+% p^\mu_3&=&(R_fk_f^\prime)^\mu,\qquad p^\mu_4=P^\mu_f-(R_fk_f^\prime)^\mu\, .
+%\end{eqnarray}
+%The four-vectors in Eq.~(\ref{eq:pipi_to_pipi2}) become now
+%\begin{eqnarray}
+%P^{+\mu}&=&p^\mu_1+p^\mu_2+p^\mu_3+p^\mu_4=P^\mu_i+P^\mu_f,\qquad P^{-\mu}=P^\mu_i-P^\mu_f,\\
+% k^{+\mu}&=&p^\mu_2-p^\mu_1+p^\mu_4-p^\mu_3=P^{+\mu}-2(R_ik_i^\prime)^\mu-2(R_fk_f^\prime)^\mu\, ,\\
+%  k^{-\mu}&=&p^\mu_2-p^\mu_1+p^\mu_3-p^\mu_4=P^{-\mu}-2(R_ik_i^\prime)^\mu+2(R_fk_f^\prime)^\mu\, .
+%\end{eqnarray}
+%The term in parenthesis of the first term in Eq.~(\ref{eq:pipi_to_pipi2}) is invariant under the integration and therefore we are left with the folllowing integral
+%\begin{eqnarray}
+%\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_f{\cal F}_1(Q^2;E_i^\star,{\hat k}^\star_i;E_f^\star,\hat{k}^\star_f)&=&4\pi\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_f Y^*_{l^\prime m^\prime}(\hat{k}^\star_f){\cal F}_{1;l^\prime m^\prime;lm}(Q^2;E_i^\star;E_f^\star)Y_{lm}(\hat{k}^\star_i) \\
+%&=&{\cal F}_{1;00;00}(Q^2;E_i^\star;E_f^\star)\, .
+%\end{eqnarray}
+%For the second term Eq.~(\ref{eq:pipi_to_pipi2}), looking at the term proportional to $k^{+\mu}$ we would have
+%\begin{eqnarray}
+%\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_f\left[P^{+\mu}+\frac{(P^{-}\cdot P^{+}) }{Q^2}P^{-\mu}-2(R_ik_i^\prime)^\mu-2(R_fk_f^\prime)^\mu-2\frac{(P^{-}\cdot(R_ik_i^\prime+R_fk_f^\prime))}{Q^2} P^{-\mu}\right]{\cal F}_3(Q^2;E_i^\star,{\hat k}_i^\star;E_f^\star,\hat{k}^\star_f)\, ,\label{eq:full_dec_2nd}
+%\end{eqnarray}
+%where 
+%it is easy to see that the first two terms in the above expression can be "reabsorbed" in the first two terms in Eq.(\ref{eq:pipi_to_pipi2}) since, trivially,
+%\begin{eqnarray}
+%P_i^2-P_f^2=E_i^2-|{\bf P}_i|^2+E_f^2-|{\bf P}_f|^2=E_i^{\star 2} -E_f^{\star 2}\, .
+%\end{eqnarray}
+% We are now left with the terms proportional to $k_i$ and $k_f$, for simplicity lets look first at the term proportional to $k_i$
+%\begin{eqnarray}
+%\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_fR_ik_i^\prime{\cal F}_3(Q^2;E_i^\star,{\hat k}_i^\star;E_f^\star,\hat{k}^\star_f)\, ,
+%\end{eqnarray}
+%the rotation matrix is independent from $k_i$ therefore we will look only at
+%\begin{eqnarray}
+%\int d\hat{{\bf k}}_id\hat{{\bf k}}_fk_i^\prime{\cal F}_3(Q^2;E_i^\star,{\hat k}_i;E_f^\star,\hat{k}_f^\star)\, ,
+%\end{eqnarray}
+%and expanding ${\cal F}_3$ in spherical harmonics, we have
+%\begin{eqnarray}
+%4\pi\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_fk_i^\prime Y_{l^\prime m^\prime}(\hat{k}^\star_f){\cal F}_{3;l^\prime m^\prime;lm}(Q^2;E_i^\star;E_f^\star)Y_{l m}(\hat{k}^\star_i)\, ,\label{eq:basic_unit}
+%\end{eqnarray}
+%It's easy to see that
+%\begin{eqnarray}
+%\int d\hat{{\bf k}}_f Y_{l^\prime m^\prime}(\hat{k}_f^\star)=\sqrt{4\pi}\delta_{l0}\, .
+%\end{eqnarray}
+%Lets look at 
+%\begin{eqnarray}
+%\int d\hat{{\bf k}}^\star_i Y_{l m}(\hat{k}^\star_i)k_i^\prime\, ,
+%\end{eqnarray}
+%in components we have
+%\begin{eqnarray}
+%\int d\hat{{\bf k}}^\star_i Y_{l m}(\hat{k}^\star_i)k_i^\prime&=&\int d\hat{{\bf k}}^\star_i Y_{l m}(\hat{k}_i^\star)	\begin{bmatrix} \tfrac{E_i}{2} + \tfrac{|\textbf{P}_i|}{2\omega_\pi} k^\star_{iz} \\ k^\star_{ix} \\ k^\star_{iy} \\ \tfrac{|\textbf{P}_i|}{2} + \tfrac{E_i}{E_i^\star} k^\star_z \end{bmatrix}=\int d\hat{{\bf k}}^\star_i Y_{l m}(\hat{k}^\star_i)\begin{bmatrix} \sqrt{\pi}Y_{00}E_i + \tfrac{|\textbf{P}_i|}{\omega_\pi}\sqrt{\frac{\pi}{3}}|{\bf k}_i^\star|Y_{10}(\hat{k}^\star_i) \\ \sqrt{\frac{2\pi}{3}}|{\bf k}_i^\star| \left[Y_{1,-1}(\hat{k}_i^\star)-Y_{11}(\hat{k}_i^\star)\right]\\ i\sqrt{\frac{2\pi}{3}}|{\bf k}_i^\star|\left[Y_{1-1}(\hat{k}_i^\star)+Y_{11}(\hat{k}_i^\star)\right] \\ \sqrt{\pi}Y_{0,0}|{\bf P}_i| + \tfrac{E_i}{\omega_\pi} \sqrt{\frac{\pi}{3}}|{\bf k}^\star_i|Y_{10}(\hat{k}_i^\star) \end{bmatrix}\\
+%&=&\begin{bmatrix} \sqrt{\pi}\delta_{l0}\delta_{m0}E_i + \tfrac{|\textbf{P}_i|}{\omega_\pi}\sqrt{\frac{\pi}{3}} \delta_{l1}\delta_{m 0}|{\bf k}^\star_i| \\ \sqrt{\frac{2 \pi}{3}} |{\bf k}^\star_i| \delta_{l1}[\delta_{m-1}-\delta_{m1}] \\ +i\sqrt{\frac{2 \pi}{3}} |{\bf k}^\star_i| \delta_{l1}[\delta_{m-1}+\delta_{m1}]  \\ \sqrt{\pi}|\textbf{P}_i|\delta_{l0} \delta_{m 0} + \tfrac{E_i}{\omega_\pi} \sqrt{\frac{\pi}{3}}|{\bf k}_i^\star|\delta_{l1}\delta_{m 0}\, , \end{bmatrix}=\sqrt{\pi}\delta_{l0}\delta_{m 0}\begin{bmatrix}
+%E_i\\ 0 \\ 0 \\|{\bf P}_i|
+%\end{bmatrix}+\delta_{l1}\begin{bmatrix} \tfrac{|\textbf{P}_i|}{\omega_\pi}\sqrt{\frac{\pi}{3}} \delta_{m 0}|{\bf k}^\star_i| \\ \sqrt{\frac{2 \pi}{3}} |{\bf k}^\star_i| [\delta_{m-1}-\delta_{m1}] \\ +i\sqrt{\frac{2 \pi}{3}} |{\bf k}^\star_i| [\delta_{m-1}+\delta_{m1}]  \\  \tfrac{E_i}{\omega_\pi} \sqrt{\frac{\pi}{3}}|{\bf k}_i^\star|\delta_{m 0}\, , \end{bmatrix}\, ,\nonumber\\
+%&=& \sqrt{\pi}\delta_{l0}\delta_{m 0}\widetilde{P}_i^\mu+\delta_{l1}V_m^\mu(|{\bf k}_i|,|{\bf P}_i|)
+%\end{eqnarray}
+%So we have that Eq.~(\ref{eq:basic_unit}) becomes
+%\begin{eqnarray}
+%\sqrt{\pi}{\cal F}_{3;00;00}(Q^2;E_i^\star;E_f^\star)\widetilde{P}^\mu_i+{\cal F}_{3;00;1m}(Q^2;E_i^\star;E_f^\star)V^\mu_m(E_i^\star,|{\bf k}^\star_i|,|{\bf P}_i|)\, .
+%\end{eqnarray}
+%The second term is zero for parity (as it has been shown in Raul notes).
+%Therefore if $(R_i \widetilde{P}_i)^\mu=P_i^\mu$ (since its a rotation in the direction of ${\bf P}_i$) (and similar for $k_f$) we have that the last four terms of Eq.~(\ref{eq:full_dec_2nd}) can be reabsorbed in the first two terms of Eq.~(\ref{eq:pipi_to_pipi2}). For the third in Eq.~(\ref{eq:pipi_to_pipi2}) term we have in principle the following integral
+%\begin{eqnarray}
+%\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_f\left[P^{-\mu}+\frac{(P^{+}\cdot P^{-}) }{Q^2}P^{+\mu}-2(R_ik_i^\prime)^\mu+2(R_fk_f^\prime)^\mu-2\frac{(P^{+}\cdot(R_ik_i^\prime-R_fk_f^\prime))}{Q^2} P^{-\mu}\right]{\cal F}_4(Q^2;E_i^\star,{\hat k}_i^\star;E_f^\star,\hat{k}^\star_f)\, ,\label{eq:full_dec_3rd}
+%\end{eqnarray}
+%It is useful to look first at the following integral
+%\begin{eqnarray}
+%&\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_f\bigg[P^{-\mu}+\frac{(P^{+}\cdot P^{-}) }{Q^2}P^{+\mu}\bigg]{\cal F}_4(Q^2;E_i^\star,{\hat k}_i^\star;E_f^\star,\hat{k}^\star_f)\, ,\label{eq:f4_1st}
+%\end{eqnarray}
+%where ${\cal F}_4$ can   be rewritten as a sum of a symmetric and antisymmetric components
+%\begin{eqnarray}
+%&{\cal F}_4(Q^2;E_i^\star,{\hat k}_i^\star;E_f^\star,\hat{k}^\star_f)=-{\cal F}_4(Q^2;E_f^\star,\hat{k}^\star_f;E_i^\star,{\hat k}_i^\star)\, ,
+%\end{eqnarray}
+%but as it has been shown in Sec. \ref{sec:gpi_to_pipi} the symmetric part vanishes, and therefore Eq.~(\ref{eq:f4_1st}) vanishes. 
+%Lets look now at this piece 
+%\begin{eqnarray}
+%&\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_f\left[-2(R_ik_i^\prime)^\mu+2(R_fk_f^\prime)^\mu-2\frac{(P^{+}\cdot(R_ik_i^\prime-R_fk_f^\prime))}{Q^2} P^{-\mu}\right]{\cal F}_4(Q^2;E_i^\star,{\hat k}_i^\star;E_f^\star,\hat{k}^\star_f)\, \label{eq:full_dec_4th}\\
+%&\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_f\left[-2(R_ik_i^\prime)^\mu-2(R_fk_f^\prime)^\mu+2\frac{(P^{+}\cdot(R_ik_i^\prime+R_fk_f^\prime))}{Q^2} P^{-\mu}\right]{\cal F}_{4}(Q^2;E_i^\star,{\hat k}_i^\star;E_f^\star,\hat{k}^\star_f)
+%\end{eqnarray}
+%and therefore the treatment is analogous to what has been done before.
+%
+%
+
+\subsubsection{Checking equivalence between $\gamma^\star\rho\to\rho'$ and $\gamma^\star(\pi\pi)_{\ell=1}\to(\pi\pi)_{\ell=1}$}
+
+Here we follow similar steps to the ones above to show that when the initial and final states appearing in Eq.~\ref{eq:pipi_to_pipi}  are projected onto an an $\ell=1$ partial wave, the subsequent amplitude has the same Lorentz decomposition as that of the $\gamma^\star\rho\to\rho$ electromagnetic matrix elements, Eq.~\ref{eq:rho_to_rho_FF}. We begin by writing the $\ell=1$ partial wave projection of the amplitude, 
+\begin{align}
+\langle{\bf P}_f;|{\bf k}^\star_f|;\ell=1\lambda_f|{\cal J}^\mu(0)|{\bf P}_i;|{\bf k}^\star_i|;\ell=1\lambda_i\rangle\, \nn\\
+&\hspace{-4cm}
+=
+\int d\hat{\bf k}^\star_i\int d\hat{\bf k}^\star_f
+\frac{Y_{1\lambda_i}(\hat{k}_i^\star)}{\sqrt{4\pi}}
+\frac{Y^*_{1\lambda_f}(\hat{k}_f^\star)}{\sqrt{4\pi}}
+\langle \pi(p_3)\pi(p_4)|{\cal J}^\mu(0)|\pi(p_1)\pi(p_2)\rangle,\nn\\
+&\hspace{-4cm}=
+\int d\hat{\bf k}^\star_i\int d\hat{\bf k}^\star_f
+\frac{Y_{1\lambda_i}(\hat{k}_i^\star)}{\sqrt{4\pi}}
+\frac{Y^*_{1\lambda_f}(\hat{k}_f^\star)}{\sqrt{4\pi}}
+\bigg[ \left(P^{+\mu}+\frac{(E_i^{\star 2}-E_f^{\star 2})}{Q^2} P^{-\mu}\right)\mathcal{F}_{1}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)
+\nn\\
+&\hspace{-4cm}
++
+\left(k^{+\mu}+\frac{(P^-\cdot k^{+})}{Q^2} P^{-\mu}\right)
+\mathcal{F}_{3}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)
++
+\left(k^{-\mu}+\frac{(P^-\cdot k^{-})}{Q^2} P^{-\mu}\right)
+\mathcal{F}_{4}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)\bigg].
+\label{eq:pipi_to_pipi_Pwave}
+\end{align}
+
+{\raul[I would like to first write down the final result and then derive it...but I don't know it yet]}
+
+To arrive at this equation, we 
+
+Looking at the first term, it is to see that
+\begin{align}
+\int d\hat{\bf k}^\star_i\int d\hat{\bf k}^\star_f
+\frac{Y_{1\lambda_i}(\hat{k}_i^\star)}{\sqrt{4\pi}}
+\frac{Y^*_{1\lambda_f}(\hat{k}_f^\star)}{\sqrt{4\pi}}
+(4\pi)Y_{l^\prime m^\prime}(\hat{k}_f^\star)  
+Y^*_{lm}(\hat{k}_i^\star)
+ \mathcal{F}_{1;l m;l^\prime m^\prime}(Q^2;E_i^\star;E_f^\star)=\mathcal{F}_{1;1 \lambda_i;1 \lambda_f}(Q^2;E_i^\star;E_f^\star)\, .\label{eq:pw_dec_1st}
+\end{align}
+
+Note, this has the same Lorentz structure as the first and last terms in Eq.~\ref{eq:rho_to_rho_FF},
+\begin{align}
+\langle\rho'(\lambda_f,P_f)|{\mathcal{J}}^{\mu}|\rho(\lambda_i,P_i)\rangle
+&\supset
+\left((P_f+P_i)^\mu \,+(P_i-P_f)^\mu\frac{(E_i^{\star 2}-E_f^{\star 2})}{Q^2} \right)\,\left(\epsilon_f^*\cdot \epsilon_i\right)\, \widetilde{G}_1(Q^2,P_i^2,P_f^2)\nn\\
+&
++\left((P_f+P_i)^\mu \,+(P_i-P_f)^\mu\frac{(P_i^2-P_f^2)}{Q^2} \right)(\epsilon_f^*\cdot P_i)\,(\epsilon_i\cdot P_f)\,\widetilde{G}_5(Q^2,P_i^2,P_f^2).
+,
+\end{align}
+but the latter depend on only two amplitudes, while the former could, in principle depend on 9 ($\lambda_f,\lambda_i=-1,0,1$) or 18...?. {\raul [need to sort this out...since $\mathcal{F}_{1;1 \lambda_i;1 \lambda_f}(Q^2;E_i^\star;E_f^\star)\,$ is a Lorentz scalar and the barrier factors..., can we write it as....????
+\begin{align}
+\mathcal{F}_{1;1 \lambda_i;1 \lambda_f}(Q^2;E_i^\star;E_f^\star)\, 
+=
+P_i\cdot P_f\widetilde{\mathcal{F}}_{1;1 \lambda_i;1 \lambda_f}(Q^2;E_i^\star;E_f^\star) \, .
+\end{align}
+]}
+
+
+Next, let us consider part of the second term
+\begin{align}
+&\int d\hat{\bf k}^\star_i\int d\hat{\bf k}^\star_f
+\frac{Y_{1\lambda_i}(\hat{k}_i^\star)}{\sqrt{4\pi}}
+\frac{Y^*_{1\lambda_f}(\hat{k}_f^\star)}{\sqrt{4\pi}}\mathcal{F}_{3}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)
+\left(k^{\mu}_i+\frac{(P^-\cdot k_i)}{Q^2} P^{-\mu}\right)\nn\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\hspace{1cm}=
+\int d\hat{\bf k}^\star_i\int d\hat{\bf k}^\star_f
+{Y_{1\lambda_i}(\hat{k}_i^\star)}
+{Y^*_{1\lambda_f}(\hat{k}_f^\star)}
+Y_{l^\prime m^\prime}(\hat{k}_f^\star)  
+Y^*_{lm}(\hat{k}_i^\star)
+ \mathcal{F}_{1;l m;l^\prime m^\prime}(Q^2;E_i^\star;E_f^\star)
+\nn\\
+&\hspace{2cm}\times
+\left(
+\begin{bmatrix} 
+\gamma_i\left(\omega_{k_i}^\star+\beta_ik_{i||}^\star\right)\\
+\gamma_i\left(\beta_i\omega_{k_i}^\star+k_{i||}^\star\right)\\
+ k^\star_{i\perp}
+ \end{bmatrix}^\mu
++
+\frac{\left[P^-_0\gamma_i\left(\omega_{k_i}^\star+\beta_ik_{i||}^\star\right)-\vec{P}^-_{||}\cdot\hat{P}_i \gamma_i\left(\beta_i\omega_{k_i}^\star+k_{i||}^\star\right) - \vec{P}^-_{||}\cdot\vec{k}^\star_\perp\right]}{Q^2} P^{-\mu}\right)
+\nn\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\hspace{1cm}=
+\frac{1}{2}\left(
+P^\mu_i
++
+\frac{P^-\cdot P_i}{Q^2} P^{-\mu}\right)
+\mathcal{F}_{1;\lambda_i;1 \lambda_f}(Q^2;E_i^\star;E_f^\star)
+%%%%%
+\nn\\
+&\hspace{2cm}+\int d\hat{\bf k}^\star_i\int d\hat{\bf k}^\star_f
+{Y_{1\lambda_i}(\hat{k}_i^\star)}
+{Y^*_{1\lambda_f}(\hat{k}_f^\star)}
+Y_{l^\prime m^\prime}(\hat{k}_f^\star)  
+Y^*_{lm}(\hat{k}_i^\star)
+ \mathcal{F}_{1;l m;l^\prime m^\prime}(Q^2;E_i^\star;E_f^\star)
+\nn\\
+&\hspace{2cm}\times
+\left(
+\begin{bmatrix} 
+\gamma_i\beta_ik_{i||}^\star\\
+\gamma_i k_{i||}^\star\\
+ k^\star_{i\perp}
+ \end{bmatrix}^\mu
++
+\frac{\left[P^-_0\gamma_i \beta_ik_{i||}^\star-\vec{P}^-_{||}\cdot\hat{P}_i \gamma_i k_{i||}^\star - \vec{P}^-_{||}\cdot\vec{k}^\star_\perp\right]}{Q^2} P^{-\mu}\right)
+\nn\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&\hspace{1cm}=
+\frac{1}{2}\left(
+P^\mu_i
++
+\frac{P^-\cdot P_i}{Q^2} P^{-\mu}\right)
+\mathcal{F}_{1;\lambda_i;1 \lambda_f}(Q^2;E_i^\star;E_f^\star)
++\int d\hat{\bf k}^\star_i
+{Y_{1\lambda_i}(\hat{k}_i^\star)}
+Y^*_{lm}(\hat{k}_i^\star)
+ \mathcal{F}_{1;l m;1\lambda_f}(Q^2;E_i^\star;E_f^\star)
+\nn\\
+&\hspace{2cm}\times
+\left(
+\begin{bmatrix} 
+\gamma_i\beta_ik_{i||}^\star\\
+\gamma_i k_{i||}^\star\\
+ k^\star_{i\perp}
+ \end{bmatrix}^\mu
++
+\frac{\left[P^-_0\gamma_i \beta_ik_{i||}^\star-\vec{P}^-_{||}\cdot\hat{P}_i \gamma_i k_{i||}^\star - \vec{P}^-_{||}\cdot\vec{k}^\star_\perp\right]}{Q^2} P^{-\mu}\right).
+\label{eq:pipi_to_pipi_Pwave2}
+\end{align}
+To evaluate the the last term, we note that parity dictates that only odd values of $l$ will contribute. Next, we can write the product of two spherical harmonics in terms of a single spherical harmonic using Wigner 3j-symbols. Generically, we can write this product as
+\begin{align}
+{Y_{1\lambda_i}(\hat{k}_i^\star)}
+Y^*_{lm}(\hat{k}_i^\star)
+=
+\sum_{\ell_fm_f}
+c_{\ell_fm_f;1\lambda_i;lm}
+Y_{\ell_fm_f}(\hat{k}_i^\star)
+\end{align}
+where
+\begin{align}
+c_{\ell_fm_f;1\lambda_i;lm}
+=\int d\hat{\bf k}^\star_i \, Y^*_{\ell_fm_f}(\hat{k}_i^\star)
+\,{Y_{1\lambda_i}(\hat{k}_i^\star)}
+\,Y^*_{lm}(\hat{k}_i^\star)
+\end{align}
+and it can of course be written in terms of the standard Wigner 3j-symbols. Next, we note that if we insert this identify into Eq.~\ref{eq:pipi_to_pipi_Pwave2}, we will have to integrate $\int Y_{\ell_fm_f}(\hat{k}_i^\star) k^\star_i$. Since $k^\star_i$ can be written in terms of the $\ell=1$ spherical harmonic, this tells us that only $\ell_f=1$ contributes. Given that only $l$ contribute and the constraints of the Wigner 3j-symbols symbols, this tells that only the $l=1$ components have nonzero contributions. 
+
+\begin{align}
+&
+\int d\hat{\bf k}^\star_i
+{Y_{1\lambda_i}(\hat{k}_i^\star)}
+Y^*_{lm}(\hat{k}_i^\star)
+ \mathcal{F}_{1;l m;1\lambda_f}(Q^2;E_i^\star;E_f^\star)
+\left(
+\begin{bmatrix} 
+\gamma_i\beta_ik_{i||}^\star\\
+\gamma_i k_{i||}^\star\\
+ k^\star_{i\perp}
+ \end{bmatrix}^\mu
++
+\frac{\left[P^-_0\gamma_i \beta_ik_{i||}^\star-\vec{P}^-_{||}\cdot\hat{P}_i \gamma_i k_{i||}^\star - \vec{P}^-_{||}\cdot\vec{k}^\star_\perp\right]}{Q^2} P^{-\mu}\right).
+\nn\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+&=
+c_{1m_f;1\lambda_i;1m}
+\int d\hat{\bf k}^\star_i
+Y_{1m_f}(\hat{k}_i^\star)
+ \mathcal{F}_{1;1 m;1\lambda_f}(Q^2;E_i^\star;E_f^\star)
+\left(
+\begin{bmatrix} 
+\gamma_i\beta_ik_{i||}^\star\\
+\gamma_i k_{i||}^\star\\
+ k^\star_{i\perp}
+ \end{bmatrix}^\mu
++
+\frac{\left[P^-_0\gamma_i \beta_ik_{i||}^\star-\vec{P}^-_{||}\cdot\hat{P}_i \gamma_i k_{i||}^\star - \vec{P}^-_{||}\cdot\vec{k}^\star_\perp\right]}{Q^2} P^{-\mu}\right)
+\end{align}
+
+Next, we make use of the observation made in Ref.~\cite{Briceno:2016kkp}, that $X^\sigma(\lambda) = \int \! d\hat{\mathbf{k}} \, Y_{1\lambda}(\hat{\mathbf{k}})\, k'^\sigma$ transforms like $\epsilon^{\sigma}(P_z, \lambda)$.
+
+
+seems to suggest the following structure
+\begin{align}
+c_{1m_f;1\lambda_i;1m}\,
+ \mathcal{F}_{1;1 m;1\lambda_f}(Q^2;E_i^\star;E_f^\star)
+\left(
+\epsilon_i^\mu+
+\frac{P^-_0\cdot \epsilon_i}{Q^2} P^{-\mu}\right)
+\end{align}
+this seems to suggest that the first term will contribute to $\widetilde{G}_3$ and the second to $\widetilde{G}_5$ in Eq.~\ref{eq:rho_to_rho_FF},
+{\raul [continue here]}
+
+
+{\raul  First we establish that $P_\mu X^\mu = 0$,
 \begin{align}
 	P_\mu X^\mu 
  	&= \int \! d\hat{\mathbf{k}} \, Y_{1\lambda}(\hat{\mathbf{k}})\, \left[ \frac{\Epipi^2}{2}  - \frac{P^2}{2} \right] = 0,
@@ -1160,163 +1635,49 @@ and then we may check that the $\lambda=\pm 1$ components are what is expected, 
 	\end{bmatrix}\nn\\
 	&= \sqrt{\frac{4\pi}{3}} |\textbf{k}| \epsilon^\sigma(P_z,\lambda=+1),
 \end{align}
-and indeed the forms are equivalent. Note the presence of a factor of $|\textbf{k}| = k$ above, which suggests that $\mathcal A \sim k \, T_1$. Recalling that $T_1$ does not have the threshold factor for the final state $\pi \pi$, we see that in the case that the $\rho$ is unstable into $\pi \pi$, the quantity $\mathcal A$ should behave like $k$ around the $\pi \pi$ threshold. 
-
+and indeed the forms are equivalent. 
 
 }
 
-\subsubsection{Checking equivalence between $\gamma^\star\sigma\to\sigma$ and $\gamma^\star(\pi\pi)_{\ell=0}\to(\pi\pi)_{\ell=0}$}
-{\ab 
-	The Lorentz decomposition of the matrix element $\gamma^\star\sigma\to\sigma$ is the same of the Lorentz decomposition of $\gamma^\star\pi\to\pi$, and therefore will not be repeated here.
-	We consider the following matrix element 
-\begin{eqnarray}
-M_{\lambda_\gamma}&=&\langle \pi(p_3)\pi(p_4)|{\cal J}^\mu(0)|\pi(p_1)\pi(p_2)\rangle\epsilon_\mu(q,\lambda_\gamma)\, ,
-\end{eqnarray}
-and for convenience we repeat here the expression of its Lorentz decomposition
-\begin{eqnarray}
-&&\frac{1}{4\pi}\int d\hat{\bf k}^\star_i\int d\hat{\bf k}^\star_f\bigg[ \left(P^{+\mu}+\frac{(E_i^{\star 2}-E_f^{\star 2})}{Q^2} P^{-\mu}\right)\mathcal{F}_{1}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)
-\nn\\
-&&+
-\left(k^{+\mu}+\frac{(P^-\cdot k^{+})}{Q^2} P^{-\mu}\right)
-\mathcal{F}_{3}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)
-+
-\left(k^{-\mu}+\frac{(P^-\cdot k^{-})}{Q^2} P^{-\mu}\right)
-\mathcal{F}_{4}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)\bigg].
-\label{eq:pipi_to_pipi2}
-\end{eqnarray}
-We are interested in calculating the following matrix element
-\begin{eqnarray}
-\langle{\bf P}_f;|{\bf k}^\star_f|;J=0|{\cal J}^\mu(0)|{\bf P}_i;|{\bf k}^\star_i|;J=0\rangle\, ,
-\end{eqnarray}
-where $|{\bf P}_i;|{\bf k}^\star_i|;J=0\rangle $ is an initial two-nucleon state with center of mass momentum ${\bf k}^\star_i$ that has been boosted to a moving frame with momentum ${\bf P_i}$ and then performing a rotation to the axis of the momentum. Therefore using the following two relations
-\begin{eqnarray}
-|{\bf P}_i;|{\bf k}_i^\star|;J=0\rangle&=&\int d\hat{\bf k}^\star_i\frac{1}{\sqrt{4\pi}}|\pi(R_i{\bf k}_i^\prime)\pi({\bf P}_i-R_i{\bf k}_i^\prime)\rangle\, ,\\
-|{\bf P}_f;|{\bf k_f}^\star|;J=0\rangle&=&\int d\hat{\bf k}^\star_f\frac{1}{\sqrt{4\pi}}|\pi(R_f{\bf k}_f^\prime)\pi({\bf P}_f-R_f{\bf k}_f^\prime)\rangle\, ,
-\end{eqnarray}
-where $k_i^{\prime\mu}=\left[Z_{P_i}\right]^\mu_\nu k^{\star\nu}$ and $k_f^{\prime\mu}=\left[Z_{P_f}\right]^\mu_\nu k_f^{\star\nu}$, we have now
-\begin{eqnarray}
-\frac{1}{4\pi}\int d\hat{\bf k}_i^\star\int d\hat{\bf k}_f^\star\langle\pi(R_f{\bf k}_f^\prime)\pi({\bf P}_f-R_f{\bf k}_f^\prime)|{\cal J}^\mu(0)|\pi(R_i{\bf k}_i^\prime)\pi({\bf P}_i-R_i{\bf k}_i^\prime)\rangle\, .
-\end{eqnarray}
-Since we have
-\begin{eqnarray}
-p^\mu_1&=&(R_ik_i^\prime)^\mu,\qquad  p^\mu_2=P^\mu_i-(R_ik^\prime_i)^\mu,\\
- p^\mu_3&=&(R_fk_f^\prime)^\mu,\qquad p^\mu_4=P^\mu_f-(R_fk_f^\prime)^\mu\, .
-\end{eqnarray}
-The four-vectors in Eq.~(\ref{eq:pipi_to_pipi2}) become now
-\begin{eqnarray}
-P^{+\mu}&=&p^\mu_1+p^\mu_2+p^\mu_3+p^\mu_4=P^\mu_i+P^\mu_f,\qquad P^{-\mu}=P^\mu_i-P^\mu_f,\\
- k^{+\mu}&=&p^\mu_2-p^\mu_1+p^\mu_4-p^\mu_3=P^{+\mu}-2(R_ik_i^\prime)^\mu-2(R_fk_f^\prime)^\mu\, ,\\
-  k^{-\mu}&=&p^\mu_2-p^\mu_1+p^\mu_3-p^\mu_4=P^{-\mu}-2(R_ik_i^\prime)^\mu+2(R_fk_f^\prime)^\mu\, .
-\end{eqnarray}
-The term in parenthesis of the first term in Eq.~(\ref{eq:pipi_to_pipi2}) is invariant under the integration and therefore we are left with the folllowing integral
-\begin{eqnarray}
-\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_f{\cal F}_1(Q^2;E_i^\star,{\hat k}^\star_i;E_f^\star,\hat{k}^\star_f)&=&4\pi\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_f Y^\star_{l^\prime m^\prime}(\hat{k}^\star_f){\cal F}_{1;l^\prime m^\prime;lm}(Q^2;E_i^\star;E_f^\star)Y_{lm}(\hat{k}^\star_i) \\
-&=&{\cal F}_{1;00;00}(Q^2;E_i^\star;E_f^\star)\, .
-\end{eqnarray}
-For the second term Eq.~(\ref{eq:pipi_to_pipi2}), looking at the term proportional to $k^{+\mu}$ we would have
-\begin{eqnarray}
-\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_f\left[P^{+\mu}+\frac{(P^{-}\cdot P^{+}) }{Q^2}P^{-\mu}-2(R_ik_i^\prime)^\mu-2(R_fk_f^\prime)^\mu-2\frac{(P^{-}\cdot(R_ik_i^\prime+R_fk_f^\prime))}{Q^2} P^{-\mu}\right]{\cal F}_3(Q^2;E_i^\star,{\hat k}_i^\star;E_f^\star,\hat{k}^\star_f)\, ,\label{eq:full_dec_2nd}
-\end{eqnarray}
-where 
-it is easy to see that the first two terms in the above expression can be "reabsorbed" in the first two terms in Eq.(\ref{eq:pipi_to_pipi2}) since, trivially,
-\begin{eqnarray}
-P_i^2-P_f^2=E_i^2-|{\bf P}_i|^2+E_f^2-|{\bf P}_f|^2=E_i^{\star 2} -E_f^{\star 2}\, .
-\end{eqnarray}
- We are now left with the terms proportional to $k_i$ and $k_f$, for simplicity lets look first at the term proportional to $k_i$
-\begin{eqnarray}
-\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_fR_ik_i^\prime{\cal F}_3(Q^2;E_i^\star,{\hat k}_i^\star;E_f^\star,\hat{k}^\star_f)\, ,
-\end{eqnarray}
-the rotation matrix is independent from $k_i$ therefore we will look only at
-\begin{eqnarray}
-\int d\hat{{\bf k}}_id\hat{{\bf k}}_fk_i^\prime{\cal F}_3(Q^2;E_i^\star,{\hat k}_i;E_f^\star,\hat{k}_f^\star)\, ,
-\end{eqnarray}
-and expanding ${\cal F}_3$ in spherical harmonics, we have
-\begin{eqnarray}
-4\pi\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_fk_i^\prime Y_{l^\prime m^\prime}(\hat{k}^\star_f){\cal F}_{3;l^\prime m^\prime;lm}(Q^2;E_i^\star;E_f^\star)Y_{l m}(\hat{k}^\star_i)\, ,\label{eq:basic_unit}
-\end{eqnarray}
-It's easy to see that
-\begin{eqnarray}
-\int d\hat{{\bf k}}_f Y_{l^\prime m^\prime}(\hat{k}_f^\star)=\sqrt{4\pi}\delta_{l0}\, .
-\end{eqnarray}
-Lets look at 
-\begin{eqnarray}
-\int d\hat{{\bf k}}^\star_i Y_{l m}(\hat{k}^\star_i)k_i^\prime\, ,
-\end{eqnarray}
-in components we have
-\begin{eqnarray}
-\int d\hat{{\bf k}}^\star_i Y_{l m}(\hat{k}^\star_i)k_i^\prime&=&\int d\hat{{\bf k}}^\star_i Y_{l m}(\hat{k}_i^\star)	\begin{bmatrix} \tfrac{E_i}{2} + \tfrac{|\textbf{P}_i|}{2\omega_\pi} k^\star_{iz} \\ k^\star_{ix} \\ k^\star_{iy} \\ \tfrac{|\textbf{P}_i|}{2} + \tfrac{E_i}{E_i^\star} k^\star_z \end{bmatrix}=\int d\hat{{\bf k}}^\star_i Y_{l m}(\hat{k}^\star_i)\begin{bmatrix} \sqrt{\pi}Y_{00}E_i + \tfrac{|\textbf{P}_i|}{\omega_\pi}\sqrt{\frac{\pi}{3}}|{\bf k}_i^\star|Y_{10}(\hat{k}^\star_i) \\ \sqrt{\frac{2\pi}{3}}|{\bf k}_i^\star| \left[Y_{1,-1}(\hat{k}_i^\star)-Y_{11}(\hat{k}_i^\star)\right]\\ i\sqrt{\frac{2\pi}{3}}|{\bf k}_i^\star|\left[Y_{1-1}(\hat{k}_i^\star)+Y_{11}(\hat{k}_i^\star)\right] \\ \sqrt{\pi}Y_{0,0}|{\bf P}_i| + \tfrac{E_i}{\omega_\pi} \sqrt{\frac{\pi}{3}}|{\bf k}^\star_i|Y_{10}(\hat{k}_i^\star) \end{bmatrix}\\
-&=&\begin{bmatrix} \sqrt{\pi}\delta_{l0}\delta_{m0}E_i + \tfrac{|\textbf{P}_i|}{\omega_\pi}\sqrt{\frac{\pi}{3}} \delta_{l1}\delta_{m 0}|{\bf k}^\star_i| \\ \sqrt{\frac{2 \pi}{3}} |{\bf k}^\star_i| \delta_{l1}[\delta_{m-1}-\delta_{m1}] \\ +i\sqrt{\frac{2 \pi}{3}} |{\bf k}^\star_i| \delta_{l1}[\delta_{m-1}+\delta_{m1}]  \\ \sqrt{\pi}|\textbf{P}_i|\delta_{l0} \delta_{m 0} + \tfrac{E_i}{\omega_\pi} \sqrt{\frac{\pi}{3}}|{\bf k}_i^\star|\delta_{l1}\delta_{m 0}\, , \end{bmatrix}=\sqrt{\pi}\delta_{l0}\delta_{m 0}\begin{bmatrix}
-E_i\\ 0 \\ 0 \\|{\bf P}_i|
-\end{bmatrix}+\delta_{l1}\begin{bmatrix} \tfrac{|\textbf{P}_i|}{\omega_\pi}\sqrt{\frac{\pi}{3}} \delta_{m 0}|{\bf k}^\star_i| \\ \sqrt{\frac{2 \pi}{3}} |{\bf k}^\star_i| [\delta_{m-1}-\delta_{m1}] \\ +i\sqrt{\frac{2 \pi}{3}} |{\bf k}^\star_i| [\delta_{m-1}+\delta_{m1}]  \\  \tfrac{E_i}{\omega_\pi} \sqrt{\frac{\pi}{3}}|{\bf k}_i^\star|\delta_{m 0}\, , \end{bmatrix}\, ,\nonumber\\
-&=& \sqrt{\pi}\delta_{l0}\delta_{m 0}\widetilde{P}_i^\mu+\delta_{l1}V_m^\mu(|{\bf k}_i|,|{\bf P}_i|)
-\end{eqnarray}
-So we have that Eq.~(\ref{eq:basic_unit}) becomes
-\begin{eqnarray}
-\sqrt{\pi}{\cal F}_{3;00;00}(Q^2;E_i^\star;E_f^\star)\widetilde{P}^\mu_i+{\cal F}_{3;00;1m}(Q^2;E_i^\star;E_f^\star)V^\mu_m(E_i^\star,|{\bf k}^\star_i|,|{\bf P}_i|)\, .
-\end{eqnarray}
-The second term is zero for parity (as it has been shown in Raul notes).
-It is easy to see that a similar decomposition holds for the term proportional to $k_f$.
-Therefore if $(R_i \widetilde{P}_i)^\mu=P_i^\mu$ (since its a rotation in the direction of ${\bf P}_i$) (and similar for $k_f$) we have that the last four terms of Eq.~(\ref{eq:full_dec_2nd}) can be reabsorbed in the first two terms of Eq.~(\ref{eq:pipi_to_pipi2}). For the third in Eq.~(\ref{eq:pipi_to_pipi2}) term we have in principle the following integral
-\begin{eqnarray}
-\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_f\left[P^{-\mu}+\frac{(P^{+}\cdot P^{-}) }{Q^2}P^{+\mu}-2(R_ik_i^\prime)^\mu+2(R_fk_f^\prime)^\mu-2\frac{(P^{+}\cdot(R_ik_i^\prime-R_fk_f^\prime))}{Q^2} P^{-\mu}\right]{\cal F}_4(Q^2;E_i^\star,{\hat k}_i^\star;E_f^\star,\hat{k}^\star_f)\, ,\label{eq:full_dec_3rd}
-\end{eqnarray}
-It is useful to look first at the following integral
-\begin{eqnarray}
-&\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_f\bigg[P^{-\mu}+\frac{(P^{+}\cdot P^{-}) }{Q^2}P^{+\mu}\bigg]{\cal F}_4(Q^2;E_i^\star,{\hat k}_i^\star;E_f^\star,\hat{k}^\star_f)\, ,\label{eq:f4_1st}
-\end{eqnarray}
-where ${\cal F}_4$ can   be rewritten as a sum of a symmetric and antisymmetric components
-\begin{eqnarray}
-&{\cal F}_4(Q^2;E_i^\star,{\hat k}_i^\star;E_f^\star,\hat{k}^\star_f)=-{\cal F}_4(Q^2;E_f^\star,\hat{k}^\star_f;E_i^\star,{\hat k}_i^\star)\, ,
-\end{eqnarray}
-but as it has been shown in Sec. \ref{sec:gpi_to_pipi} the symmetric part vanishes, and therefore Eq.~(\ref{eq:f4_1st}) vanishes. 
-Lets look now at this piece 
-\begin{eqnarray}
-&\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_f\left[-2(R_ik_i^\prime)^\mu+2(R_fk_f^\prime)^\mu-2\frac{(P^{+}\cdot(R_ik_i^\prime-R_fk_f^\prime))}{Q^2} P^{-\mu}\right]{\cal F}_4(Q^2;E_i^\star,{\hat k}_i^\star;E_f^\star,\hat{k}^\star_f)\, \label{eq:full_dec_4th}\\
-&\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_f\left[-2(R_ik_i^\prime)^\mu-2(R_fk_f^\prime)^\mu+2\frac{(P^{+}\cdot(R_ik_i^\prime+R_fk_f^\prime))}{Q^2} P^{-\mu}\right]{\cal F}_{4}(Q^2;E_i^\star,{\hat k}_i^\star;E_f^\star,\hat{k}^\star_f)
-\end{eqnarray}
-and therefore the treatment is analogous to what has been done before.
 
 
-%Maybe this term should be zero since $S=0$ in the intial and final state?? }
-
-\subsubsection{Checking equivalence between $\gamma^\star\rho\to\rho'$ and $\gamma^\star(\pi\pi)_{\ell=1}\to(\pi\pi)_{\ell=1}$}
-For clarity we report here the formula that will be relevant in the following
-\begin{eqnarray}
-|{\bf P}_i;|{\bf k}_i^\star|;J=1,\lambda_i\rangle&=&\int d\hat{\bf k}^\star_i\frac{1}{\sqrt{4\pi}}Y_{1\lambda_i}(\hat{k}_i^\star)|\pi(R_i{\bf k}_i^\prime)\pi({\bf P}_i-R_i{\bf k}_i^\prime)\rangle\, ,\\
-|{\bf P}_f;|{\bf k}_f^\star|;J=1,\lambda_f\rangle&=&\int d\hat{\bf k}^\star_f\frac{1}{\sqrt{4\pi}}Y_{1\lambda_f}(\hat{k}_f^\star)|\pi(R_f{\bf k}_f^\prime)\pi({\bf P}_f-R_f{\bf k}_f^\prime)\rangle\, ,
-\end{eqnarray}
-In this case the object of interest is
-\begin{eqnarray}
-&\langle{\bf P}_f;|{\bf k}^\star_f|;J=1,\lambda_f|{\cal J}^\mu(0)|{\bf P}_i;|{\bf k}^\star_i|;J=1,\lambda_i\rangle=\\
-&\int d\hat{\bf k}_i^\star\int d\hat{\bf k}_f^\star Y^\star_{1\lambda_f}(\hat{k}_f^\star) Y_{1\lambda_i}(\hat{k}_i^\star)\langle\pi(R_f{\bf k}_f^\prime)\pi({\bf P}_f-R_f{\bf k}_f^\prime)|{\cal J}^\mu(0)|\pi(R_i{\bf k}_i^\prime)\pi({\bf P}_i-R_i{\bf k}_i^\prime)\rangle\, =\\
-&\frac{1}{4\pi}\int d\hat{\bf k}_i^\star\int d\hat{\bf k}_f^\star Y^\star_{1\lambda_f}(\hat{k}_f^\star) Y_{1\lambda_i}(\hat{k}_i^\star)\bigg[ \left(P^{+\mu}+\frac{(E_i^{\star 2}-E_f^{\star 2})}{Q^2} P^{-\mu}\right)\mathcal{F}_{1}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)
-\nn\\
-&+
-\left(k^{+\mu}+\frac{(P^-\cdot k^{+})}{Q^2} P^{-\mu}\right)
-\mathcal{F}_{3}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)
-+
-\left(k^{-\mu}+\frac{(P^-\cdot k^{-})}{Q^2} P^{-\mu}\right)
-\mathcal{F}_{4}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)\bigg].\label{eq:pw_dec}
-\end{eqnarray}
-Looking at the first term we have
-\begin{eqnarray}
-&\sum_{lm,l^\prime m^\prime}\int d\hat{\bf k}_i^\star\int d\hat{\bf k}_f^\star Y^\star_{1\lambda_f}(\hat{k}_f^\star)Y_{l^\prime m^\prime}(\hat{k}_f^\star)  Y_{1\lambda_i}(\hat{k}_i^\star)Y^\star_{lm}(\hat{k}_i^\star) \mathcal{F}_{1;l m;l^\prime m^\prime}(Q^2;E_i^\star;E_f^\star)\nonumber\\
-&=\mathcal{F}_{1;1 \lambda_i;1 \lambda_f}(Q^2;E_i^\star;E_f^\star)\, .\label{eq:pw_dec_1st}
-\end{eqnarray}
-Therefore this term transforms in the same way of the first term in Eq.(\ref{eq:rho_to_rho_FF}).
-For the second term in Eq.~(\ref{eq:pw_dec}) we have 
-\begin{eqnarray}
-&\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_f\left[P^{+\mu}+\frac{(P^{-}\cdot P^{+}) }{Q^2}P^{-\mu}-2(R_ik_i^\prime)^\mu-2(R_fk_f^\prime)^\mu-2\frac{(P^{-}\cdot(R_ik_i^\prime+R_fk_f^\prime))}{Q^2} P^{-\mu}\right]\nonumber\\
-& Y^\star_{1\lambda_f}(\hat{k}_f^\star)Y_{l^\prime m^\prime}(\hat{k}_f^\star)  Y_{1\lambda_i}(\hat{k}_i^\star)Y^\star_{lm}(\hat{k}_i^\star) \mathcal{F}_{3;l^\prime m^\prime;l m}(Q^2;E_i^\star;E_f^\star)\label{eq:full_dec}
-\end{eqnarray}
-similarly to before the first two terms in the above Equation can be reabsorbed in the first term of Eq.(\ref{eq:pw_dec}).
-We start here by looking at the term
-\begin{eqnarray}
-\int d\hat{{\bf k}}^\star_i Y^\star_{l m}(\hat{k}^\star_i)Y_{1\lambda_i}(\hat{k}_i^\star)k_i^\prime&=&\int d\hat{{\bf k}}^\star_i Y^\star_{l m}(\hat{k}^\star_i)Y_{1\lambda_i}(\hat{k}_i^\star)\begin{bmatrix} \sqrt{\pi}Y_{00}E_i + \tfrac{|\textbf{P}_i|}{\omega_\pi}\sqrt{\frac{\pi}{3}}|{\bf k}_i^\star|Y_{10}(\hat{k}^\star_i) \\ \sqrt{\frac{2\pi}{3}}|{\bf k}_i^\star| \left[Y_{1,-1}(\hat{k}_i^\star)-Y_{11}(\hat{k}_i^\star)\right]\\ i\sqrt{\frac{2\pi}{3}}|{\bf k}_i^\star|\left[Y_{1-1}(\hat{k}_i^\star)+Y_{11}(\hat{k}_i^\star)\right] \\ \sqrt{\pi}Y_{0,0}|{\bf P}_i| + \tfrac{E_i}{\omega_\pi} \sqrt{\frac{\pi}{3}}|{\bf k}^\star_i|Y_{10}(\hat{k}_i^\star) \end{bmatrix}
-\end{eqnarray}
-
-In progress, checking some algebra.. (just more complicated than before, but in principle straightforward, last famous words..)
-}
+%For clarity we report here the formula that will be relevant in the following
+%\begin{eqnarray}
+%|{\bf P}_i;|{\bf k}_i^\star|;J=1,\lambda_i\rangle&=&\int d\hat{\bf k}^\star_i\frac{1}{\sqrt{4\pi}}Y_{1\lambda_i}(\hat{k}_i^\star)|\pi(R_i{\bf k}_i^\prime)\pi({\bf P}_i-R_i{\bf k}_i^\prime)\rangle\, ,\\
+%|{\bf P}_f;|{\bf k}_f^\star|;J=1,\lambda_f\rangle&=&\int d\hat{\bf k}^\star_f\frac{1}{\sqrt{4\pi}}Y_{1\lambda_f}(\hat{k}_f^\star)|\pi(R_f{\bf k}_f^\prime)\pi({\bf P}_f-R_f{\bf k}_f^\prime)\rangle\, ,
+%\end{eqnarray}
+%In this case the object of interest is
+%\begin{eqnarray}
+%&\langle{\bf P}_f;|{\bf k}^\star_f|;J=1,\lambda_f|{\cal J}^\mu(0)|{\bf P}_i;|{\bf k}^\star_i|;J=1,\lambda_i\rangle=\\
+%&\int d\hat{\bf k}_i^\star\int d\hat{\bf k}_f^\star Y^*_{1\lambda_f}(\hat{k}_f^\star) Y_{1\lambda_i}(\hat{k}_i^\star)\langle\pi(R_f{\bf k}_f^\prime)\pi({\bf P}_f-R_f{\bf k}_f^\prime)|{\cal J}^\mu(0)|\pi(R_i{\bf k}_i^\prime)\pi({\bf P}_i-R_i{\bf k}_i^\prime)\rangle\, =\\
+%&\frac{1}{4\pi}\int d\hat{\bf k}_i^\star\int d\hat{\bf k}_f^\star Y^*_{1\lambda_f}(\hat{k}_f^\star) Y_{1\lambda_i}(\hat{k}_i^\star)\bigg[ \left(P^{+\mu}+\frac{(E_i^{\star 2}-E_f^{\star 2})}{Q^2} P^{-\mu}\right)\mathcal{F}_{1}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)
+%\nn\\
+%&+
+%\left(k^{+\mu}+\frac{(P^-\cdot k^{+})}{Q^2} P^{-\mu}\right)
+%\mathcal{F}_{3}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)
+%+
+%\left(k^{-\mu}+\frac{(P^-\cdot k^{-})}{Q^2} P^{-\mu}\right)
+%\mathcal{F}_{4}(Q^2;E_i^\star,\hat{k}^\star_i;E_f^\star,\hat{k}^\star_f)\bigg].\label{eq:pw_dec}
+%\end{eqnarray}
+%Looking at the first term we have
+%\begin{eqnarray}
+%&\sum_{lm,l^\prime m^\prime}\int d\hat{\bf k}_i^\star\int d\hat{\bf k}_f^\star Y^*_{1\lambda_f}(\hat{k}_f^\star)Y_{l^\prime m^\prime}(\hat{k}_f^\star)  Y_{1\lambda_i}(\hat{k}_i^\star)Y^*_{lm}(\hat{k}_i^\star) \mathcal{F}_{1;l m;l^\prime m^\prime}(Q^2;E_i^\star;E_f^\star)\nonumber\\
+%&=\mathcal{F}_{1;1 \lambda_i;1 \lambda_f}(Q^2;E_i^\star;E_f^\star)\, .\label{eq:pw_dec_1st}
+%\end{eqnarray}
+%Therefore this term transforms in the same way of the first term in Eq.(\ref{eq:rho_to_rho_FF}).
+%For the second term in Eq.~(\ref{eq:pw_dec}) we have 
+%\begin{eqnarray}
+%&\int d\hat{{\bf k}}^\star_id\hat{{\bf k}}^\star_f\left[P^{+\mu}+\frac{(P^{-}\cdot P^{+}) }{Q^2}P^{-\mu}-2(R_ik_i^\prime)^\mu-2(R_fk_f^\prime)^\mu-2\frac{(P^{-}\cdot(R_ik_i^\prime+R_fk_f^\prime))}{Q^2} P^{-\mu}\right]\nonumber\\
+%& Y^*_{1\lambda_f}(\hat{k}_f^\star)Y_{l^\prime m^\prime}(\hat{k}_f^\star)  Y_{1\lambda_i}(\hat{k}_i^\star)Y^*_{lm}(\hat{k}_i^\star) \mathcal{F}_{3;l^\prime m^\prime;l m}(Q^2;E_i^\star;E_f^\star)\label{eq:full_dec}
+%\end{eqnarray}
+%similarly to before the first two terms in the above Equation can be reabsorbed in the first term of Eq.(\ref{eq:pw_dec}).
+%We start here by looking at the term
+%\begin{eqnarray}
+%\int d\hat{{\bf k}}^\star_i Y^*_{l m}(\hat{k}^\star_i)Y_{1\lambda_i}(\hat{k}_i^\star)k_i^\prime&=&\int d\hat{{\bf k}}^\star_i Y^*_{l m}(\hat{k}^\star_i)Y_{1\lambda_i}(\hat{k}_i^\star)\begin{bmatrix} \sqrt{\pi}Y_{00}E_i + \tfrac{|\textbf{P}_i|}{\omega_\pi}\sqrt{\frac{\pi}{3}}|{\bf k}_i^\star|Y_{10}(\hat{k}^\star_i) \\ \sqrt{\frac{2\pi}{3}}|{\bf k}_i^\star| \left[Y_{1,-1}(\hat{k}_i^\star)-Y_{11}(\hat{k}_i^\star)\right]\\ i\sqrt{\frac{2\pi}{3}}|{\bf k}_i^\star|\left[Y_{1-1}(\hat{k}_i^\star)+Y_{11}(\hat{k}_i^\star)\right] \\ \sqrt{\pi}Y_{0,0}|{\bf P}_i| + \tfrac{E_i}{\omega_\pi} \sqrt{\frac{\pi}{3}}|{\bf k}^\star_i|Y_{10}(\hat{k}_i^\star) \end{bmatrix}
+%\end{eqnarray}
+%
+%In progress, checking some algebra.. (just more complicated than before, but in principle straightforward, last famous words..)
+%
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
